@@ -12,8 +12,8 @@
 	src.number = number
 	src.message_text = message_text
 	src.is_outgoing = is_outgoing
-	src.timestamp = station_time()
-	src.time = station_time_timestamp("hh:mm")
+	src.timestamp = city_time()
+	src.time = city_time_timestamp("hh:mm")
 
 /datum/phone_conversation
 	var/contact_name = ""

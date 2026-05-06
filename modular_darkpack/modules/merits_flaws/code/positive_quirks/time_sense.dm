@@ -11,12 +11,12 @@
 
 /mob/proc/get_time_status()
 	. = list()
-	. += "Local City Time: [SSticker.round_start_timeofday ? "[station_time_timestamp("hh:mm MMM")] [CURRENT_STATION_YEAR]" : "The round hasn't started yet!"]"
+	. += "Local City Time: [SSticker.round_start_timeofday ? "[city_time_timestamp("hh:mm MMM")] [CURRENT_STATION_YEAR]" : "The round hasn't started yet!"]"
 
 /mob/living/get_time_status()
 	. = list()
 	if(HAS_TRAIT(src, TRAIT_TIME_SENSE))
-		. += "Local City Time: [station_time_timestamp("hh:mm MMM")] [CURRENT_STATION_YEAR]"
+		. += "Local City Time: [city_time_timestamp("hh:mm MMM")] [CURRENT_STATION_YEAR]"
 		. += "Phase of moon: [GLOB.moon_state]"
 	else
 		. += "Local City Time: [CURRENT_STATION_YEAR]? Get a watch."

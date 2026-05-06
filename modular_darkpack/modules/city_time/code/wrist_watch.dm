@@ -14,5 +14,5 @@
 
 /obj/item/watch/examine(mob/user)
 	. = ..()
-	. += "The watch reads: <b>[station_time_timestamp("hh:mm:ss, MMM DD")]</b>"
-	. += "That should make it <b>[station_time_timestamp("Day")]</b>"
+	. += "The watch reads: <b>[city_time_timestamp("hh:mm:ss, MMM DD")]</b>"
+	. += "That should make it <b>[city_time_timestamp("Day")]</b>"

@@ -108,7 +108,7 @@
 	sender = param_sender
 	subject = param_subject
 	message = param_message
-	date = station_time_timestamp("hh:mm")
+	date = city_time_timestamp("hh:mm")
 
 /datum/email/proc/to_data()
 	var/list/data = list("subject"=subject, "sender" = sender, "message" = message, "date" = date, "checked" = checked, "stared" = stared)

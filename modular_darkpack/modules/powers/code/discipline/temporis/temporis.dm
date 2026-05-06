@@ -42,7 +42,7 @@
 
 /datum/discipline_power/temporis/hourglass_of_the_mind/activate()
 	. = ..()
-	to_chat(owner, "<b>[station_time_timestamp("hh:mm:ss")]</b>")
+	to_chat(owner, "<b>[city_time_timestamp("hh:mm:ss")]</b>")
 
 	// Check range for targets with that have warped time this round and display them, if any exist
 	var/list/targets = list()

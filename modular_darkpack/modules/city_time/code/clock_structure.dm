@@ -8,7 +8,7 @@
 
 /obj/structure/coclock/examine(mob/user)
 	. = ..()
-	. += "The clock reads: <b>[station_time_timestamp()]</b>"
+	. += "The clock reads: <b>[city_time_timestamp()]</b>"
 
 /obj/structure/coclock/grandpa
 	icon = 'modular_darkpack/modules/city_time/icons/grandpa_cock.dmi'
