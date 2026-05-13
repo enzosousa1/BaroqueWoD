@@ -10398,6 +10398,7 @@
 /area/vtm/interior/sewer/nosferatu_town)
 "aIg" = (
 /obj/effect/turf_decal/loading_area,
+/obj/effect/abstract/cargo_landing_spot,
 /turf/open/misc/dirt,
 /area/vtm/westfield_mall/interior/supply)
 "aIh" = (
@@ -18156,6 +18157,10 @@
 /obj/effect/decal/rugs,
 /turf/open/floor/iron/dark,
 /area/vtm/westfield_mall/interior/art_store)
+"rtM" = (
+/obj/effect/abstract/cargo_landing_spot,
+/turf/open/floor/plating/concrete,
+/area/vtm/westfield_mall/interior/supply)
 "rus" = (
 /obj/machinery/sprinkler,
 /turf/open/floor/wood/smooth/old,
@@ -18267,6 +18272,11 @@
 	},
 /turf/open/floor/plating/roofwalk,
 /area/vtm/westfield_mall)
+"rSA" = (
+/obj/effect/decal/pallet,
+/obj/effect/abstract/cargo_landing_spot,
+/turf/open/floor/plating/concrete,
+/area/vtm/westfield_mall/interior/supply)
 "rSN" = (
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -26590,11 +26600,11 @@ aFc
 (49,1,1) = {"
 aFc
 aOe
-ars
+rtM
 aZf
 aaV
 aZf
-ars
+rtM
 agx
 ars
 aNJ
@@ -27810,7 +27820,7 @@ ars
 aZf
 aaV
 aZf
-aiq
+rSA
 aOe
 aeW
 aVT
@@ -28718,7 +28728,7 @@ aFc
 (63,1,1) = {"
 aFc
 aOe
-aiq
+rSA
 aZf
 aaV
 aZf
@@ -29330,7 +29340,7 @@ ars
 aZf
 aaV
 aZf
-aiq
+rSA
 aOe
 aeW
 aeW
@@ -30546,7 +30556,7 @@ ars
 aZf
 aaV
 aIg
-ars
+rtM
 apX
 aOe
 aeW
@@ -30698,7 +30708,7 @@ ars
 aZf
 aaV
 aIg
-ars
+rtM
 apX
 aOe
 aeW
@@ -31002,7 +31012,7 @@ ars
 aXD
 aaV
 aZf
-aiq
+rSA
 aOe
 aeW
 aeW
@@ -31454,7 +31464,7 @@ aFc
 (81,1,1) = {"
 aFc
 aOe
-aiq
+rSA
 aZf
 aaV
 aZf
@@ -32214,7 +32224,7 @@ aFc
 (86,1,1) = {"
 aFc
 aOe
-ars
+rtM
 aZf
 aaV
 aZf
@@ -33126,7 +33136,7 @@ aFc
 (92,1,1) = {"
 aFc
 aOe
-ars
+rtM
 aZf
 aaV
 aZf
@@ -33278,7 +33288,7 @@ aFc
 (93,1,1) = {"
 aFc
 aOe
-ars
+rtM
 aZf
 aaV
 aZf

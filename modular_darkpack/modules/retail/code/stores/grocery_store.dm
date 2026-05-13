@@ -47,7 +47,7 @@
 		new /datum/data/vending_product("nail polish remover", /obj/item/reagent_containers/cup/bottle/acetone/vampire), // NOCTURNE EDIT
 		new /datum/data/vending_product("kitchen knife", /obj/item/knife, 26),
 		new /datum/data/vending_product("rolling pin", /obj/item/kitchen/rollingpin, 8),
-		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/glass/mixing_bowl),
+		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/cup/mixing_bowl),
 	)
 
 /obj/structure/retail/deli

@@ -96,7 +96,7 @@
 // NOCTURNE REMOVAL START - MOVED TO NOCTURNE MASTER FILES
 /*
 /datum/preferences/proc/render_new_preview_appearance(mob/living/carbon/human/dummy/mannequin, show_job_clothes = TRUE)
-	var/datum/job/no_job = SSjob.get_job_type(/datum/job/vampire/unassigned) // DARKPACK EDIT, ORIGINAL: var/datum/job/no_job = SSjob.get_job_type(/datum/job/unassigned)
+	var/datum/job/no_job = SSjob.get_job_type(/datum/job/vampire/unassigned) // DARKPACK EDIT CHANGE - ORIGINAL: var/datum/job/no_job = SSjob.get_job_type(/datum/job/unassigned)
 	var/datum/job/preview_job = get_highest_priority_job() || no_job
 
 	if(preview_job)
