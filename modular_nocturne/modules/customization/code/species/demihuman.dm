@@ -58,3 +58,39 @@
 
 		"And the craziest bit? Everybody thought it was always like this!\""
 	)
+
+// dirty fucking hack bullshit because garou completely fucked EVERYTHING
+// ENSURE THAT OUTSIDE OF THE SPECIES NAME AND ID, THAT THIS IS IDENTICAL TO /datum/species/human/demihuman
+/datum/species/human/shifter/homid/demihuman
+	id = SPECIES_FERA_HOMID_DEMIHUMAN
+
+	examine_limb_id = SPECIES_HUMAN
+	mutantears = /obj/item/organ/ears/mutant
+	mutant_features = list(
+		FEATURE_EARS_NOCTURNE,
+		FEATURE_FRILLS_NOCTURNE,
+		FEATURE_HORNS_NOCTURNE,
+		FEATURE_TAIL_NOCTURNE,
+		FEATURE_FLUFF_NOCTURNE,
+		FEATURE_BREASTS_NOCTURNE,
+		FEATURE_PINTLE_NOCTURNE,
+		FEATURE_TESTICLES_NOCTURNE,
+		FEATURE_VAGINA_NOCTURNE,
+	)
+
+/datum/species/human/shifter/bestial/demihuman
+	id = SPECIES_FERA_BESTIAL_DEMIHUMAN
+
+	examine_limb_id = SPECIES_HUMAN
+	mutantears = /obj/item/organ/ears/mutant
+	mutant_features = list(
+		FEATURE_EARS_NOCTURNE,
+		FEATURE_FRILLS_NOCTURNE,
+		FEATURE_HORNS_NOCTURNE,
+		FEATURE_TAIL_NOCTURNE,
+		FEATURE_FLUFF_NOCTURNE,
+		FEATURE_BREASTS_NOCTURNE,
+		FEATURE_PINTLE_NOCTURNE,
+		FEATURE_TESTICLES_NOCTURNE,
+		FEATURE_VAGINA_NOCTURNE,
+	)

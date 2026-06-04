@@ -71,3 +71,73 @@
 	human.undershirt = "Tank Top (White)"
 	regenerate_organs(human)
 	human.update_body(is_creating = TRUE)
+
+// dirty fucking hack bullshit because garou completely fucked EVERYTHING
+// ENSURE THAT OUTSIDE OF THE SPECIES NAME AND ID, THAT THIS IS IDENTICAL TO /datum/species/human/anthro
+/datum/species/human/shifter/homid/anthro
+	id = SPECIES_FERA_HOMID_ANTHRO
+
+	examine_limb_id = SPECIES_ANTHRO
+	inherent_traits = list(
+		TRAIT_MUTANT_COLORS,
+	)
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/anthro,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/anthro,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/anthro,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/anthro,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/anthro,
+	)
+	mutantears = /obj/item/organ/ears/mutant
+	mutant_features = list(
+		FEATURE_EARS_NOCTURNE,
+		FEATURE_FRILLS_NOCTURNE,
+		FEATURE_HORNS_NOCTURNE,
+		FEATURE_SNOUT_NOCTURNE,
+		FEATURE_TAIL_NOCTURNE,
+		FEATURE_FLUFF_NOCTURNE,
+		FEATURE_BREASTS_NOCTURNE,
+		FEATURE_PINTLE_NOCTURNE,
+		FEATURE_TESTICLES_NOCTURNE,
+		FEATURE_VAGINA_NOCTURNE,
+	)
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
+	digi_leg_overrides = list(
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
+	)
+
+/datum/species/human/shifter/bestial/anthro
+	id = SPECIES_FERA_BESTIAL_ANTHRO
+
+	examine_limb_id = SPECIES_ANTHRO
+	inherent_traits = list(
+		TRAIT_MUTANT_COLORS,
+	)
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/anthro,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/anthro,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/anthro,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/anthro,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/anthro,
+	)
+	mutantears = /obj/item/organ/ears/mutant
+	mutant_features = list(
+		FEATURE_EARS_NOCTURNE,
+		FEATURE_FRILLS_NOCTURNE,
+		FEATURE_HORNS_NOCTURNE,
+		FEATURE_SNOUT_NOCTURNE,
+		FEATURE_TAIL_NOCTURNE,
+		FEATURE_FLUFF_NOCTURNE,
+		FEATURE_BREASTS_NOCTURNE,
+		FEATURE_PINTLE_NOCTURNE,
+		FEATURE_TESTICLES_NOCTURNE,
+		FEATURE_VAGINA_NOCTURNE,
+	)
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
+	digi_leg_overrides = list(
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
+	)

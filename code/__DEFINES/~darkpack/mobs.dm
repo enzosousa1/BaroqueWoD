@@ -11,6 +11,12 @@
 #define SPECIES_FERA_WAR "war"
 #define SPECIES_FERA_DIRE "dire"
 #define SPECIES_FERA_FERAL "feral"
+// NOCTURNE ADDITION START - DIEEEEE, DIEEEEEEEEEEEEE
+#define SPECIES_FERA_HOMID_DEMIHUMAN "homid_demihuman"
+#define SPECIES_FERA_HOMID_ANTHRO "homid_anthro"
+#define SPECIES_FERA_BESTIAL_DEMIHUMAN "bestial_demihuman"
+#define SPECIES_FERA_BESTIAL_ANTHRO "bestial_anthro"
+// NOCTURNE ADDITION END
 
 // #define SPECIES_GAROU "garou"
 

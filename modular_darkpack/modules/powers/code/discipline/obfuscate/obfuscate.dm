@@ -266,7 +266,7 @@
 			original_sprite_greyscale = TRUE
 
 	target.dna.copy_dna(owner.dna, 0)
-	owner.set_species(target.dna.species.type) // NOCTURNE EDIT
+	owner.set_species(target.client?.prefs.read_preference(/datum/preference/choiced/species) || target.dna.species.type) // NOCTURNE EDIT - get preference species first, use actual species as fallback (fucking hate garous)
 	var/datum/splat/vampire/kindred/target_splat = get_kindred_splat(target)
 	if(target_splat?.clan?.alt_sprite)
 		owner.set_body_sprite(target_splat.clan.alt_sprite, target_splat.clan.alt_sprite_greyscale, TRUE)

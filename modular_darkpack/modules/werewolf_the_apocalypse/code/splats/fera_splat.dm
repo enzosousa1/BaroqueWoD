@@ -123,7 +123,17 @@
 
 /datum/splat/werewolf/shifter/on_gain()
 	. = ..()
-	owner.set_species(/datum/species/human/shifter/homid)
+	// NOCTURNE EDIT START
+	// ORIGINAL: owner.set_species(/datum/species/human/shifter/homid)
+	var/original_species_type = owner.dna.species.type
+	switch(original_species_type)
+		if(/datum/species/human/anthro)
+			owner.set_species(/datum/species/human/shifter/homid/anthro)
+		if(/datum/species/human/demihuman)
+			owner.set_species(/datum/species/human/shifter/homid/demihuman)
+		else
+			owner.set_species(/datum/species/human/shifter/homid)
+	// NOCTURNE EDIT END
 	add_power(/datum/action/cooldown/power/gift/howling)
 
 	RegisterSignal(owner, COMSIG_LIVING_DEATH, PROC_REF(revert_to_breed_form))
@@ -131,7 +141,12 @@
 /datum/splat/werewolf/shifter/on_lose_or_destroy()
 	. = ..()
 	if(!QDELETED(owner))
-		owner.set_species(/datum/species/human)
+		// NOCTURNE EDIT START
+		// ORIGINAL: owner.set_species(/datum/species/human)
+		if(owner.client) // the dummy shouldnt need to update the species, that should already be taken care of
+			var/original_species_type = owner.client.prefs.read_preference(/datum/preference/choiced/species)
+			owner.set_species(original_species_type)
+		// NOCTURNE EDIT END
 
 	UnregisterSignal(owner, COMSIG_LIVING_DEATH)
 

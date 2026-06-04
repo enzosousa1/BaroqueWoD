@@ -65,6 +65,23 @@
 
 	SEND_SIGNAL(owner, COMSIG_MASQUERADE_VIOLATION)
 
+	// NOCTURNE ADDITION START - thank GOD players cant change their character prefs mid round
+	if(form_to_transform == /datum/species/human/shifter/homid)
+		var/original_species_type = owner.client.prefs.read_preference(/datum/preference/choiced/species)
+		switch(original_species_type)
+			if(/datum/species/human/anthro)
+				form_to_transform = /datum/species/human/shifter/homid/anthro
+			if(/datum/species/human/demihuman)
+				form_to_transform = /datum/species/human/shifter/homid/demihuman
+	else if(form_to_transform == /datum/species/human/shifter/bestial)
+		var/original_species_type = owner.client.prefs.read_preference(/datum/preference/choiced/species)
+		switch(original_species_type)
+			if(/datum/species/human/anthro)
+				form_to_transform = /datum/species/human/shifter/bestial/anthro
+			if(/datum/species/human/demihuman)
+				form_to_transform = /datum/species/human/shifter/bestial/demihuman
+	// NOCTURNE ADDITION END
+
 	addtimer(CALLBACK(src, PROC_REF(transform_finish), form_to_transform, time_to_transform), time_to_transform * 0.9)
 
 /datum/splat/werewolf/shifter/proc/steps_between_forms(datum/species/human/shifter/first_form, datum/species/human/shifter/second_form)
