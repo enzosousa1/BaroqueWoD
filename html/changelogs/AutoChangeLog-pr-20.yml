@@ -1,0 +1,4 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - bugfix: "fixed garou overriding furry species"
