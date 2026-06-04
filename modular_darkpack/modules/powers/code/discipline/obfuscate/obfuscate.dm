@@ -250,6 +250,14 @@
 		try_deactivate(direct = TRUE)
 		return
 
+	// NOCTURNE ADDITION START
+	// im paranoid of people shapeshifting into disconnected war form garou and shit
+	if(!isnpc(target) && !target.client)
+		to_chat(owner, span_warning("Something about [chosen_name] just doesn't feel right..."))
+		try_deactivate(direct = TRUE)
+		return
+	// NOCTURNE ADDITION END
+
 	var/appearance_difference = target.st_get_stat(STAT_APPEARANCE) - owner.st_get_stat(STAT_APPEARANCE)
 	owner.adjust_blood_pool(-max(appearance_difference, 1))
 
@@ -266,7 +274,12 @@
 			original_sprite_greyscale = TRUE
 
 	target.dna.copy_dna(owner.dna, 0)
-	owner.set_species(target.client?.prefs.read_preference(/datum/preference/choiced/species) || target.dna.species.type) // NOCTURNE EDIT - get preference species first, use actual species as fallback (fucking hate garous)
+	// NOCTURNE ADDITION START
+	if(isnpc(target))
+		owner.set_species(target.dna.species.type)
+	else if(target.client)
+		owner.set_species(target.client?.prefs.read_preference(/datum/preference/choiced/species))
+	// NOCTURNE ADDITION END
 	var/datum/splat/vampire/kindred/target_splat = get_kindred_splat(target)
 	if(target_splat?.clan?.alt_sprite)
 		owner.set_body_sprite(target_splat.clan.alt_sprite, target_splat.clan.alt_sprite_greyscale, TRUE)
