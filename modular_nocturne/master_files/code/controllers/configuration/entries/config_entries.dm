@@ -18,3 +18,9 @@
 /// to make it more readable in the BYOND window.
 /datum/config_entry/string/missing_whitelist_message
 	default = "\nReason: You are not on the white list for this server"
+
+/datum/config_entry/string/servertagline
+	config_entry_value = "We forgot to set the server's tagline in config.txt"
+
+/datum/config_entry/string/discord_link
+	config_entry_value = "We forgot to set the server's discord link in config.txt"
