@@ -83,6 +83,8 @@
 #define FEATURE_TAIL_NOCTURNE_COLORS "tail_noct_colors"
 #define FEATURE_FLUFF_NOCTURNE "fluff_noct"
 #define FEATURE_FLUFF_NOCTURNE_COLORS "fluff_noct_colors"
+#define FEATURE_WINGS_NOCTURNE "wings_noct"
+#define FEATURE_WINGS_NOCTURNE_COLORS "wings_noct_colors"
 
 #define FEATURE_BREASTS_NOCTURNE "breasts_noct"
 #define FEATURE_BREASTS_NOCTURNE_COLORS "breasts_noct_colors"

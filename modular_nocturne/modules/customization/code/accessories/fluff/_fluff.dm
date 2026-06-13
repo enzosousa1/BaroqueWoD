@@ -9,13 +9,25 @@
 	icon_state = "none"
 
 /datum/sprite_accessory/nocturne/fluff/bird
-	name = "Harpy Fluff"
+	name = "Harpy"
 	icon_state = "harpy"
 
 /datum/sprite_accessory/nocturne/fluff/bug
-	name = "Insect Fluff"
+	name = "Insect"
 	icon_state = "insect"
 
 /datum/sprite_accessory/nocturne/fluff/moth
-	name = "Moth Fluff"
+	name = "Moth"
 	icon_state = "moth"
+
+/datum/sprite_accessory/nocturne/fluff/mothalt
+	name = "Moth (Alt)"
+	icon_state = "mothalt"
+
+/datum/sprite_accessory/nocturne/fluff/mothdual
+	name = "Moth (Dual)"
+	icon_state = "mothdual"
+
+/datum/sprite_accessory/nocturne/fluff/thick
+	name = "Thick"
+	icon_state = "thick"

@@ -49,11 +49,11 @@
 	var/datum/universal_icon/final_icon = body.copy()
 
 	if (!isnull(sprite_accessory))
-		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_FRONT"))
-			var/datum/universal_icon/accessory_icon = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_FRONT", SOUTH)
+		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT"))
+			var/datum/universal_icon/accessory_icon = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT", SOUTH)
 			final_icon.blend_icon(accessory_icon, ICON_OVERLAY)
-		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_FRONT_2"))
-			var/datum/universal_icon/accessory_icon_2 = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_FRONT_2", SOUTH)
+		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT_2"))
+			var/datum/universal_icon/accessory_icon_2 = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT_2", SOUTH)
 			accessory_icon_2.blend_color(COLOR_RED, ICON_MULTIPLY)
 			final_icon.blend_icon(accessory_icon_2, ICON_OVERLAY)
 

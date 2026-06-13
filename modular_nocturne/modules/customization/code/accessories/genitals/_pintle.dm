@@ -158,3 +158,19 @@
 	name = "Hemi, Knotted - Large (Sheath)"
 	icon_state = "hemiknotsheath_large"
 */
+
+/datum/sprite_accessory/nocturne/pintle/barbknot_small
+	name = "Barbed, Knotted - Average"
+	icon_state = "barbknot_medium"
+
+/datum/sprite_accessory/nocturne/pintle/barbknotsheath_small
+	name = "Barbed, Knotted - Average (Sheath)"
+	icon_state = "barbknotsheath_medium"
+
+/datum/sprite_accessory/nocturne/pintle/barbknot_medium
+	name = "Barbed, Knotted - Large"
+	icon_state = "barbknot_large"
+
+/datum/sprite_accessory/nocturne/pintle/barbknotsheath_medium
+	name = "Barbed, Knotted - Large (Sheath)"
+	icon_state = "barbknotsheath_large"

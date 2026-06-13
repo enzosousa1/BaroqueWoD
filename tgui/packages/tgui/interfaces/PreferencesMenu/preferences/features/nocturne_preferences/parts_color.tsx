@@ -164,3 +164,19 @@ export const vagina_nocturne_color: Feature<string[]> = {
   name: 'Vagina Color',
   component: FeatureTriColorInput,
 };
+
+// wings
+
+export const has_wings_nocturne: FeatureToggle = {
+  name: 'Add Part: Wings',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds wings to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const wings_nocturne_color: Feature<string[]> = {
+  name: 'Wings Color',
+  component: FeatureTriColorInput,
+};

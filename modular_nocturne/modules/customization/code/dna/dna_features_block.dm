@@ -27,3 +27,6 @@
 
 /datum/dna_block/feature/accessory/vagina_nocturne
 	feature_key = FEATURE_VAGINA_NOCTURNE
+
+/datum/dna_block/feature/accessory/wings_nocturne
+	feature_key = FEATURE_WINGS_NOCTURNE
