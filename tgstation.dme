@@ -8092,6 +8092,7 @@
 #include "modular_nocturne\modules\jobs\code\jobs\citizen\salon.dm"
 #include "modular_nocturne\modules\mapgen\code\biomes.dm"
 #include "modular_nocturne\modules\mapgen\code\jungle_generator.dm"
+#include "modular_nocturne\modules\retail\code\stores\xxx_store.dm"
 #include "modular_nocturne\modules\tagline\code\world.dm"
 #include "modular_nocturne\modules\title_screen\code\title_screen.dm"
 #include "modular_nocturne\modules\title_screen\code\title_screen_html.dm"

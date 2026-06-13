@@ -18,6 +18,23 @@
 	// Equivlenet to products list if you dont need to pass args. Will likely phase out the evil news in our type path definitions
 	var/list/product_types = list()
 
+	// NOCTURNE ADDITION START
+
+	/**
+	 * Equivalent to /tg/'s product_categories variable for their vending machines.
+	 * Only difference is that instead of being able to specify the amount of stock,
+	 * you can specify the price of an item.
+	 *
+	 * Form should be list(
+	 * 	"name" = "Category Name",
+	 * 	"icon" = "UI Icon (Font Awesome or tgfont)",
+	 * 	"products" = list(/type/path = price, ...),
+	 * )
+	 **/
+	var/list/product_categories = null
+
+	// NOCTURNE ADDITION END
+
 /obj/structure/retail/Initialize()
 	. = ..()
 	if(owner_needed == TRUE)
@@ -49,6 +66,17 @@
 		ui_interact(user)
 
 /obj/structure/retail/proc/build_inventory()
+
+	// NOCTURNE ADDITION START - PRODUCT CATEGORIES
+	for (var/list/category as anything in product_categories)
+		for (var/product_key in category["products"])
+			var/datum/data/vending_product/new_record = new /datum/data/vending_product(path = product_key)
+			new_record.price = category["products"][product_key]
+			new_record.category = category
+
+			products_list += new_record
+	// NOCTURNE ADDITION END - PRODUCT CATEGORIES
+
 	for(var/product_path in product_types)
 		products_list += new /datum/data/vending_product(path = product_path)
 	for(var/datum/data/vending_product/product in products_list)
@@ -79,6 +107,16 @@
 
 /obj/structure/retail/ui_static_data(mob/user)
 	. = list()
+
+	// NOCTURNE ADDITION START - PRODUCT CATEGORIES
+	var/static/list/default_category = list(
+		"name" = "Products",
+		"icon" = "cart-shopping",
+	)
+
+	var/list/categories = list()
+	// NOCTURNE ADDITION END
+
 	.["product_records"] = list()
 	for(var/datum/data/vending_product/product in products_list)
 		var/list/product_data = list(
@@ -99,7 +137,19 @@
 		)
 			product_data["icon"] = initial(printed.icon)
 			product_data["icon_state"] = initial(printed.icon_state)
+
+		// NOCTURNE ADDITION BEGIN - PRODUCT CATEGORIES
+		var/list/category = product.category || default_category
+		if (!isnull(category))
+			if (!(category["name"] in categories))
+				categories[category["name"]] = list("icon" = category["icon"])
+
+			product_data["category"] = category["name"]
+		// NOCTURNE ADDITION END
+
 	.["money_symbol"] = MONEY_SYMBOL
+
+	.["categories"] = categories // NOCTURNE ADDITION - PRODUCT CATEGORIES
 
 /obj/structure/retail/ui_data(mob/user)
 	. = list()
