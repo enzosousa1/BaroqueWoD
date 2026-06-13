@@ -75,3 +75,15 @@
 	human.received_ownership_keys += ownership_type
 	qdel(src)
 
+// NOCTURNE ADDITION START
+/obj/structure/vampdoor/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+	. = ..()
+	if(isnull(held_item) && ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!(LOCK_OWNERSHIP_APARTMENT in human.received_ownership_keys))
+			var/datum/component/door_ownership/claimable = GetComponent(/datum/component/door_ownership)
+			if(claimable)
+				context[SCREENTIP_CONTEXT_ALT_LMB] = "Claim Apartment"
+
+		return CONTEXTUAL_SCREENTIP_SET
+// NOCTURNE ADDITION END
