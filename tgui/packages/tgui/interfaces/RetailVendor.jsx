@@ -63,12 +63,12 @@ export const RetailVendor = (props) => {
 
   return (
     <Window width={431} height={635} resizable>
-      <Window.Content scrollable>
+      <Window.Content> {/* NOCTURNE EDIT - ORIGINAL: <Window.Content scrollable> */}
         <Stack fill vertical>
           <Stack.Item>
             <UserDetails />
           </Stack.Item>
-          <Section title="Products">
+          <Section title="Products" scrollable fill> {/* NOCTURNE EDIT - ORIGINAL: <Section title="Products"> */}
             <Table>
               {/* NOCTURNE REMOVAL START
               {inventory.map((product) => {
@@ -124,7 +124,7 @@ export const RetailVendor = (props) => {
                 })
                 .map((product) => {
                   return (
-                    <Table.Row key={product.name}>
+                    <Table.Row key={product.ref}>
                       <Table.Cell
                         style={{
                           'width': '100%',

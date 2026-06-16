@@ -17,6 +17,17 @@
 /obj/structure/platform/lowwall/brick/window/reinforced,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"ag" = (
+/obj/structure/table/wood,
+/obj/item/melee/vamp/handsickle,
+/obj/item/reagent_containers/cup/mortar{
+	pixel_y = 15
+	},
+/obj/item/pestle{
+	pixel_y = 20
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "ah" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#6d6d6d"
@@ -40,6 +51,11 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"ak" = (
+/obj/structure/table/wood,
+/obj/item/bong,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "al" = (
 /obj/structure/chair/sofa/corp/corner,
 /obj/effect/landmark/start/darkpack/anarch/sweeper,
@@ -194,6 +210,15 @@
 	},
 /turf/open/floor/carpet/red,
 /area/vtm/palm_desert/interior/millennium)
+"aE" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "aH" = (
 /obj/structure/chair/sofa/city_bench/metal/right/black{
 	dir = 1
@@ -346,6 +371,18 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"bt" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
+"bv" = (
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "bw" = (
 /obj/structure/chair/office/darkpack/green,
 /mob/living/carbon/human/npc/shop,
@@ -356,6 +393,13 @@
 /obj/structure/bed,
 /obj/effect/spawner/random/bedsheet,
 /turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
+"bz" = (
+/obj/structure/rack/wide/metal_shelf{
+	dir = 4
+	},
+/obj/machinery/light/directional/west,
+/turf/open/floor/city/factory,
 /area/vtm/palm_desert)
 "bB" = (
 /obj/structure/table/countertop/red,
@@ -439,6 +483,9 @@
 /obj/effect/turf_decal/siding/grey{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/access/chantry,
+/obj/effect/mapping_helpers/door/lock_difficulty/seven,
 /turf/open/floor/city/plating,
 /area/vtm/interior/library)
 "bQ" = (
@@ -464,12 +511,35 @@
 	},
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"bU" = (
+/obj/structure/chair/sofa/city_bench/metal/middle{
+	dir = 4
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "bV" = (
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
 "bX" = (
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/ghetto)
+"bZ" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/suit/costume/wellworn_shirt/graphic/ian,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
+"ca" = (
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "cb" = (
 /obj/structure/platform/lowwall/painted,
 /obj/structure/table/wood,
@@ -479,6 +549,10 @@
 	},
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"cc" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "cd" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/concrete,
@@ -486,6 +560,34 @@
 "cf" = (
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"cg" = (
+/obj/structure/filingcabinet{
+	pixel_x = -6
+	},
+/obj/structure/filingcabinet/security{
+	pixel_x = 7
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
+"ch" = (
+/obj/structure/table/wood,
+/obj/item/kirbyplants/organic/plant17{
+	pixel_y = 12;
+	pixel_x = -1
+	},
+/obj/item/kirbyplants/darkpack/plant3{
+	pixel_y = 15;
+	pixel_x = 11
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"ci" = (
+/obj/effect/decal/cleanable/trash,
+/obj/structure/sink/directional/west,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "cj" = (
 /obj/structure/vampdoor/woodglass,
 /obj/effect/mapping_helpers/door/access/bank,
@@ -520,6 +622,12 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"cn" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "co" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -551,6 +659,18 @@
 /obj/effect/spawner/random/occult/artifact,
 /turf/open/misc/dirt,
 /area/vtm/palm_desert/outside/office)
+"cv" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_y = 6
+	},
+/obj/item/pen{
+	pixel_y = 7
+	},
+/obj/machinery/light/directional/north,
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "cx" = (
 /obj/structure/table/countertop/red,
 /obj/machinery/microwave{
@@ -566,6 +686,10 @@
 /obj/effect/mapping_helpers/door/unlock,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/giovanni)
+"cz" = (
+/obj/effect/turf_decal/asphaltline/alt,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "cA" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
@@ -582,6 +706,15 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"cD" = (
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 15;
+	name = "bars"
+	},
+/obj/structure/platform/lowwall/market/window,
+/turf/open/floor/plating/rough,
+/area/vtm/palm_desert)
 "cE" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 10
@@ -602,6 +735,15 @@
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"cL" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "cM" = (
 /obj/structure/vampdoor/glass,
 /obj/effect/turf_decal/siding/white,
@@ -673,6 +815,10 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"dc" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "de" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#e8bdff"
@@ -724,6 +870,30 @@
 	},
 /turf/open/floor/city/toilet,
 /area/vtm/interior/hotel)
+"du" = (
+/obj/structure/chair/darkpack/green{
+	dir = 1
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"dv" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/dark{
+	dir = 8
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
+"dx" = (
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 8;
+	name = "bars"
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "dy" = (
 /obj/item/clothing/under/vampire/guard,
 /obj/item/clothing/under/vampire/guard,
@@ -818,6 +988,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"dR" = (
+/obj/effect/decal/cleanable/trash{
+	icon_state = "trash7"
+	},
+/obj/structure/bed/maint,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "dS" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table,
@@ -835,6 +1014,12 @@
 /area/vtm/palm_desert)
 "dU" = (
 /turf/closed/wall/vampwall/brick,
+/area/vtm/palm_desert)
+"dV" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
 /area/vtm/palm_desert)
 "dW" = (
 /obj/effect/decal/wallpaper/paper/green,
@@ -858,11 +1043,22 @@
 "eb" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert)
+"ec" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/siding/white{
+	color = "#636363";
+	dir = 8
+	},
+/turf/open/floor/city/plating_mono,
+/area/vtm/palm_desert)
 "ee" = (
 /obj/machinery/light/directional/north,
 /obj/structure/reagent_dispensers/cleaningfluid,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/hotel)
+"ef" = (
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "eg" = (
 /obj/structure/vampdoor,
 /obj/effect/mapping_helpers/door/access/bank,
@@ -935,6 +1131,15 @@
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/carpet/red,
 /area/vtm/palm_desert/interior/millennium)
+"eu" = (
+/obj/structure/filingcabinet{
+	pixel_x = -6
+	},
+/obj/structure/filingcabinet{
+	pixel_x = 7
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "ew" = (
 /obj/structure/sign/city/hotel/directional/east,
 /turf/open/openspace,
@@ -992,6 +1197,8 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/door/autoname,
+/obj/effect/mapping_helpers/door/unlock,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/xxx_store)
 "eM" = (
@@ -1094,6 +1301,10 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/six,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"fg" = (
+/obj/structure/glowshroom/single,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "fi" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -1129,20 +1340,27 @@
 /obj/machinery/light/prince/directional/north,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/hotel)
+"fq" = (
+/obj/structure/stone_tile/surrounding_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "fr" = (
 /obj/structure/guncase,
 /obj/item/gun/ballistic/automatic/darkpack/ak74,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
 "fs" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/effect/turf_decal/siding/white,
+/obj/structure/vampdoor/prison,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/nine,
+/obj/effect/mapping_helpers/door/access/police,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
 	},
-/obj/structure/vampfence{
-	dir = 8
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert)
 "ft" = (
 /obj/structure/table/countertop/red,
 /obj/item/food/popcorn,
@@ -1191,6 +1409,21 @@
 /obj/structure/platform/lowwall/rich/window,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"fE" = (
+/obj/structure/stone_tile/surrounding/cracked,
+/obj/effect/bump_teleporter{
+	id = 120;
+	id_target = 210
+	},
+/obj/structure/table/wood{
+	density = 0
+	},
+/obj/structure/fluff/tv{
+	icon_state = "tv_nature";
+	pixel_y = 12
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "fF" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/darkpack/purplegold,
@@ -1215,6 +1448,10 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/giovanni)
+"fK" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "fL" = (
 /obj/structure/coclock,
 /obj/effect/decal/cleanable/litter,
@@ -1222,12 +1459,12 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/laundromat)
 "fM" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/litter,
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/palm_desert/outside/commercial)
+/turf/closed/wall/vampwall/market,
+/area/vtm/palm_desert)
+"fO" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "fP" = (
 /obj/structure/vampdoor/woodglass,
 /obj/effect/turf_decal/siding/wood/dark,
@@ -1266,6 +1503,27 @@
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"fT" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/two,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
+"fY" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 4
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"fZ" = (
+/obj/item/trash/vampirebar,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "ga" = (
 /obj/effect/turf_decal/bordur{
 	dir = 5
@@ -1294,6 +1552,10 @@
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"gh" = (
+/obj/structure/chair/wood/darkpack,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "gi" = (
 /obj/effect/turf_decal/siding/white/inner_corner{
 	dir = 1
@@ -1320,6 +1582,10 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/laundromat)
+"gn" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "go" = (
 /obj/structure/table/wood,
 /obj/vampire_computer,
@@ -1523,6 +1789,12 @@
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"hg" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "hh" = (
 /obj/effect/decal/cleanable/litter,
 /obj/item/reagent_containers/cup/glass/bottle/beer/vampire,
@@ -1598,6 +1870,13 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
+"hD" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "hH" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/documents/nanotrasen{
@@ -1620,6 +1899,13 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"hJ" = (
+/mob/living/carbon/human/npc/police/static,
+/obj/structure/chair/office/darkpack/blue{
+	dir = 4
+	},
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "hL" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/west,
@@ -1702,6 +1988,12 @@
 /obj/effect/landmark/start/darkpack/farmer,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"ii" = (
+/obj/structure/vampdoor/glass{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "ij" = (
 /obj/item/kirbyplants/random,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1747,6 +2039,11 @@
 /obj/structure/bookcase/random/adult,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"iy" = (
+/obj/structure/kitchenspike,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "iz" = (
 /obj/machinery/light/cold/directional/north,
 /obj/structure/rack/food{
@@ -1829,6 +2126,15 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"iV" = (
+/obj/structure/table/wood,
+/obj/item/food/meat/slab,
+/obj/item/food/meat/slab{
+	pixel_y = 8;
+	pixel_x = 6
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "iW" = (
 /obj/machinery/light/small/directional/west,
 /obj/effect/decal/fakelattice{
@@ -1844,6 +2150,12 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"iZ" = (
+/obj/structure/bed/maint{
+	pixel_y = 2
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "ja" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/granite/black,
@@ -1860,6 +2172,18 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
+"jd" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 1
+	},
+/obj/structure/vampdoor/prison,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/nine,
+/obj/effect/mapping_helpers/door/access/police,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "je" = (
 /obj/structure/railing{
 	dir = 5
@@ -1873,6 +2197,32 @@
 /obj/machinery/oven,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
+"jh" = (
+/obj/structure/table,
+/obj/item/melee/vamp/tire{
+	pixel_x = 7;
+	pixel_y = 3
+	},
+/obj/item/melee/vamp/tire,
+/obj/item/melee/vamp/tire{
+	pixel_x = 7
+	},
+/obj/item/melee/vamp/tire{
+	pixel_y = 5;
+	pixel_x = -2
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
+"ji" = (
+/obj/effect/landmark/start/darkpack/law_enforcement/officer,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"jj" = (
+/obj/item/food/meat/slab,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "jl" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/tv{
@@ -1880,6 +2230,10 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/ghetto)
+"jn" = (
+/obj/structure/table,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "jo" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/toilet,
@@ -1903,6 +2257,9 @@
 	},
 /turf/open/genturf,
 /area/vtm/planetgeneration/desert)
+"jv" = (
+/turf/open/misc/dirt,
+/area/vtm/interior/caves)
 "jw" = (
 /obj/structure/chair/comfy/darkpack/dark{
 	dir = 1
@@ -1916,6 +2273,10 @@
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"jz" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "jA" = (
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/city/circled,
@@ -1925,6 +2286,15 @@
 /obj/effect/landmark/start/darkpack/chantry/archivist,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"jC" = (
+/obj/structure/platform/lowwall/market/window,
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 15;
+	name = "bars"
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "jD" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/city/plating,
@@ -1935,6 +2305,9 @@
 	},
 /turf/open/floor/city/toilet,
 /area/vtm/interior/ghetto)
+"jG" = (
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm/palm_desert)
 "jH" = (
 /obj/structure/hedge,
 /obj/effect/turf_decal/siding/grey/inner_corner{
@@ -1943,6 +2316,14 @@
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"jJ" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "jK" = (
 /obj/machinery/light/floor,
 /turf/open/floor/plating/concrete,
@@ -1964,10 +2345,20 @@
 /obj/effect/turf_decal/darkpack/dirt/corner,
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"jO" = (
+/mob/living/basic/pet/dog/corgi{
+	name = "Lupus Wolfkin";
+	desc = "A timber wolf."
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "jP" = (
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/carpet/red,
 /area/vtm/palm_desert/interior/millennium)
+"jR" = (
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "jS" = (
 /obj/structure/hedge,
 /obj/effect/turf_decal/siding/grey/inner_corner{
@@ -2004,6 +2395,21 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"jZ" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_y = 6
+	},
+/obj/item/pen{
+	pixel_y = 7
+	},
+/obj/item/flashlight/lamp{
+	pixel_y = 13;
+	pixel_x = -11
+	},
+/obj/structure/platform/lowwall/market,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "ka" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/plastitanium,
@@ -2012,16 +2418,19 @@
 /turf/closed/wall/vampwall/junk,
 /area/vtm/interior)
 "kc" = (
-/obj/structure/chair/office/darkpack/red{
-	dir = 8
+/obj/effect/turf_decal/bordur{
+	dir = 4
 	},
-/obj/effect/landmark/start/darkpack/chantry/archivist,
-/turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/interior/library)
+/turf/open/genturf,
+/area/vtm/planetgeneration/desert)
 "ke" = (
 /obj/effect/decal/wallpaper/paper/stripe,
 /turf/closed/wall/vampwall/junk,
 /area/vtm/interior/ghetto)
+"ki" = (
+/obj/structure/stairs/east,
+/turf/open/floor/plating,
+/area/vtm/interior/caves)
 "kk" = (
 /obj/machinery/washing_machine,
 /obj/item/clothing/suit/vampire/dutch,
@@ -2114,6 +2523,12 @@
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/anarch)
+"kC" = (
+/obj/structure/chair/sofa/city_bench/metal/left{
+	dir = 8
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "kF" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -2150,6 +2565,12 @@
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/library)
+"kK" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "kL" = (
 /obj/darkpack_car/rand{
 	dir = 4
@@ -2160,6 +2581,21 @@
 /obj/effect/decal/wallpaper/lightpadded,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/ghetto)
+"kN" = (
+/obj/structure/curtain/cloth,
+/obj/effect/turf_decal/stock{
+	dir = 8;
+	pixel_x = 10;
+	pixel_y = -1
+	},
+/obj/effect/turf_decal/stock{
+	dir = 4;
+	pixel_x = -10
+	},
+/obj/effect/turf_decal/siding/white,
+/obj/machinery/shower/directional/south,
+/turf/open/floor/plating/rough,
+/area/vtm/palm_desert)
 "kO" = (
 /turf/closed/wall/vampwall/market,
 /area/vtm/interior/shop)
@@ -2200,6 +2636,12 @@
 /obj/underplate,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"kY" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "la" = (
 /obj/structure/railing{
 	dir = 8
@@ -2210,6 +2652,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/stairs,
 /area/vtm/palm_desert/outside/residential)
+"lb" = (
+/obj/structure/chair/sofa/city_bench/metal/middle{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "ld" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -2300,6 +2748,11 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/millennium)
+"lt" = (
+/obj/machinery/vending/snack,
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "lu" = (
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/wood/smooth/old,
@@ -2350,6 +2803,12 @@
 "lE" = (
 /turf/open/floor/carpet/darkpack/bluegold,
 /area/vtm/interior/theatre)
+"lG" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "lH" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/wood/smooth/old,
@@ -2361,6 +2820,19 @@
 	},
 /turf/open/floor/carpet/darkpack/purplegold,
 /area/vtm/interior/theatre)
+"lJ" = (
+/obj/structure/table,
+/obj/item/gun/ballistic/shotgun/vampire{
+	pixel_y = 4
+	},
+/obj/item/ammo_box/darkpack/c12g,
+/obj/item/paper/fluff{
+	default_raw_text = "I use the shotgun. You know why? Cause the shotgun doesnt miss, and unlike the shitty taser it stops a criminal in their tracks in two hits. Bang, bang, and theyre fucking done. I use four shots just to make damn sure because im not here to coddle a bunch of criminal scum sucking dirtbags. Im there to enforce Cali-fucking-fornian LAW. The shotgun is the superior law enforcement weapon because it stops crime. And it stops crime by reducing the number of criminals roaming the fucking streets.";
+	pixel_x = 9;
+	pixel_y = 10
+	},
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "lK" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/reagent_containers/blood/vitae,
@@ -2443,6 +2915,12 @@
 	},
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"lX" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 8
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "lZ" = (
 /obj/structure/sign/poster/city/pixies/directional/north,
 /turf/open/floor/plating/sidewalk/poor,
@@ -2502,6 +2980,21 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"mh" = (
+/obj/structure/table/wood,
+/obj/item/melee/vamp/handsickle,
+/obj/item/claymore/machete,
+/obj/item/claymore/machete{
+	pixel_y = 9;
+	pixel_w = 0;
+	pixel_x = -3
+	},
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/obj/structure/railing,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "mi" = (
 /obj/structure/bookcase/random/reference,
 /turf/open/floor/wood/smooth/old,
@@ -2628,6 +3121,14 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/giovanni)
+"mv" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/siding/white{
+	dir = 1;
+	color = "#636363"
+	},
+/turf/open/floor/city/plating_mono,
+/area/vtm/palm_desert)
 "mz" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -2691,12 +3192,32 @@
 /obj/item/ammo_box/magazine/darkpack556,
 /turf/open/floor/wood/ornate,
 /area/vtm/palm_desert/interior/millennium)
+"mH" = (
+/obj/structure/bookcase/random/lupine,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"mI" = (
+/obj/structure/chair/sofa/right/brown,
+/obj/structure/stone_tile/slab/cracked,
+/obj/effect/landmark/start/darkpack/forest_wolves/council,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "mK" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"mL" = (
+/obj/structure/bookcase/random/lupine,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
+"mM" = (
+/obj/effect/decal/kopatich,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "mO" = (
 /obj/effect/gibspawner/human,
 /turf/open/floor/city/factory,
@@ -2751,6 +3272,12 @@
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/city/plating,
 /area/vtm/interior/library)
+"nd" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "ne" = (
 /turf/open/floor/carpet/green,
 /area/vtm/interior)
@@ -2784,6 +3311,11 @@
 /obj/effect/landmark/start/darkpack/hecata/squadra,
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/giovanni)
+"nm" = (
+/obj/structure/stone_tile/slab,
+/obj/item/food/meat/rawcutlet/plain/human,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "nn" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/tv{
@@ -2913,6 +3445,12 @@
 /obj/structure/hedge,
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
+"nR" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "nS" = (
 /obj/item/kirbyplants/random/dead{
 	desc = "It doesn't look very healthy...";
@@ -3094,6 +3632,9 @@
 	},
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/salon)
+"oB" = (
+/turf/closed/wall/vampwall/rock,
+/area/vtm/interior/caves)
 "oD" = (
 /turf/open/genturf,
 /area/vtm/planetgeneration/desert)
@@ -3143,6 +3684,10 @@
 /obj/item/clothing/under/suit/checkered,
 /turf/open/floor/city/circled,
 /area/vtm/interior/laundromat)
+"oO" = (
+/obj/structure/hedge,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "oQ" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/vampire/burlesque,
@@ -3167,6 +3712,14 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/city/circled,
 /area/vtm/interior/laundromat)
+"oU" = (
+/obj/structure/table,
+/obj/structure/reagent_dispensers/wall/peppertank{
+	pixel_y = 5
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "oW" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/vampire/heels,
@@ -3252,6 +3805,12 @@
 /obj/structure/lamppost/sidewalk,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/palm_desert/outside/office)
+"pj" = (
+/obj/structure/table,
+/obj/machinery/computer/order_console/mining/restricted/police,
+/obj/structure/platform/lowwall/market,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "pk" = (
 /obj/effect/turf_decal/darkpack/dirt{
 	dir = 4
@@ -3325,6 +3884,10 @@
 "pG" = (
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/carpet/darkpack/redsilver,
+/area/vtm/palm_desert/interior/hotel)
+"pH" = (
+/obj/structure/hedge,
+/turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
 "pI" = (
 /obj/effect/turf_decal/siding/white/inner_corner{
@@ -3414,6 +3977,13 @@
 	},
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"qd" = (
+/obj/structure/vampdoor/prison,
+/obj/effect/mapping_helpers/door/access/park_ranger,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/mapping_helpers/door/lock,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "qe" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
@@ -3425,6 +3995,14 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"qi" = (
+/obj/structure/chair/darkpack/green{
+	dir = 4;
+	pixel_y = 9
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "ql" = (
 /obj/structure/curtain/bounty{
 	pixel_y = -27
@@ -3512,6 +4090,20 @@
 /obj/item/pushbroom,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/hotel)
+"qF" = (
+/obj/structure/table/wood,
+/obj/structure/stone_tile/slab/cracked,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"qI" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "qJ" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm/palm_desert/interior/restaurant)
@@ -3538,6 +4130,15 @@
 /obj/machinery/light/directional/east,
 /turf/open/water,
 /area/vtm/palm_desert/interior/millennium)
+"qU" = (
+/obj/structure/table/wood,
+/obj/item/stack/sheet/animalhide/generic,
+/obj/item/stack/sheet/animalhide{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "qV" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/lavendergrass/style_random,
@@ -3570,6 +4171,12 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"rd" = (
+/obj/structure/chair/sofa/city_bench/metal/right{
+	dir = 8
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "re" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/paper_bin{
@@ -3618,6 +4225,16 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/theatre)
+"rr" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
+"rt" = (
+/obj/machinery/vending/coffee,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "rv" = (
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /obj/structure/curtain/bounty{
@@ -3625,6 +4242,12 @@
 	},
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"rx" = (
+/obj/effect/turf_decal/crosswalk{
+	dir = 8
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/outside/industrial)
 "rz" = (
 /turf/open/floor/carpet/darkpack/purplegold,
 /area/vtm/interior/theatre)
@@ -3652,6 +4275,15 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/darkpack/bluegold,
 /area/vtm/interior/theatre)
+"rG" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/flora/rock/stalagmite,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "rJ" = (
 /turf/open/openspace,
 /area/vtm/palm_desert/interior/hotel)
@@ -3664,6 +4296,11 @@
 /obj/effect/turf_decal/crosswalk,
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/commercial)
+"rM" = (
+/obj/structure/vampdoor/reinf,
+/obj/effect/turf_decal/siding/wood/dark,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "rN" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/decal/fakelattice{
@@ -3712,6 +4349,31 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
+"rY" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/button/door{
+	id = 815;
+	name = "Police Parking Shutters Control";
+	pixel_y = 30
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"rZ" = (
+/obj/structure/table/wood,
+/obj/item/stack/sheet/animalhide/generic,
+/obj/item/stack/sheet/animalhide/generic,
+/obj/item/stack/sheet/animalhide{
+	pixel_y = 8;
+	anchored = 1
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
+"sa" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "sb" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/darkpack/blackgold,
@@ -3813,6 +4475,11 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"sv" = (
+/obj/machinery/vending/cola,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "sw" = (
 /obj/fake_platform/grey{
 	color = "#6d6d6d"
@@ -3879,6 +4546,16 @@
 	},
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/giovanni)
+"sJ" = (
+/obj/structure/bookcase/random/lupine,
+/turf/open/floor/plating,
+/area/vtm/interior/caves)
+"sK" = (
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "sL" = (
 /obj/structure/curtain/bounty{
 	pixel_y = 38
@@ -3914,6 +4591,12 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior)
+"sV" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "sW" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small/dim/directional/west,
@@ -3923,6 +4606,18 @@
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"sY" = (
+/obj/structure/chair/sofa/city_bench/metal/left{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"tb" = (
+/obj/structure/sink/directional/east,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "td" = (
 /obj/structure/curtain/bounty{
 	pixel_y = 15;
@@ -3930,6 +4625,23 @@
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/ghetto)
+"tg" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"th" = (
+/obj/effect/decal/cleanable/trash{
+	icon_state = "trash8"
+	},
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "tk" = (
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 4
@@ -3970,6 +4682,13 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"tr" = (
+/obj/structure/sink/directional/east,
+/mob/living/basic/mouse/vampire,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "ts" = (
 /obj/structure/vampfence/corner{
 	dir = 8
@@ -4011,6 +4730,12 @@
 /obj/structure/coclock,
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/giovanni)
+"tA" = (
+/obj/structure/glowshroom/single,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "tB" = (
 /obj/structure/chair/sofa/corp/corner{
 	color = "#CD5C5C"
@@ -4102,6 +4827,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"tO" = (
+/obj/structure/chair/darkpack/green,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "tP" = (
 /obj/structure/vampfence/corner/rich{
 	dir = 4;
@@ -4112,6 +4841,15 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"tR" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/wood/dark{
+	dir = 4
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "tS" = (
 /mob/living/basic/frog,
 /turf/open/water,
@@ -4204,6 +4942,21 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/gun_store)
+"us" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/stone_tile/block,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
+"ut" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "uw" = (
 /obj/structure/table/wood,
 /obj/machinery/fax/anarch,
@@ -4253,6 +5006,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"uK" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "uL" = (
 /obj/structure/platform/lowwall/rich,
 /obj/effect/decal/wallpaper/gold/low,
@@ -4266,6 +5023,11 @@
 /obj/effect/decal/graffiti,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"uP" = (
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "uQ" = (
 /obj/structure/vampfence/rich{
 	dir = 4;
@@ -4289,6 +5051,10 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"uV" = (
+/obj/machinery/vending/snack,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "uW" = (
 /obj/structure/table,
 /obj/item/clothing/suit/costume/hawaiian,
@@ -4328,6 +5094,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"vd" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "vf" = (
 /obj/structure/vampfence,
 /turf/open/genturf,
@@ -4504,6 +5274,13 @@
 /obj/vampire_computer,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"vW" = (
+/obj/structure/vampdoor/glass,
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "vX" = (
 /obj/structure/table/wood,
 /obj/item/pool_cue{
@@ -4535,6 +5312,15 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/palm_desert/interior/millennium)
+"wa" = (
+/turf/closed/wall/vampwall/wood,
+/area/vtm/interior/caves)
+"wb" = (
+/obj/structure/table/wood,
+/obj/item/knife/butcher,
+/obj/item/pen/charcoal,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "wd" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/wood,
@@ -4552,6 +5338,15 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/palm_desert/outside/office)
+"wg" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/siding/white{
+	color = "#636363";
+	dir = 8
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/city/plating_mono,
+/area/vtm/palm_desert)
 "wh" = (
 /obj/structure/railing,
 /turf/open/floor/wood/smooth/old,
@@ -4577,6 +5372,19 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/four,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert)
+"wm" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/iron/stairs,
+/area/vtm/palm_desert)
+"wn" = (
+/obj/structure/vampdoor/reinf,
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/ten,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "wp" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/vampstatue/angel{
@@ -4594,6 +5402,17 @@
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"ws" = (
+/obj/structure/table,
+/obj/item/reagent_containers/cup/glass/coffee/vampire/robust,
+/obj/item/flashlight/seclite,
+/obj/item/flashlight/seclite,
+/obj/item/flashlight/seclite,
+/obj/item/flashlight/seclite,
+/obj/item/flashlight/seclite,
+/obj/item/flashlight/seclite,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "wu" = (
 /obj/structure/chair/wood/darkpack,
 /turf/open/floor/wood/smooth/old,
@@ -4616,6 +5435,20 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior)
+"wE" = (
+/obj/structure/closet/cabinet,
+/obj/item/melee/baseball_bat/vamp,
+/obj/item/melee/baseball_bat/vamp,
+/obj/item/melee/baseball_bat/vamp,
+/obj/item/clothing/head/vampire/cowboy/armorless,
+/obj/item/clothing/head/vampire/cowboy/armorless,
+/obj/item/clothing/head/vampire/cowboy/armorless,
+/obj/item/clothing/head/cowboy,
+/obj/item/shovel/vamp,
+/obj/item/shovel/vamp,
+/obj/item/shovel/vamp,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "wF" = (
 /obj/structure/vampdoor/prison,
 /obj/effect/mapping_helpers/door/access/giovanni,
@@ -4647,20 +5480,51 @@
 /obj/effect/decal/wallpaper/paper/darkgreen,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/ghetto)
+"wP" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/mob/living/basic/pet/dog/corgi{
+	name = "Lupus Wolfkin";
+	desc = "A timber wolf."
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "wQ" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/carpet/darkpack/greengold,
 /area/vtm/interior/ghetto)
+"wR" = (
+/obj/structure/platform/lowwall/market/window,
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 15;
+	name = "bars"
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "wS" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/xxx_store)
+"wV" = (
+/obj/effect/turf_decal/stock{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/outside/residential)
 "wW" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"wZ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "xa" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
@@ -4704,6 +5568,16 @@
 /obj/structure/chair/comfy/darkpack/red,
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/theatre)
+"xm" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"xn" = (
+/obj/structure/chair/darkpack/green{
+	dir = 4
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "xo" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/bedsheet/any,
@@ -4799,6 +5673,20 @@
 /obj/structure/vampdoor,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/gun_store)
+"xR" = (
+/obj/structure/stone_tile/slab/cracked,
+/obj/item/food/grown/redbeet{
+	pixel_y = 10
+	},
+/obj/item/food/grown/parsnip{
+	pixel_x = 6
+	},
+/obj/item/food/grown/peas{
+	pixel_y = -7;
+	pixel_x = -3
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "xS" = (
 /turf/closed/indestructible/the_matrix,
 /area/vtm/palm_desert/outside/commercial)
@@ -4817,6 +5705,11 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"xV" = (
+/obj/structure/vampdoor/glass,
+/obj/effect/turf_decal/siding/wood/dark,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "xY" = (
 /obj/machinery/bookbinder,
 /turf/open/floor/city/plating,
@@ -4997,12 +5890,25 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"yK" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/siding/white{
+	color = "#636363"
+	},
+/turf/open/floor/city/plating_mono,
+/area/vtm/palm_desert)
 "yL" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/giovanni)
+"yN" = (
+/obj/darkpack_car/police{
+	dir = 2
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "yR" = (
 /obj/structure/filingcabinet{
 	pixel_x = 7
@@ -5019,6 +5925,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"yT" = (
+/obj/machinery/vending/cola,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "yU" = (
 /obj/structure/chair/plastic/darkpack{
 	dir = 1
@@ -5088,6 +5998,13 @@
 /obj/structure/closet/crate/bin,
 /turf/open/floor/city/circled,
 /area/vtm/interior/shop)
+"zn" = (
+/obj/structure/chair/darkpack/green{
+	dir = 4;
+	pixel_y = 9
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "zp" = (
 /obj/structure/roofstuff/vent_end{
 	dir = 8
@@ -5097,6 +6014,22 @@
 "zq" = (
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/theatre)
+"zr" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"zt" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 1;
+	name = "Seat of Shame"
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"zu" = (
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "zv" = (
 /obj/structure/railing,
 /obj/effect/decal/pallet,
@@ -5170,6 +6103,18 @@
 /obj/structure/stairs/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"zQ" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/obj/item/storage/fancy/cigarettes/cigpack_robust,
+/obj/item/lighter/greyscale,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "zS" = (
 /obj/structure/table/countertop/red,
 /obj/structure/sink/basin/directional/north{
@@ -5193,6 +6138,17 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"zW" = (
+/obj/effect/mapping_helpers/door/access/park_ranger,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/ten,
+/obj/structure/vampdoor/prison{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "zZ" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/effect/turf_decal/darkpack/dirt/corner,
@@ -5257,6 +6213,26 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/misc/dirt,
 /area/vtm/interior/ghetto)
+"Ak" = (
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
+"Al" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "Am" = (
 /obj/effect/turf_decal/siding/wood/dark,
 /obj/structure/vampdoor/woodglass,
@@ -5293,11 +6269,28 @@
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/carpet/darkpack/greengold,
 /area/vtm/interior/ghetto)
+"Av" = (
+/obj/effect/decal/cleanable/trash,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "Ay" = (
 /obj/structure/table,
 /obj/structure/platform/lowwall/market,
 /turf/open/floor/plating/rough,
 /area/vtm/interior/shop)
+"AA" = (
+/obj/machinery/door/poddoor/shutters{
+	damage_deflection = 60;
+	id = 815;
+	max_integrity = 300;
+	name = "Police Parking Shutter";
+	dir = 8
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "AB" = (
 /obj/structure/hedge,
 /turf/open/floor/carpet/darkpack/blackgold,
@@ -5351,6 +6344,16 @@
 	},
 /turf/open/floor/iron/stairs,
 /area/vtm/palm_desert/outside/residential)
+"AN" = (
+/obj/structure/chair/darkpack/green{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"AO" = (
+/obj/effect/turf_decal/asphaltline,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/outside/industrial)
 "AP" = (
 /obj/structure/chair/wood/darkpack/red,
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -5571,6 +6574,10 @@
 "BH" = (
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
+"BI" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "BJ" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#6d6d6d"
@@ -5654,6 +6661,10 @@
 /obj/machinery/light/small/red/directional/east,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"BZ" = (
+/obj/item/food/meat/slab,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Ca" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
@@ -5700,6 +6711,12 @@
 "Cq" = (
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/restaurant)
+"Cr" = (
+/obj/structure/flora/rock/stalagmite,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "Cs" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/city/plating_mono,
@@ -5708,6 +6725,11 @@
 /obj/effect/landmark/start/darkpack/salon,
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"Cv" = (
+/obj/machinery/light/directional/north,
+/obj/structure/table,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Cw" = (
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/restaurant)
@@ -5750,6 +6772,12 @@
 	},
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/giovanni)
+"CF" = (
+/obj/structure/bed/maint,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "CG" = (
 /obj/structure/railing{
 	dir = 6
@@ -5758,6 +6786,12 @@
 /obj/structure/flora/bush/flowers_yw/style_random,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"CH" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "CJ" = (
 /obj/machinery/light/floor,
 /turf/open/floor/city/gummaguts,
@@ -5794,6 +6828,10 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"CR" = (
+/obj/structure/stairs/east,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "CS" = (
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/residential)
@@ -5802,18 +6840,23 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
 "CU" = (
-/obj/effect/turf_decal/bordur{
-	dir = 8
+/obj/structure/vampdoor/wood{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm/palm_desert/outside/commercial)
+/obj/effect/mapping_helpers/door/access/park_ranger,
+/obj/effect/mapping_helpers/door/lock_difficulty/four,
+/obj/effect/mapping_helpers/door/lock,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "CZ" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"Da" = (
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Db" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -5888,6 +6931,12 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/salon)
+"Dx" = (
+/obj/structure/table,
+/obj/item/toner/large,
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Dy" = (
 /obj/structure/railing{
 	dir = 1
@@ -5944,6 +6993,13 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
+"DN" = (
+/obj/structure/werewolf_totem/wendigo{
+	pixel_y = 5
+	},
+/obj/structure/stone_tile/surrounding,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "DO" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
@@ -6071,6 +7127,10 @@
 /obj/machinery/vending/cola,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"Eo" = (
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Ep" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -6084,6 +7144,13 @@
 	},
 /turf/open/floor/iron/stairs,
 /area/vtm/palm_desert/outside/residential)
+"Er" = (
+/obj/structure/table/wood,
+/obj/item/vamp/keys/nps,
+/obj/item/vamp/keys/nps,
+/obj/item/vamp/keys/nps,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "Es" = (
 /obj/structure/vampdoor/glass{
 	dir = 4
@@ -6096,6 +7163,12 @@
 /obj/effect/mapping_helpers/door/unlock,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
+"Et" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "Eu" = (
 /obj/structure/vampdoor/woodglass,
 /obj/effect/turf_decal/siding/wood/dark,
@@ -6150,6 +7223,14 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/five,
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
+"EH" = (
+/obj/structure/chair/wood/darkpack{
+	dir = 1
+	},
+/obj/structure/stone_tile/slab,
+/obj/effect/landmark/start/darkpack/forest_wolves/council,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "EI" = (
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/brick,
@@ -6163,7 +7244,7 @@
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
 "EK" = (
-/turf/open/floor/plating/sidewalk/old,
+/turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
 "EN" = (
 /obj/effect/decal/wallpaper/grey,
@@ -6260,6 +7341,9 @@
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/door/autoname,
+/obj/effect/mapping_helpers/door/unlock,
+/obj/effect/mapping_helpers/door/access/chantry,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
 "Fj" = (
@@ -6368,6 +7452,11 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"FJ" = (
+/obj/structure/bonfire/prelit,
+/obj/structure/stone_tile/surrounding,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "FK" = (
 /obj/structure/flora/bush/sparsegrass/style_random{
 	pixel_x = -2
@@ -6412,6 +7501,20 @@
 /obj/effect/landmark/start/darkpack/anarch/sweeper,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"FW" = (
+/obj/structure/stone_tile/surrounding_tile,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"FX" = (
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 8;
+	name = "bars"
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "Ga" = (
 /obj/structure/table,
 /turf/open/floor/plating/concrete,
@@ -6426,6 +7529,16 @@
 	},
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/giovanni)
+"Ge" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/structure/railing,
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "Gi" = (
 /obj/structure/platform/lowwall/painted,
 /obj/structure/table/wood,
@@ -6449,12 +7562,29 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/hotel)
+"Gm" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "Gn" = (
 /obj/structure/chair/pew{
 	dir = 8
 	},
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
+"Go" = (
+/obj/structure/platform/lowwall/wood/window,
+/obj/structure/barricade/wooden/crude{
+	pixel_y = 15
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "Gq" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/rough/cave{
@@ -6472,6 +7602,18 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"Gt" = (
+/obj/structure/stone_tile/surrounding_tile/cracked,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"Gu" = (
+/obj/structure/closet,
+/obj/effect/turf_decal/siding/white{
+	dir = 5;
+	color = "#636363"
+	},
+/turf/open/floor/city/plating_mono,
+/area/vtm/palm_desert)
 "Gv" = (
 /obj/structure/closet/mini_fridge,
 /turf/open/floor/wood/smooth/old,
@@ -6489,6 +7631,12 @@
 	},
 /turf/open/floor/plating/roofwalk,
 /area/vtm/palm_desert)
+"Gz" = (
+/obj/structure/chair/darkpack/green{
+	dir = 1
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "GA" = (
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
@@ -6496,6 +7644,12 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"GD" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "GG" = (
 /obj/effect/decal/cleanable/gasoline,
 /turf/open/floor/wood/smooth/old,
@@ -6770,12 +7924,48 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"Hx" = (
+/obj/effect/turf_decal/stock,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/outside/residential)
+"Hy" = (
+/obj/structure/railing,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "HA" = (
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert)
+"HC" = (
+/obj/structure/toilet{
+	dir = 8;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
+"HE" = (
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "HG" = (
 /turf/open/openspace,
 /area/vtm/interior/library)
+"HH" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"HI" = (
+/obj/structure/hedge,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "HJ" = (
 /obj/darkpack_car/rand/anarch{
 	dir = 1
@@ -6861,6 +8051,17 @@
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"Id" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/obj/machinery/light/directional/east,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "Ie" = (
 /obj/structure/table/wood,
 /obj/item/hatchet/wooden{
@@ -6900,6 +8101,17 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"Ik" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/obj/machinery/light/directional/west,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "Il" = (
 /obj/structure/sink/directional/west,
 /obj/structure/toilet{
@@ -6938,6 +8150,10 @@
 /obj/effect/landmark/start/darkpack/chantry/archivist,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"Iu" = (
+/obj/structure/platform/lowwall/market/window,
+/turf/open/floor/plating/rough,
+/area/vtm/palm_desert)
 "Iv" = (
 /obj/structure/table/wood,
 /obj/structure/retail/library{
@@ -7013,6 +8229,12 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/gun_store)
+"II" = (
+/obj/structure/chair/sofa/city_bench/metal/right{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "IJ" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4;
@@ -7057,12 +8279,22 @@
 /obj/machinery/light/prince/directional/east,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
+"IN" = (
+/obj/structure/table/wood,
+/obj/structure/stone_tile/slab,
+/obj/item/pen/charcoal,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "IP" = (
 /obj/structure/rack/tall/store_shelf_metal{
 	dir = 4
 	},
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/xxx_store)
+"IR" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
+/turf/open/misc/dirt,
+/area/vtm/interior/caves)
 "IS" = (
 /obj/effect/decal/pallet,
 /obj/structure/closet/crate/wooden,
@@ -7136,6 +8368,13 @@
 	},
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"Jh" = (
+/obj/structure/chair/darkpack/green{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Ji" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#6d6d6d"
@@ -7161,6 +8400,10 @@
 	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"Jp" = (
+/obj/structure/bed/dogbed,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Jq" = (
 /obj/effect/decal/fakelattice{
 	density = 0
@@ -7169,6 +8412,15 @@
 /obj/machinery/hydroponics/simple/plastic,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/farm)
+"Jr" = (
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "Js" = (
 /obj/structure/table/wood/fancy/royalblack,
 /turf/open/floor/carpet/royalblack,
@@ -7179,6 +8431,13 @@
 	},
 /turf/closed/wall/vampwall/bar,
 /area/vtm/palm_desert/interior/anarch)
+"Ju" = (
+/obj/structure/table/wood,
+/obj/item/food/grown/tea/astra,
+/obj/item/food/grown/mushroom/libertycap,
+/obj/item/cigarette/pipe,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Jy" = (
 /obj/structure/hedge,
 /turf/open/floor/city/gummaguts,
@@ -7198,12 +8457,32 @@
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"JD" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/suit/hooded/mysticrobe,
+/obj/item/flashlight/lantern,
+/obj/item/clothing/suit/hooded/robes,
+/obj/item/clothing/suit/hooded/robes/darkred,
+/obj/item/clothing/suit/hooded/robes/yellow,
+/obj/item/clothing/suit/hooded/robes/green,
+/obj/item/clothing/suit/hooded/robes/black,
+/obj/item/clothing/suit/hooded/robes/blue,
+/obj/item/clothing/suit/hooded/robes/grey,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"JF" = (
+/obj/structure/stone_tile/slab,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "JG" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_br/style_random,
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"JH" = (
+/turf/open/misc/drought/smooth,
+/area/vtm/interior/caves)
 "JI" = (
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /turf/open/floor/wood/ornate,
@@ -7212,6 +8491,15 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/xxx_store)
+"JM" = (
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "JO" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/city/circled/large,
@@ -7275,6 +8563,12 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
+"JZ" = (
+/obj/structure/chair/sofa/city_bench/metal/right{
+	dir = 4
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "Ka" = (
 /obj/structure/filingcabinet{
 	pixel_x = -6
@@ -7367,6 +8661,12 @@
 /obj/effect/spawner/random/bedsheet,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"KD" = (
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/shotgun/vampire,
+/obj/item/ammo_box/darkpack/c12g/buck,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "KE" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
@@ -7383,6 +8683,12 @@
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"KK" = (
+/obj/structure/vampfence/corner{
+	dir = 4
+	},
+/turf/open/genturf,
+/area/vtm/planetgeneration/desert)
 "KN" = (
 /obj/structure/railing{
 	dir = 10
@@ -7441,6 +8747,12 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"KY" = (
+/obj/structure/platform/lowwall/market,
+/obj/structure/table,
+/obj/item/folder/blue,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "La" = (
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/roofwalk,
@@ -7499,6 +8811,18 @@
 	},
 /turf/open/floor/wood/ornate,
 /area/vtm/palm_desert/interior/millennium)
+"Lm" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 1
+	},
+/obj/structure/stone_tile/slab/cracked,
+/obj/effect/landmark/start/darkpack/forest_wolves/council,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"Ln" = (
+/obj/effect/turf_decal/crosswalk,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/outside/industrial)
 "Lo" = (
 /obj/structure/curtain/bounty{
 	pixel_y = -27
@@ -7527,10 +8851,22 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"Lx" = (
+/obj/structure/spirit_board,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Ly" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"Lz" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 4
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "LB" = (
 /obj/effect/decal/cleanable/trash,
 /obj/machinery/light/small/directional/north,
@@ -7720,6 +9056,17 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
+"Ms" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"Mt" = (
+/obj/structure/stone_tile/block,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Mu" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/bedsheet/any,
@@ -7785,6 +9132,9 @@
 /obj/item/knife/vamp,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"MG" = (
+/turf/open/openspace,
+/area/vtm/interior/caves)
 "MH" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/city/circled/large,
@@ -7818,6 +9168,9 @@
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/door/access/chantry,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/seven,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
 "MN" = (
@@ -7825,9 +9178,20 @@
 /obj/effect/landmark/start/darkpack/anarch/tapster,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
+"MO" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "MP" = (
 /turf/closed/wall/vampwall/junk,
 /area/vtm/interior/ghetto)
+"MQ" = (
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/automatic/darkpack/huntrifle,
+/obj/item/ammo_box/magazine/darkpack556/hunt,
+/obj/item/ammo_box/darkpack/c556,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "MR" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
@@ -7839,10 +9203,20 @@
 	color = "#c2c0bc"
 	},
 /area/vtm/palm_desert/outside/residential)
+"MU" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "MV" = (
 /obj/effect/decal/wallpaper/paper,
 /turf/closed/wall/vampwall/old,
 /area/vtm/interior/hotel)
+"MW" = (
+/obj/structure/chair/darkpack/green{
+	dir = 8
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Na" = (
 /mob/living/carbon/human/npc/shop,
 /turf/open/floor/city/circled/large,
@@ -7851,6 +9225,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/darkpack/greengold,
 /area/vtm/interior/ghetto)
+"Ne" = (
+/obj/structure/table/wood,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Ng" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
@@ -7870,6 +9249,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"No" = (
+/obj/effect/turf_decal/bordur,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "Np" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -7930,6 +9313,15 @@
 "Nz" = (
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/residential)
+"NA" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/mapping_helpers/door/access/police,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "NB" = (
 /obj/structure/fluff/tv{
 	icon_state = "tv_off";
@@ -7948,10 +9340,26 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"ND" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "NE" = (
 /obj/machinery/light/prince/directional/east,
 /turf/open/floor/carpet/darkpack/purplegold,
 /area/vtm/interior/theatre)
+"NF" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/item/food/meat/slab,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "NG" = (
 /obj/structure/fluff/tv{
 	icon_state = "tv_analog";
@@ -7960,6 +9368,15 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"NH" = (
+/obj/structure/table,
+/obj/item/newspaper,
+/obj/item/newspaper{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "NI" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/east,
@@ -8052,6 +9469,15 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/hotel)
+"Oe" = (
+/obj/structure/sign/flag/california/directional/north,
+/obj/machinery/photocopier/prebuilt,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
+"Of" = (
+/obj/effect/decal/rugs,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "Og" = (
 /obj/structure/hedge,
 /obj/effect/turf_decal/siding/grey{
@@ -8075,10 +9501,49 @@
 /obj/structure/bookcase/random/religion,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"Ok" = (
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/revolver/darkpack/snub,
+/obj/item/gun/ballistic/revolver/darkpack/snub{
+	pixel_y = 5;
+	pixel_x = 9
+	},
+/obj/item/ammo_box/darkpack/c9mm,
+/obj/item/ammo_box/darkpack/c9mm,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"Ol" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/handcuffs{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"On" = (
+/obj/structure/table/wood,
+/obj/item/clothing/suit/vampire/vest,
+/obj/item/clothing/suit/vampire/vest,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"Oo" = (
+/obj/structure/chair/sofa/right/brown{
+	dir = 1
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Oq" = (
 /obj/machinery/light/prince/directional/north,
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/giovanni)
+"Or" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/police,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/ten,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "Ot" = (
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk,
@@ -8171,6 +9636,16 @@
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"OJ" = (
+/obj/structure/vampfence/corner,
+/turf/open/genturf,
+/area/vtm/planetgeneration/desert)
+"OK" = (
+/obj/structure/table/wood,
+/obj/item/knife/vamp,
+/obj/item/pen/charcoal,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "OL" = (
 /obj/structure/guncase{
 	anchored = 1
@@ -8189,6 +9664,11 @@
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"ON" = (
+/obj/effect/turf_decal/asphaltline/alt,
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "OO" = (
 /obj/structure/table/wood,
 /obj/structure/desk_bell,
@@ -8226,6 +9706,10 @@
 "OV" = (
 /turf/closed/indestructible/the_matrix,
 /area/vtm/palm_desert/outside/residential)
+"OW" = (
+/obj/effect/decal/wallpaper,
+/turf/closed/wall/vampwall/market,
+/area/vtm/palm_desert)
 "OX" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/bowl{
@@ -8351,6 +9835,11 @@
 /obj/structure/guillotine,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/theatre)
+"Px" = (
+/obj/structure/table,
+/obj/item/storage/fancy/donut_box,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Py" = (
 /obj/effect/decal/cleanable/gasoline,
 /obj/structure/methlab,
@@ -8411,12 +9900,28 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"PL" = (
+/obj/structure/chair/office/darkpack/blue,
+/obj/effect/landmark/start/darkpack/law_enforcement/officer,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "PM" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/shaker,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"PP" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "PQ" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
@@ -8492,6 +9997,12 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/outside/residential)
+"Qf" = (
+/obj/structure/chair/sofa/city_bench/metal/left{
+	dir = 4
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "Qg" = (
 /obj/effect/decal/wallpaper/light,
 /turf/closed/wall/vampwall/brick,
@@ -8529,6 +10040,10 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/six,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
+"Qo" = (
+/obj/effect/decal/wallpaper/light,
+/turf/closed/wall/vampwall/market,
+/area/vtm/palm_desert)
 "Qp" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/bitcoin_miner{
@@ -8567,6 +10082,28 @@
 "Qv" = (
 /turf/open/openspace,
 /area/vtm/palm_desert/interior/farm)
+"Qw" = (
+/obj/structure/stone_tile/slab,
+/obj/item/food/grown/wheat{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/food/grown/rice{
+	pixel_x = -8
+	},
+/obj/item/food/grown/corn{
+	pixel_y = -4;
+	pixel_x = 4
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
+"Qx" = (
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/automatic/darkpack/huntrifle,
+/obj/item/ammo_box/magazine/darkpack556/hunt,
+/obj/item/ammo_box/darkpack/c556,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "QB" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/semi9mm{
@@ -8600,6 +10137,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"QG" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "QH" = (
 /obj/effect/decal/cleanable/ash{
 	pixel_x = -3;
@@ -8607,6 +10148,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"QI" = (
+/obj/structure/table/wood,
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "QJ" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 1
@@ -8624,9 +10169,27 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/ghetto)
+"QN" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 8
+	},
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
+"QO" = (
+/obj/structure/table,
+/obj/item/storage/fancy/donut_box,
+/obj/structure/coclock,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "QR" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/gun_store)
+"QS" = (
+/obj/structure/chair/sofa/left/brown,
+/obj/structure/stone_tile/slab,
+/obj/effect/landmark/start/darkpack/forest_wolves/council,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "QT" = (
 /obj/item/cigbutt,
 /obj/effect/decal/cleanable/ash{
@@ -8671,6 +10234,10 @@
 "Ra" = (
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
+"Rb" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Rc" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -8702,6 +10269,13 @@
 /obj/effect/decal/wallpaper/red,
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/theatre)
+"Rl" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/obj/structure/railing,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "Rm" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/red,
@@ -8751,6 +10325,10 @@
 	},
 /turf/open/floor/city/toilet,
 /area/vtm/interior/hotel)
+"Ry" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Rz" = (
 /obj/structure/stairs/west,
 /turf/open/floor/wood/smooth/old,
@@ -8776,6 +10354,15 @@
 	},
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"RD" = (
+/obj/structure/platform/lowwall/market/window,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
+"RF" = (
+/obj/structure/platform/lowwall/market,
+/obj/structure/table,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "RG" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 1
@@ -8799,10 +10386,24 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/xxx_store)
+"RM" = (
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 8
+	},
+/obj/effect/turf_decal/siding/white,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "RN" = (
 /obj/structure/lamppost/sidewalk,
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
+"RO" = (
+/obj/structure/stone_tile/surrounding_tile,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "RP" = (
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/palm_desert/outside/office)
@@ -8845,16 +10446,46 @@
 /obj/structure/sign/poster/city/bloodrayne/directional/north,
 /turf/open/floor/carpet/darkpack/bluegold,
 /area/vtm/interior/theatre)
+"RY" = (
+/obj/darkpack_car/police{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "RZ" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
+"Sa" = (
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "Sb" = (
 /obj/structure/vampfence/corner{
 	dir = 1
 	},
 /turf/open/genturf,
 /area/vtm/planetgeneration/desert)
+"Sh" = (
+/obj/structure/table,
+/obj/item/storage/box/evidence{
+	pixel_y = 9;
+	pixel_x = -5
+	},
+/obj/item/detective_scanner/darkpack{
+	pixel_x = 7
+	},
+/obj/item/detective_scanner/darkpack{
+	pixel_x = 7
+	},
+/obj/item/detective_scanner/darkpack{
+	pixel_x = 7
+	},
+/obj/item/detective_scanner/darkpack{
+	pixel_x = 7
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert)
 "Sj" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -8979,6 +10610,12 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"SO" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert)
 "SP" = (
 /obj/structure/vampfence/rich{
 	dir = 8
@@ -8996,6 +10633,10 @@
 /obj/vampire_computer,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"SU" = (
+/obj/structure/flora/rock/stalagmite,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "SV" = (
 /obj/structure/bed,
 /turf/open/floor/wood/smooth/old,
@@ -9067,6 +10708,11 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/anarch)
+"Tn" = (
+/obj/effect/turf_decal/asphaltline/alt,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert)
 "To" = (
 /obj/effect/decal/pallet,
 /obj/structure/bonfire/prelit/fire_barrel{
@@ -9101,6 +10747,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/ghetto)
+"Tu" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "Tv" = (
 /obj/structure/lamppost/sidewalk,
 /turf/open/floor/plating/sidewalk/rich,
@@ -9139,18 +10791,33 @@
 	dir = 1
 	},
 /obj/machinery/light/prince/directional/east,
+/obj/effect/landmark/start/darkpack/chantry/archivist,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
 "TC" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/hotel)
+"TD" = (
+/obj/structure/vampdoor/prison,
+/obj/effect/mapping_helpers/door/access/park_ranger,
+/obj/effect/mapping_helpers/door/lock_difficulty/four,
+/obj/effect/mapping_helpers/door/lock,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "TE" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/hotel)
+"TJ" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/structure/bed/dogbed,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/interior/caves)
 "TL" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/effect/turf_decal/darkpack/dirt{
@@ -9212,6 +10879,11 @@
 /obj/effect/landmark/start/darkpack/hecata/famiglia,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"TW" = (
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "TX" = (
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/plating/sidewalk/poor,
@@ -9247,7 +10919,9 @@
 /obj/structure/chair/comfy/darkpack/dark{
 	dir = 8
 	},
-/mob/living/carbon/human/npc/shop,
+/mob/living/carbon/human/npc/shop{
+	dir = 8
+	},
 /obj/effect/mapping_helpers/mob_buckler,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
@@ -9269,6 +10943,15 @@
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"Ui" = (
+/obj/structure/vampdoor/wood{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/park_ranger,
+/obj/effect/mapping_helpers/door/lock_difficulty/six,
+/obj/effect/mapping_helpers/door/lock,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Uk" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/fax/camarilla{
@@ -9341,6 +11024,10 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
+"Ux" = (
+/obj/structure/glowshroom/single,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Uy" = (
 /obj/machinery/light/prince/directional/east,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -9353,6 +11040,12 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert)
+"UD" = (
+/obj/structure/chair/sofa/left/brown{
+	dir = 1
+	},
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "UE" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/table/wood,
@@ -9422,6 +11115,12 @@
 /obj/vampire_computer,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"US" = (
+/obj/structure/chair/sofa/city_bench/metal/middle{
+	dir = 8
+	},
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "UV" = (
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/wood/smooth,
@@ -9467,6 +11166,13 @@
 /obj/item/clothing/suit/hooded/heisenberg,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/hotel)
+"Vh" = (
+/obj/structure/bonfire/prelit{
+	pixel_y = 7
+	},
+/obj/structure/stone_tile/surrounding,
+/turf/open/floor/plating/rough/cave,
+/area/vtm/interior/caves)
 "Vi" = (
 /obj/structure/railing/corner{
 	dir = 4
@@ -9685,6 +11391,10 @@
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/hotel)
+"VZ" = (
+/obj/machinery/logging_machine,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Wb" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/tv{
@@ -9692,9 +11402,27 @@
 	},
 /turf/open/floor/carpet/darkpack/greengold,
 /area/vtm/interior/ghetto)
+"Wd" = (
+/obj/structure/closet,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/under/vampire/police,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/shoes/vampire/jackboots,
+/obj/item/clothing/head/vampire/police,
+/obj/item/clothing/head/vampire/police,
+/obj/item/storage/fancy/donut_box,
+/turf/open/floor/city/toilet,
+/area/vtm/palm_desert)
 "We" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm/palm_desert/interior/gun_store)
+"Wf" = (
+/obj/structure/table,
+/obj/item/taperecorder,
+/obj/item/tape,
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "Wg" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_br/style_random,
@@ -9782,6 +11510,11 @@
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/old,
 /area/vtm/interior/hotel)
+"Wv" = (
+/turf/open/floor/iron/stairs{
+	dir = 4
+	},
+/area/vtm/palm_desert)
 "Ww" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 8
@@ -9924,6 +11657,10 @@
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/laundromat)
+"Xi" = (
+/obj/effect/turf_decal/bordur/corner,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "Xj" = (
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/city/gummaguts,
@@ -9946,8 +11683,15 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/hedge,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"Xr" = (
+/obj/effect/turf_decal/bordur/corner{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/industrial)
 "Xs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
@@ -10021,6 +11765,14 @@
 	dir = 1
 	},
 /area/vtm/palm_desert/outside/commercial)
+"XK" = (
+/obj/structure/chair/darkpack/green{
+	dir = 8
+	},
+/obj/effect/landmark/start/darkpack/law_enforcement/officer,
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "XL" = (
 /obj/structure/chair/pew{
 	dir = 4
@@ -10057,6 +11809,19 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"XQ" = (
+/obj/structure/filingcabinet{
+	pixel_x = 7
+	},
+/obj/item/kirbyplants/darkpack/plant3{
+	pixel_x = 6;
+	pixel_y = 20
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -6
+	},
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert)
 "XR" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/rough,
@@ -10157,6 +11922,12 @@
 /obj/structure/hedge,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"Yr" = (
+/obj/structure/chair/plastic/darkpack{
+	dir = 8
+	},
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "Ys" = (
 /obj/structure/vampdoor/wood,
 /obj/effect/turf_decal/siding/dark{
@@ -10262,10 +12033,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
+"YW" = (
+/turf/open/floor/plating/rough,
+/area/vtm/interior/caves)
 "Zb" = (
 /obj/structure/sign/poster/city/tiamat/directional/north,
 /turf/open/floor/carpet/darkpack/bluegold,
 /area/vtm/interior/theatre)
+"Zc" = (
+/obj/structure/sink/directional/west,
+/turf/open/floor/plating/concrete{
+	color = "#bfbfbf"
+	},
+/area/vtm/palm_desert)
 "Ze" = (
 /obj/structure/curtain/bounty{
 	pixel_y = -27
@@ -10325,6 +12105,10 @@
 /obj/structure/closet/secure_closet/freezer/fridge/all_access,
 /turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/restaurant)
+"Zt" = (
+/obj/structure/stone_tile/cracked,
+/turf/open/floor/plating/stone,
+/area/vtm/interior/caves)
 "Zv" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
@@ -10601,30 +12385,30 @@ DL
 "}
 (2,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -10753,30 +12537,30 @@ DL
 "}
 (3,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+oB
+oB
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -10905,30 +12689,30 @@ DL
 "}
 (4,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+oB
+Qx
+KD
+mh
+Vh
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11057,30 +12841,30 @@ DL
 "}
 (5,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+oB
+jR
+jR
+fq
+PP
+Ok
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11209,30 +12993,30 @@ DL
 "}
 (6,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+oB
+oB
+oB
+oB
+uP
+Da
+jR
+jR
+On
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11361,30 +13145,30 @@ DL
 "}
 (7,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+oB
+Cr
+uP
+oB
+zW
+oB
+oB
+MQ
+oB
+oB
+mL
+mL
+oB
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11513,30 +13297,30 @@ DL
 "}
 (8,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+ND
+bt
+Da
+Da
+jR
+jR
+oB
+oB
+oB
+mH
+Da
+Da
+jR
+Da
+IR
+Da
+oB
+oB
+oB
+oB
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11665,30 +13449,30 @@ DL
 "}
 (9,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+FJ
+Mt
+jR
+YW
+YW
+Da
+uP
+oB
+oB
+mH
+Da
+jR
+ut
+xR
+HE
+jv
+oB
+Cr
+uP
+oB
+nV
+nV
+nV
 kw
 kw
 kw
@@ -11817,30 +13601,30 @@ DL
 "}
 (10,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+Jr
+Gt
+YW
+jR
+Da
+Da
+tA
+oB
+oB
+mL
+jR
+YW
+JF
+DN
+nm
+uP
+sJ
+Da
+Da
+oB
+oB
+nV
+nV
 kw
 kw
 kw
@@ -11969,30 +13753,30 @@ DL
 "}
 (11,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+Da
+Da
+YW
+Ux
+uP
+jR
+Da
+FX
+Da
+Da
+jR
+YW
+CH
+Qw
+FW
+Da
+uP
+jR
+ch
+UD
+oB
+nV
+nV
 kw
 kw
 kw
@@ -12121,30 +13905,30 @@ DL
 "}
 (12,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+YW
+Hy
+ki
+oB
+uP
+Da
+jR
+qd
+YW
+mM
+jR
+jR
+jv
+jv
+jJ
+aE
+sV
+YW
+Er
+Oo
+oB
+nV
+nV
 kw
 kw
 kw
@@ -12273,30 +14057,30 @@ DL
 "}
 (13,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+Da
+Da
+oB
+oB
+Cr
+uP
+Da
+FX
+uP
+Da
+Da
+Da
+Da
+Da
+Rl
+FJ
+Mt
+uP
+hD
+oB
+oB
+nV
+nV
 kw
 kw
 kw
@@ -12425,30 +14209,30 @@ DL
 "}
 (14,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+oB
+oB
+Cr
+oB
+oB
+oB
+CU
+oB
+oB
+oB
+oB
+tA
+uP
+oB
+oB
+oB
+oB
+oB
+oB
+oB
+oB
+nV
+nV
+nV
 kw
 kw
 kw
@@ -12577,30 +14361,30 @@ DL
 "}
 (15,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+oB
+oB
+oB
+oB
+Da
+jR
+Da
+uP
+uP
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -12729,30 +14513,30 @@ DL
 "}
 (16,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+oB
+uP
+Da
+fY
+zr
+Da
+SU
+oB
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -12881,30 +14665,30 @@ DL
 "}
 (17,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+oB
+oB
+uP
+gh
+QI
+MO
+zt
+Da
+dx
+Ge
+FJ
+us
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13033,30 +14817,30 @@ DL
 "}
 (18,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+oB
+wE
+Da
+Da
+lX
+Yr
+jR
+jR
+TD
+hg
+tg
+RO
+TJ
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13185,30 +14969,30 @@ DL
 "}
 (19,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+oB
+oB
+Ol
+jJ
+aE
+sV
+jR
+uP
+FX
+BZ
+sa
+jR
+jj
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13337,30 +15121,30 @@ DL
 "}
 (20,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+oB
+oB
+Rl
+FJ
+Mt
+Cr
+oB
+oB
+oB
+Jp
+NF
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13489,30 +15273,30 @@ DL
 "}
 (21,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+nV
+oB
+oB
+oB
+oB
+oB
+oB
+nV
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13641,30 +15425,30 @@ DL
 "}
 (22,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13793,30 +15577,30 @@ DL
 "}
 (23,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -13945,30 +15729,30 @@ DL
 "}
 (24,1,1) = {"
 DL
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
-kw
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
 kw
 kw
 kw
@@ -33402,76 +35186,76 @@ DL
 "}
 (2,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+FU
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
 CB
 CB
 CB
@@ -33554,76 +35338,76 @@ DL
 "}
 (3,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+oD
+oD
+oD
+oD
+OJ
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+FU
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
+Eg
 CB
 Eg
 CB
@@ -33706,76 +35490,76 @@ DL
 "}
 (4,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+oB
+oB
+oB
+oB
+oB
+oB
+nV
+nV
+nV
+nV
+oD
+oD
+oD
+oD
+oD
+nV
+nV
+nV
+nV
+nV
+nV
+nV
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
+FU
 CB
 CB
 CB
@@ -33858,76 +35642,76 @@ DL
 "}
 (5,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-Bw
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-nW
-fs
-nW
-nW
-CU
-nW
-fM
-nW
+nV
+nV
+nV
+nV
+oB
+oB
+oB
+oB
+oB
+oB
+oB
+mI
+IN
+Lm
+tA
+oB
+nV
+nV
+nV
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
+hI
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+FR
+yY
+FR
+FR
+PA
+FR
+Af
+FR
 FR
 FR
 xa
@@ -34010,49 +35794,49 @@ DL
 "}
 (6,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oB
+oB
+oB
+oB
+oB
+wb
+iV
+ag
+oB
+fE
+bv
+QS
+qF
+EH
+uP
+oB
+oB
+nV
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
 hI
 FR
 FR
@@ -34162,49 +35946,49 @@ DL
 "}
 (7,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oB
+oB
+MG
+MG
+oB
+iy
+Da
+xm
+uP
+oB
+oB
+wP
+nR
+Zt
+sK
+Da
+uP
+oB
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
 hI
 FR
 FR
@@ -34314,49 +36098,49 @@ DL
 "}
 (8,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oB
+MG
+MG
+MG
+oB
+uP
+jR
+jJ
+ND
+sV
+oB
+uP
+Da
+jR
+YW
+Da
+Cr
+oB
 nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
 hI
 FR
 FR
@@ -34466,49 +36250,49 @@ DL
 "}
 (9,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oB
+MG
+MG
+MG
+oB
+qU
+jO
+Rl
+FJ
+Mt
+uP
+uP
+jR
+jJ
+ND
+sV
+uP
+oB
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
 hI
 FR
 BT
@@ -34618,49 +36402,49 @@ DL
 "}
 (10,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+oB
+MG
+MG
+MG
+oB
+rZ
+uP
+GD
+Jr
+Gt
+uP
+Da
+Da
+Rl
+FJ
+Mt
+oB
+oB
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+oD
+sR
+oD
 hI
 FR
 FR
@@ -34770,23 +36554,23 @@ DL
 "}
 (11,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
-nV
+oB
+MG
+MG
+MG
+oB
+oB
+qU
+uK
+jR
+jR
+YW
+jR
+jR
+GD
+Jr
+oB
+oB
 oD
 oD
 oD
@@ -34811,7 +36595,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -34922,22 +36706,22 @@ DL
 "}
 (12,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
+oB
+MG
+MG
+MG
+rG
+oB
+oB
+uP
+Da
+jR
+jR
+YW
+YW
+uP
+QN
+oB
 oD
 oD
 oD
@@ -34963,7 +36747,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -35074,22 +36858,22 @@ DL
 "}
 (13,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
-nV
+oB
+MG
+MG
+cn
+Da
+Lz
+uP
+Da
+jR
+SU
+Da
+jR
+jR
+JH
+oB
+oB
 oD
 oD
 oD
@@ -35115,7 +36899,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 QH
@@ -35226,21 +37010,21 @@ DL
 "}
 (14,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-nV
-nV
-nV
-nV
-nV
-nV
+oB
+oB
+MG
+cn
+jR
+jR
+jR
+jR
+tA
+oB
+wa
+Go
+Ui
+wa
+oB
 oD
 oD
 oD
@@ -35267,7 +37051,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 zM
@@ -35378,16 +37162,21 @@ DL
 "}
 (15,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
-nV
+oB
+oB
+Lx
+jJ
+ND
+bt
+ak
+oB
+oB
+Da
+jR
+jR
+jR
+JH
 oD
 oD
 oD
@@ -35414,12 +37203,7 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
-oD
-oD
-oD
+sR
 oD
 hI
 FR
@@ -35530,15 +37314,20 @@ DL
 "}
 (16,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
+nV
+oB
+JD
+Rl
+FJ
+Mt
+Ju
+oB
+Da
+JH
+jR
+JH
+JH
 oD
 oD
 oD
@@ -35550,28 +37339,23 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
+OJ
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+vf
+KK
 oD
 hI
 FR
@@ -35682,15 +37466,19 @@ DL
 "}
 (17,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
+nV
+oB
+oB
+Al
+Jr
+Gt
+OK
+oB
+fg
+JH
+JH
+JH
 oD
 oD
 oD
@@ -35703,11 +37491,7 @@ oD
 oD
 oD
 oD
-oD
-oD
-oD
-oD
-oD
+sR
 oD
 oD
 oD
@@ -35834,15 +37618,16 @@ DL
 "}
 (18,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
+nV
+nV
+oB
+Cr
+uP
+iZ
+oB
+oB
+JH
 oD
 oD
 oD
@@ -35858,8 +37643,7 @@ oD
 oD
 oD
 oD
-oD
-oD
+sR
 oD
 Bw
 nW
@@ -35986,14 +37770,14 @@ DL
 "}
 (19,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
-gd
 nV
+nV
+nV
+oB
+oB
+oB
+oB
+oB
 oD
 oD
 oD
@@ -36011,7 +37795,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -36138,12 +37922,12 @@ DL
 "}
 (20,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
-gd
+nV
+nV
+nV
+nV
+nV
+nV
 nV
 nV
 oD
@@ -36163,7 +37947,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -36290,13 +38074,13 @@ DL
 "}
 (21,1,2) = {"
 DL
-gd
-gd
-gd
-gd
-gd
 nV
 nV
+nV
+nV
+nV
+nV
+nV
 oD
 oD
 oD
@@ -36315,7 +38099,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 BT
@@ -36442,9 +38226,9 @@ DL
 "}
 (22,1,2) = {"
 DL
-gd
-gd
-gd
+nV
+nV
+nV
 nV
 nV
 nV
@@ -36467,7 +38251,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -36619,7 +38403,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -36771,7 +38555,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -36923,7 +38707,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -37075,7 +38859,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -37227,7 +39011,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -37379,7 +39163,7 @@ oD
 oD
 oD
 oD
-oD
+sR
 oD
 hI
 FR
@@ -39790,16 +41574,16 @@ yZ
 yZ
 yZ
 yZ
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
-oD
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
 ye
 ye
 ye
@@ -40780,7 +42564,7 @@ cJ
 RP
 RP
 be
-hu
+pH
 hu
 hu
 hu
@@ -41614,10 +43398,10 @@ yZ
 yZ
 yZ
 yZ
-oD
-oD
-oD
-oD
+jt
+jt
+jt
+jt
 Yz
 Yz
 aV
@@ -41805,9 +43589,9 @@ xx
 iC
 Lf
 Uh
-CS
+wV
 xb
-CS
+Hx
 gc
 LO
 LO
@@ -43629,9 +45413,9 @@ nU
 om
 Lf
 Uh
-CS
+wV
 xb
-CS
+Hx
 gc
 LO
 LO
@@ -45181,7 +46965,7 @@ RP
 Fy
 Fj
 Fj
-Fj
+vh
 Fj
 Fj
 cJ
@@ -45301,9 +47085,9 @@ MP
 LO
 LO
 Uh
-CS
+wV
 xb
-CS
+Hx
 gc
 LO
 LO
@@ -45333,7 +47117,7 @@ RP
 Fy
 Fj
 Fj
-Fj
+vh
 Fj
 Fj
 cJ
@@ -45480,17 +47264,17 @@ vF
 vF
 vF
 vF
-RP
-RP
-Fy
+yB
+yB
+VS
 Fj
 Fj
+vh
 Fj
 Fj
-Fj
-cJ
-RP
-RP
+Tp
+yB
+yB
 tP
 WY
 WY
@@ -45634,13 +47418,13 @@ EK
 EK
 EK
 EK
-EK
+No
 Um
 Um
 Um
 Um
 Um
-EK
+kK
 EK
 EK
 EK
@@ -45786,13 +47570,13 @@ EK
 EK
 EK
 EK
-EK
-Um
-Um
-Um
-Um
-Um
-EK
+No
+Ln
+Ln
+Ln
+Ln
+Ln
+kK
 EK
 EK
 EK
@@ -45915,59 +47699,59 @@ CS
 CZ
 Fw
 Fw
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+nd
 Um
 Um
 Um
 Um
 Um
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
+rr
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
+ca
 gd
 gd
 gd
@@ -46089,6 +47873,7 @@ Um
 Um
 Um
 Um
+rx
 Um
 Um
 Um
@@ -46096,8 +47881,7 @@ Um
 Um
 Um
 Um
-Um
-Um
+rx
 Um
 Um
 Um
@@ -46241,6 +48025,7 @@ Um
 Um
 Um
 Um
+rx
 Um
 Um
 Um
@@ -46248,8 +48033,7 @@ Um
 Um
 Um
 Um
-Um
-Um
+rx
 Um
 Um
 Um
@@ -46371,6 +48155,29 @@ CS
 CS
 iu
 CS
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+Um
+rx
 Um
 Um
 Um
@@ -46378,52 +48185,29 @@ Um
 Um
 Um
 Um
+rx
 Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
-Um
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
 gd
 gd
 gd
@@ -46545,6 +48329,7 @@ Um
 Um
 Um
 Um
+rx
 Um
 Um
 Um
@@ -46552,8 +48337,7 @@ Um
 Um
 Um
 Um
-Um
-Um
+rx
 Um
 Um
 Um
@@ -46697,6 +48481,7 @@ Um
 Um
 Um
 Um
+rx
 Um
 Um
 Um
@@ -46704,8 +48489,7 @@ Um
 Um
 Um
 Um
-Um
-Um
+rx
 Um
 Um
 Um
@@ -46827,59 +48611,59 @@ CS
 js
 Uv
 Uv
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
-EK
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Xi
+Um
+Um
+Um
+Um
+Xr
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
+Tu
 gd
 gd
 gd
@@ -46991,12 +48775,12 @@ EK
 EK
 EK
 EK
-EK
-EK
-EK
-EK
-EK
-EK
+No
+Ln
+Ln
+Ln
+Ln
+kK
 EK
 EK
 EK
@@ -47143,12 +48927,12 @@ EK
 EK
 EK
 EK
-EK
-EK
-EK
-EK
-EK
-EK
+No
+Um
+Um
+Um
+Um
+kK
 EK
 EK
 EK
@@ -47283,28 +49067,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+fM
+fM
+RD
+ii
+ii
+RD
+fM
+fM
+fM
+fM
+AA
+AA
+AA
+AA
+fM
+fM
+fM
+jG
+jG
 gd
 gd
 gd
@@ -47435,28 +49219,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+eu
+eb
+eb
+jZ
+Sa
+Sa
+Sa
+Sa
+Sa
+fM
+cz
+Tn
+zu
+zu
+zu
+zu
+Tn
+cz
+fM
+jG
+jG
 gd
 gd
 gd
@@ -47587,28 +49371,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+Oe
+eb
+PL
+RF
+Sa
+Sa
+Sa
+Sa
+NH
+fM
+zu
+yN
+zu
+zu
+zu
+zu
+RY
+zu
+fM
+jG
+jG
 gd
 gd
 gd
@@ -47739,28 +49523,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+Dx
+eb
+eb
+KY
+Sa
+Sa
+Sa
+Sa
+II
+fM
+cz
+cz
+zu
+zu
+zu
+zu
+cz
+cz
+fM
+jG
+jG
 gd
 gd
 gd
@@ -47891,28 +49675,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+QO
+eb
+eb
+Qo
+jz
+Sa
+Sa
+Sa
+lb
+fM
+jh
+zu
+zu
+zu
+zu
+zu
+RY
+zu
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48043,28 +49827,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+eb
+eb
+eb
+xV
+Sa
+yT
+lt
+Sa
+sY
+fM
+rY
+wZ
+wm
+MU
+zu
+zu
+ON
+cz
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48195,28 +49979,28 @@ CS
 gc
 wq
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+Qo
+tR
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+lG
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48347,28 +50131,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+Sa
+Sa
+Sa
+Sa
+sv
+rt
+uV
+Sa
+HI
+oO
+Sa
+Sa
+Sa
+Sa
+vd
+Sa
+Sa
+fO
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48499,28 +50283,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+QG
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Rb
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48651,28 +50435,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+fO
+Sa
+Ms
+Sa
+Sa
+Sa
+Sa
+Sa
+Ms
+Sa
+Sa
+Sa
+Sa
+Sa
+fO
+Ry
+Sa
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48803,28 +50587,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+fM
+fM
+Qo
+NA
+fM
+fM
+fM
+fM
+fM
+fM
+Qo
+dv
+fM
+Qo
+QG
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -48955,28 +50739,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+OW
+CF
+TW
+fZ
+fs
+Sa
+Sa
+Sa
+jd
+th
+CF
+TW
+Qo
+xn
+eb
+eb
+Qo
+Sa
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49107,28 +50891,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+OW
+Et
+ci
+HC
+RM
+Sa
+Sa
+Sa
+Ak
+HC
+Zc
+dV
+Qo
+Wf
+Gz
+eb
+Qo
+CR
+kY
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49259,28 +51043,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+fM
+OW
+Cv
+ji
+Rb
+fM
+fM
+fM
+fM
+Qo
+Iu
+Iu
+Iu
+fM
+Qo
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49411,28 +51195,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+OW
+Av
+tb
+JM
+RM
+Sa
+Sa
+Sa
+Ak
+JM
+tr
+dV
+Qo
+cv
+Jh
+XK
+Qo
+QG
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49563,28 +51347,28 @@ CS
 gc
 wq
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+OW
+CF
+TW
+th
+fs
+Sa
+Sa
+Sa
+jd
+TW
+dR
+TW
+Qo
+XQ
+eb
+eb
+rM
+Sa
+Sa
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49715,28 +51499,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+cD
+fM
+fM
+fM
+wR
+fM
+fM
+fM
+cD
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+jG
+jG
 gd
 gd
 gd
@@ -49867,28 +51651,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
 gd
 gd
 gd
@@ -50019,28 +51803,28 @@ CS
 gc
 LO
 LO
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
+jG
 gd
 gd
 gd
@@ -64735,12 +66519,12 @@ gd
 gd
 VG
 gT
-kc
+LP
 LP
 qO
 qO
 LP
-kc
+LP
 yA
 vn
 gd
@@ -70084,26 +71868,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+jC
+jC
+fM
+fM
+fM
+jC
+jC
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
 gd
 gd
 gd
@@ -70236,26 +72020,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+VZ
+XA
+XA
+cg
+Qo
+eb
+eb
+eb
+eb
+Qo
+fO
+Sa
+OW
+yK
+ef
+bz
+ef
+mv
+fM
 gd
 gd
 gd
@@ -70388,26 +72172,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+eb
+eb
+eb
+eb
+Qo
+eb
+XA
+eb
+eb
+Qo
+Sa
+Sa
+OW
+yK
+ef
+ef
+ef
+mv
+fM
 gd
 gd
 gd
@@ -70540,26 +72324,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+dc
+eb
+eb
+Ne
+Qo
+dc
+XA
+eb
+eb
+vW
+Sa
+Sa
+fM
+OW
+Sh
+ef
+gn
+fM
+fM
 gd
 gd
 gd
@@ -70692,26 +72476,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+eb
+eb
+Eo
+XA
+Qo
+eb
+XA
+eb
+eb
+Qo
+Sa
+Rb
+OW
+yK
+ef
+ef
+ef
+mv
+fM
 gd
 gd
 gd
@@ -70844,26 +72628,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+Eo
+eb
+XA
+XA
+Qo
+eb
+eb
+fK
+eb
+Qo
+Sa
+Sa
+OW
+yK
+ef
+ef
+ef
+mv
+fM
 gd
 gd
 gd
@@ -70996,26 +72780,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+qI
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+Sa
+Sa
+fM
+fM
+fM
+cL
+fM
+fM
+fM
 gd
 gd
 gd
@@ -71148,26 +72932,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+fO
+Sa
+Sa
+vd
+tO
+jn
+Px
+AN
+vd
+Sa
+Sa
+Sa
+Sa
+vd
+Sa
+Sa
+Sa
+fO
+fM
 gd
 gd
 gd
@@ -71300,26 +73084,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+qi
+zn
+Sa
+Sa
+Sa
+MW
+MW
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Sa
+Rb
+fM
 gd
 gd
 gd
@@ -71452,26 +73236,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+Qo
+Px
+jn
+du
+Sa
+Sa
+Sa
+Ms
+Sa
+Sa
+Sa
+Sa
+Ms
+fO
+Sa
+Sa
+Sa
+Sa
+Sa
+fM
 gd
 gd
 gd
@@ -71604,26 +73388,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+fM
+OW
+Or
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+Qo
+fT
+fM
+Qo
+HH
+SO
+fM
 gd
 gd
 gd
@@ -71756,26 +73540,26 @@ gd
 gd
 gd
 gd
+OW
+ef
+hJ
+pj
+ef
+ef
+mv
+Qo
+Gm
+zQ
+Ik
+Gm
+ws
+ib
+ib
+ib
+Qo
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+kY
+fM
 gd
 gd
 gd
@@ -71908,26 +73692,26 @@ gd
 gd
 gd
 gd
+OW
+oU
+ef
+wn
+ef
+ef
+Gu
+Qo
+JZ
+bU
+bU
+Qf
+ib
+ib
+BI
+ib
+Qo
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+kY
+fM
 gd
 gd
 gd
@@ -72060,26 +73844,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+OW
+lJ
+ef
+OW
+ef
+ef
+Of
+wn
+ib
+ib
+ib
+ib
+ib
+fM
+Qo
+Wv
+Qo
+Sa
+Sa
+fM
 gd
 gd
 gd
@@ -72212,26 +73996,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+OW
+cc
+ef
+ef
+Qo
+kC
+US
+US
+rd
+ib
+Qo
+kN
+ib
+Qo
+QG
+Sa
+fM
 gd
 gd
 gd
@@ -72364,26 +74148,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+OW
+ec
+wg
+ec
+Qo
+Wd
+Gm
+Id
+bZ
+ib
+Qo
+kN
+BI
+Qo
+Sa
+Sa
+fM
 gd
 gd
 gd
@@ -72516,26 +74300,26 @@ gd
 gd
 gd
 gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
-gd
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
+fM
 gd
 gd
 gd
