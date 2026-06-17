@@ -10,7 +10,7 @@
 	if(use_gender && !(limb.body_zone in GLOB.limb_zones))
 		gender_string = (limb.is_dimorphic) ? (limb.limb_gender == "m" ? "_m" : "_f") : "_m" // defaults to male so that andros dont get tiddies
 	var/zonestring = limb.body_zone
-	if((limb.bodyshape & BODYSHAPE_DIGITIGRADE) && !limb.owner?.is_digitigrade_squished())
+	if(limb.bodyshape & BODYSHAPE_DIGITIGRADE)
 		zonestring = "digitigrade_1_" + limb.body_zone
 	if(ishand)
 		zonestring = limb.aux_zone

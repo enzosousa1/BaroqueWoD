@@ -58,9 +58,9 @@
 	var/index = 1
 	var/mob/living/carbon/human/owner = limb?.owner
 	last_built_icon_states = list()
-	var/list/color_layer_names = get_color_layer_names(build_icon_state(gender, image_layer))
+	var/list/color_layer_names = get_color_layer_names(build_mutant_icon_state(gender, image_layer))
 	for(var/color_index in color_layer_names)
-		var/mutable_appearance/color_layer_image = get_singular_image(build_icon_state(gender, image_layer, color_layer_names[color_index]), image_layer, owner)
+		var/mutable_appearance/color_layer_image = get_singular_image(build_mutant_icon_state(gender, image_layer, color_layer_names[color_index]), image_layer, owner)
 		returned_images += color_layer_image
 		overlay_indexes_to_color += index
 		index++
@@ -109,7 +109,7 @@
  * * feature_key_suffix - A string that will be directly appended to the result
  * of `get_feature_key_for_overlay()`. Defaults to `null`.
  */
-/datum/bodypart_overlay/mutant/proc/build_icon_state(gender, image_layer, color_layer = null, feature_key_suffix = null)
+/datum/bodypart_overlay/mutant/proc/build_mutant_icon_state(gender, image_layer, color_layer = null, feature_key_suffix = null)
 	var/list/icon_state_builder = list()
 	icon_state_builder += sprite_datum.gender_specific ? gender : "m" //Male is default because sprite accessories are so ancient they predate the concept of not hardcoding gender
 	icon_state_builder += get_feature_key_for_overlay() + feature_key_suffix

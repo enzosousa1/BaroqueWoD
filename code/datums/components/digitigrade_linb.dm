@@ -42,6 +42,7 @@
 	SIGNAL_HANDLER
 
 	RegisterSignal(new_limb_owner, COMSIG_MOB_EQUIPPED_ITEM, PROC_REF(equipped_item))
+	RegisterSignal(new_limb_owner, COMSIG_MOB_VISUAL_EQUIPPED_ITEM, PROC_REF(equipped_item)) // NOCTURNE ADDITION
 	RegisterSignal(new_limb_owner, COMSIG_MOB_DROPPED_ITEM, PROC_REF(unequipped_item))
 	RegisterSignal(new_limb_owner, COMSIG_CARBON_ITEM_COVERAGE_CHANGED, PROC_REF(coverage_changed))
 	for(var/obj/item/equipped as anything in new_limb_owner.get_equipped_items())
@@ -52,6 +53,7 @@
 	SIGNAL_HANDLER
 
 	UnregisterSignal(old_limb_owner, COMSIG_MOB_EQUIPPED_ITEM)
+	UnregisterSignal(old_limb_owner, COMSIG_MOB_VISUAL_EQUIPPED_ITEM) // NOCTURNE ADDITION
 	UnregisterSignal(old_limb_owner, COMSIG_MOB_DROPPED_ITEM)
 	UnregisterSignal(old_limb_owner, COMSIG_CARBON_ITEM_COVERAGE_CHANGED)
 	LAZYNULL(squashing_us)
