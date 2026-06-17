@@ -51,7 +51,7 @@
 	// NOCTURNE EDIT START
 	if(HAS_TRAIT(patient, TRAIT_USES_SKINTONES))
 		var/list/skin_tones = list()
-		for(var/skin_tone as anything in GLOB.skin_tone_names)
+		for(var/skin_tone in GLOB.skin_tone_names)
 			var/skin_tone_name = GLOB.skin_tone_names[skin_tone]
 			skin_tones[skin_tone_name] = skin_tone
 

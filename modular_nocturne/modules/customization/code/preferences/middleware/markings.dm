@@ -9,7 +9,7 @@
 		"move_marking_down" = PROC_REF(move_marking_down),
 	)
 
-/datum/preference_middleware/markings/proc/get_markings_by_zone(var/body_zone)
+/datum/preference_middleware/markings/proc/get_markings_by_zone(body_zone)
 	var/datum/bodypart_overlay/simple/body_marking/body_markings/markings = new /datum/bodypart_overlay/simple/body_marking/body_markings()
 	var/list/returnval = list()
 	var/list/allmarkings = assoc_to_keys_features(SSaccessories.body_markings)

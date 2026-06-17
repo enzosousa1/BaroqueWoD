@@ -149,7 +149,7 @@
 
 /// Helper function for hiding mutant parts on the head.
 /// Use this with can_draw_on_bodypart()
-/datum/bodypart_overlay/mutant/proc/can_draw_on_head(var/mob/living/carbon/human/wearer, key)
+/datum/bodypart_overlay/mutant/proc/can_draw_on_head(mob/living/carbon/human/wearer, key)
 	if(!istype(wearer) || !wearer.head)
 		return TRUE
 
@@ -161,7 +161,7 @@
 
 /// Helper function for hiding mutant parts on the chest.
 /// Use this with can_draw_on_bodypart()
-/datum/bodypart_overlay/mutant/proc/can_draw_on_chest(var/mob/living/carbon/human/wearer, key)
+/datum/bodypart_overlay/mutant/proc/can_draw_on_chest(mob/living/carbon/human/wearer, key)
 	if(!istype(wearer) || (!wearer.w_uniform && !wearer.wear_suit))
 		return TRUE
 
