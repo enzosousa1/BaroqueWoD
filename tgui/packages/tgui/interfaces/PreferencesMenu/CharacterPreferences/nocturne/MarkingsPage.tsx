@@ -11,11 +11,11 @@ import {
 } from 'tgui-core/components';
 import { classes } from 'tgui-core/react';
 import { useBackend } from 'tgui/backend';
-import {
+import type {
   Marking,
   MarkingChoice,
   MarkingZone,
-  type PreferencesMenuData,
+  PreferencesMenuData,
 } from '../../types';
 import { createSearch } from 'tgui-core/string';
 

@@ -1,7 +1,7 @@
 import {
   CheckboxInput,
-  Feature,
-  FeatureToggle,
+  type Feature,
+  type FeatureToggle,
   FeatureTriColorInput,
 } from '../base';
 

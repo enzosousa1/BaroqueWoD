@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react'; // NOCTURNE EDIT - ORIGINAL: import {
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Section, Stack, Tabs, Box, Button } from 'tgui-core/components'; // NOCTURNE EDIT - ORIGINAL: import { Section, Stack, Tabs, Box, } from 'tgui-core/components';
+import { Section, Stack, Box, Button } from 'tgui-core/components'; // NOCTURNE EDIT - ORIGINAL: import { Section, Stack, Tabs, Box, } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 import { Window } from '../layouts';
 
