@@ -36,6 +36,10 @@
 	name = "Cat"
 	icon_state = "catbig"
 
+/datum/sprite_accessory/nocturne/ears/catalt
+	name = "Cat (Alt)"
+	icon_state = "catalt"
+
 /datum/sprite_accessory/nocturne/ears/cow
 	name = "Cow"
 	icon_state = "cow"
