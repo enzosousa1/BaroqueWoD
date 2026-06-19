@@ -46,12 +46,14 @@ SUBSYSTEM_DEF(statpanels)
 		)
 
 		// NOCTURNE ADDITION START
-		if(SSticker.HasRoundStarted())
+		if(SSticker.IsRoundInProgress())
 			if(city_time_passed() < SScity_time.time_till_daytime)
 				global_data += "Time Until Daylight: [time2text((SScity_time.time_till_daytime - city_time_passed()) / SSticker.city_time_rate_multiplier, "hh:mm:ss", NO_TIMEZONE)]"
 
-			if(city_time_passed() < SScity_time.time_till_roundend)
+			if((city_time_passed() < SScity_time.time_till_roundend) && !SSmasquerade.ending)
 				global_data += "Time Until Round End: [time2text((SScity_time.time_till_roundend - city_time_passed()) / SSticker.city_time_rate_multiplier, "hh:mm:ss", NO_TIMEZONE)]"
+			else
+				global_data += "Time Until Round End: SOON"
 		// NOCTURNE ADDITION END
 
 		if(SSshuttle.emergency)

@@ -7,10 +7,12 @@
 	spawn_positions = 3
 	supervisors = /datum/job/vampire/warder
 	req_admin_notify = 1
+	/* // NOCTURNE REMOVAL START
 	minimal_player_age = 25
 	exp_requirements = 50
 	exp_required_type = EXP_TYPE_GAIA
 	exp_required_type_department = EXP_TYPE_GAIA
+	*/ // NOCTURNE REMOVAL END
 	exp_granted_type = EXP_TYPE_GAIA
 	config_tag = "GUARDIAN"
 	job_flags = CITY_JOB_FLAGS

@@ -170,6 +170,16 @@ SUBSYSTEM_DEF(masquerade)
 		SEND_SOUND(player, 'modular_darkpack/modules/masquerade/sound/masquerade_failure.ogg') //Alerting them of their demise.
 	addtimer(CALLBACK(src, PROC_REF(end_round)), 65 SECONDS)
 
+	// NOCTURNE ADDITION START
+	var/list/round_end_message = list()
+	round_end_message += "<br>[span_userdanger("THE MASQUERADE HAS FALLEN! THE INQUISITION HAS BEGUN!")]"
+	round_end_message += "<br>[span_infoplain(span_bold("The round is ending due to Masquerade failure."))]"
+	round_end_message += "<br><br>"
+
+	to_chat(world, round_end_message.Join())
+	log_game("The round is ending due to Masquerade failure.")
+	// NOCTURNE ADDITION END
+
 // Ending the actual round.
 /datum/controller/subsystem/masquerade/proc/end_round()
 	for(var/masquerade_breach in masquerade_breachers)
