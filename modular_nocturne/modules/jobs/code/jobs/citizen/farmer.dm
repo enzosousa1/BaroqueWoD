@@ -1,9 +1,10 @@
 /datum/job/vampire/farmer
 	title = JOB_FARMER
-	description = "Keep the kitchen stocked with a steady supply of fresh ingredients. Maybe sell legally dubious herbal remedies on the side."
+	description = "Maintain the local anarchist community garden. Distribute food to the nearby restaurant. Maybe sell herbal remedies on the side."
 	faction = FACTION_CITY
 	total_positions = 3
 	spawn_positions = 3
+	supervisors = "no kings, no gods, no masters"
 	config_tag = "FARMER"
 	outfit = /datum/outfit/job/vampire/farmer
 	job_flags = CITY_JOB_FLAGS
