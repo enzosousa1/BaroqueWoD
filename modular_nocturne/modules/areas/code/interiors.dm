@@ -78,6 +78,19 @@
 	domain = TRUE
 
 
+// clinic/magadon
+
+/area/vtm/palm_desert/interior/clinic
+	name = EVIL_HOSPITAL_COMPANY + " Clinic"
+	icon_state = "old_clan_tzimisce"
+	ambience_index = AMBIENCE_OFFICE
+	zone_type = ZONE_ELYSIUM
+	fire_controled = TRUE
+	show_area_name = TRUE
+	domain = TRUE
+	gauntlet_rating = 8
+
+
 // misc
 
 /area/vtm/palm_desert/interior/hotel
@@ -88,3 +101,28 @@
 	fire_controled = TRUE
 	show_area_name = TRUE
 	domain = TRUE
+
+/area/vtm/palm_desert/interior/motel
+	name = "Motel"
+	icon_state = "hotel"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	show_area_name = TRUE
+	domain = TRUE
+
+/area/vtm/palm_desert/interior/motel/outside
+	fire_controled = FALSE
+	ambience_index = AMBIENCE_CITY
+	music_index = MUSIC_SANTAMONICA
+
+/area/vtm/palm_desert/interior/gas_station
+	name = "Gas Station"
+	icon_state = "shop"
+	icon_state = "shop"
+	fire_controled = TRUE
+	show_area_name = TRUE
+
+/area/vtm/palm_desert/interior/gas_station/outside
+	fire_controled = FALSE
+	ambience_index = AMBIENCE_CITY
+	music_index = MUSIC_SANTAMONICA

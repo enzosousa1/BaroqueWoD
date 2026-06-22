@@ -4,7 +4,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "ab" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/sidewalk/poor,
@@ -81,14 +81,14 @@
 /turf/open/floor/iron/stairs{
 	dir = 8
 	},
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "aq" = (
 /obj/structure/reagent_dispensers/cleaningfluid,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "as" = (
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "at" = (
 /obj/structure/table,
 /obj/item/stack/dollar/thousand,
@@ -176,7 +176,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ax" = (
 /obj/structure/table/wood,
 /obj/item/toy/figure/janitor{
@@ -184,7 +184,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ay" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 8
@@ -240,7 +240,7 @@
 /obj/effect/mapping_helpers/door/autoname,
 /obj/effect/mapping_helpers/door/lock_difficulty/six,
 /turf/open/floor/city/plating,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "aH" = (
 /obj/structure/chair/sofa/city_bench/metal/right/black{
 	dir = 1
@@ -279,7 +279,7 @@
 "aN" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "aO" = (
 /obj/structure/chair/comfy/darkpack/red{
 	dir = 4
@@ -327,7 +327,7 @@
 	pixel_x = -2
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "aV" = (
 /obj/structure/platform/lowwall/brick/window,
 /turf/open/floor/city/circled/large,
@@ -339,11 +339,11 @@
 "aY" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "aZ" = (
 /obj/effect/turf_decal/asphaltline/alt,
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ba" = (
 /obj/structure/chair/plastic/darkpack{
 	dir = 4
@@ -390,7 +390,7 @@
 "bm" = (
 /obj/structure/chair/comfy/darkpack/red,
 /turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "bo" = (
 /obj/structure/rack/tall/metal_shelf,
 /obj/item/dyespray{
@@ -451,7 +451,7 @@
 /mob/living/carbon/human/npc/shop,
 /obj/effect/mapping_helpers/mob_buckler,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "by" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/bedsheet,
@@ -669,7 +669,7 @@
 	dir = 1
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "cl" = (
 /obj/machinery/atm{
 	dir = 8;
@@ -700,7 +700,7 @@
 	pixel_x = 20
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "cq" = (
 /obj/structure/closet/crate/dumpster{
 	pixel_y = 13;
@@ -736,7 +736,7 @@
 "cw" = (
 /obj/structure/chair/sofa/city_bench/metal/right,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "cx" = (
 /obj/structure/table/countertop/red,
 /obj/machinery/microwave{
@@ -791,14 +791,14 @@
 /obj/machinery/iv_drip,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/city/plating,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "cH" = (
 /obj/effect/turf_decal/siding/white{
 	color = "#636363";
 	dir = 5
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "cJ" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -849,7 +849,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "cQ" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/bacotell,
@@ -858,7 +858,7 @@
 /obj/structure/platform/lowwall/old,
 /obj/structure/table/wood,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "cT" = (
 /obj/structure/chair/sofa/left/brown{
 	dir = 4
@@ -891,7 +891,7 @@
 /obj/effect/decal/cleanable/ash,
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "cZ" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/gummaguts,
@@ -937,7 +937,7 @@
 /obj/item/clothing/suit/apron/surgical,
 /obj/machinery/light/directional/south,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dn" = (
 /obj/structure/railing{
 	dir = 4
@@ -965,11 +965,11 @@
 	pixel_x = 5
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ds" = (
 /obj/structure/coclock,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "du" = (
 /obj/structure/chair/darkpack/green{
 	dir = 1
@@ -1011,7 +1011,7 @@
 "dz" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "dC" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/city/plating,
@@ -1075,7 +1075,7 @@
 /obj/item/ammo_box/darkpack/c556,
 /obj/item/ammo_box/darkpack/c556,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dO" = (
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk/poor,
@@ -1133,11 +1133,11 @@
 /obj/item/storage/pill_bottle/probital,
 /obj/item/storage/pill_bottle/penacid,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dU" = (
 /obj/structure/closet/secure_closet/chemical/heisenberg,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dV" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/concrete{
@@ -1153,14 +1153,14 @@
 /obj/effect/mapping_helpers/door/autoname,
 /obj/effect/mapping_helpers/door/access/clinic,
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dX" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1;
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "dY" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -1185,7 +1185,7 @@
 /obj/item/storage/medkit/darkpack/tox,
 /obj/item/storage/medkit/darkpack/oxy,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ec" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/vampire/eod{
@@ -1218,7 +1218,7 @@
 /obj/machinery/light/directional/north,
 /obj/structure/reagent_dispensers/cleaningfluid,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ef" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/city/factory,
@@ -1241,7 +1241,7 @@
 	},
 /obj/structure/platform/lowwall/market,
 /turf/open/floor/plating/rough,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "el" = (
 /obj/structure/table,
 /obj/effect/spawner/random/occult/artifact{
@@ -1275,7 +1275,7 @@
 /obj/item/ammo_box/darkpack/c9mm,
 /obj/item/ammo_box/darkpack/c9mm,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "eo" = (
 /obj/structure/table/wood,
 /obj/effect/turf_decal/siding/grey{
@@ -1375,7 +1375,7 @@
 "eH" = (
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/painted,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "eJ" = (
 /obj/item/reagent_containers/cup/bottle/morphine,
 /obj/item/reagent_containers/cup/bottle/morphine,
@@ -1386,7 +1386,7 @@
 /obj/item/storage/box/syringes,
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "eK" = (
 /obj/structure/vampdoor/glass{
 	dir = 4
@@ -1448,7 +1448,7 @@
 /area/vtm/interior/ghetto)
 "eV" = (
 /turf/open/openspace,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "eW" = (
 /obj/structure/mirror/directional/north,
 /obj/structure/table/modern,
@@ -1528,7 +1528,7 @@
 	dir = 1
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "fn" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/smooth/old,
@@ -1599,7 +1599,7 @@
 "fz" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "fB" = (
 /obj/structure/table/wood/fancy/red,
 /turf/open/floor/carpet/red,
@@ -1632,7 +1632,7 @@
 	dir = 8
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "fH" = (
 /obj/structure/bookcase/random/fiction,
 /turf/open/floor/wood/smooth/old,
@@ -1734,7 +1734,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "fY" = (
 /obj/structure/chair/plastic/darkpack{
 	dir = 4
@@ -1774,7 +1774,7 @@
 	dir = 8
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "gg" = (
 /obj/structure/hedge,
 /obj/effect/turf_decal/siding/grey/inner_corner,
@@ -1868,7 +1868,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "gx" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/xxx_store)
@@ -1879,7 +1879,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "gz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/trash{
@@ -1950,7 +1950,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/four,
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "gM" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -1984,10 +1984,10 @@
 /obj/structure/table/wood,
 /obj/item/veil_contract,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "gR" = (
 /turf/closed/wall/vampwall/market,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "gS" = (
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/wood/smooth/old,
@@ -2047,7 +2047,7 @@
 /obj/item/clothing/head/vampire/helmet,
 /obj/item/clothing/head/vampire/helmet,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "hd" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
@@ -2129,7 +2129,7 @@
 	pixel_x = 28
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ht" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -2153,7 +2153,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "hy" = (
 /obj/structure/sign/barber/directional/north{
 	pixel_y = 31;
@@ -2174,7 +2174,7 @@
 "hC" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "hD" = (
 /obj/structure/chair/plastic/darkpack{
 	dir = 8;
@@ -2213,7 +2213,7 @@
 /area/vtm/interior/police)
 "hK" = (
 /turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "hL" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/west,
@@ -2276,7 +2276,7 @@
 	},
 /obj/machinery/light/cold/directional/north,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "hZ" = (
 /obj/item/flashlight/flare/candle/infinite{
 	pixel_x = 11;
@@ -2307,7 +2307,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ih" = (
 /obj/structure/closet,
 /obj/effect/turf_decal/siding/white{
@@ -2340,7 +2340,7 @@
 	},
 /obj/structure/table,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "in" = (
 /obj/structure/chair/comfy/darkpack/green{
 	dir = 8
@@ -2351,7 +2351,7 @@
 "io" = (
 /obj/structure/vampdoor/reinf,
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "iq" = (
 /obj/effect/turf_decal/bordur{
 	dir = 5
@@ -2368,7 +2368,7 @@
 "is" = (
 /obj/structure/chair/comfy/darkpack/blue,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "it" = (
 /obj/structure/table/wood,
 /obj/vampire_computer,
@@ -2402,13 +2402,18 @@
 	pixel_x = 7
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "iA" = (
 /obj/structure/lamppost/one{
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"iB" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/latejoin_daytime,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/interior/ghetto)
 "iC" = (
 /obj/structure/railing{
 	dir = 10
@@ -2422,7 +2427,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/plating/rough,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "iF" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/salon)
@@ -2479,7 +2484,7 @@
 "iU" = (
 /obj/structure/bed/medical/emergency,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "iV" = (
 /obj/structure/table/wood,
 /obj/item/food/meat/slab,
@@ -2503,7 +2508,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "iZ" = (
 /obj/structure/bed/maint{
 	pixel_y = 2
@@ -2598,7 +2603,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "jr" = (
 /obj/structure/table/countertop/red,
 /obj/effect/turf_decal/siding/grey/inner_corner{
@@ -2641,7 +2646,7 @@
 "jA" = (
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "jB" = (
 /obj/structure/chair/wood/darkpack/red,
 /obj/effect/landmark/start/darkpack/chantry/archivist,
@@ -2669,7 +2674,7 @@
 "jG" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "jH" = (
 /obj/structure/hedge,
 /obj/effect/turf_decal/siding/grey/inner_corner{
@@ -2689,7 +2694,7 @@
 /obj/item/melee/baton/vamp,
 /obj/item/melee/baton/vamp,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "jJ" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 4
@@ -2760,7 +2765,7 @@
 	pixel_y = -4
 	},
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "jX" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/railing{
@@ -2802,7 +2807,7 @@
 	dir = 1
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ke" = (
 /obj/effect/decal/wallpaper/paper/stripe,
 /turf/closed/wall/vampwall/junk,
@@ -2813,11 +2818,11 @@
 /obj/item/stack/medical/bone_gel,
 /obj/item/clothing/suit/apron/surgical,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "kg" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ki" = (
 /obj/structure/stairs/east,
 /turf/open/floor/plating,
@@ -2833,7 +2838,7 @@
 /obj/item/reagent_containers/cup/glass/waterbottle,
 /obj/effect/decal/cleanable/gasoline,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "kn" = (
 /obj/structure/chair/sofa/right/brown{
 	color = "#525252";
@@ -2882,7 +2887,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "kw" = (
 /turf/open/floor/plating,
 /area/vtm/palm_desert)
@@ -2924,14 +2929,14 @@
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "kF" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "kG" = (
 /obj/structure/flora/bush/sparsegrass/style_random{
 	pixel_x = -2
@@ -2994,7 +2999,7 @@
 /area/vtm/interior/police)
 "kO" = (
 /turf/closed/wall/vampwall/market,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "kP" = (
 /turf/open/floor/iron/stairs{
 	color = "#675842"
@@ -3090,11 +3095,11 @@
 	pixel_y = 8
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "li" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "lj" = (
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/hotel)
@@ -3135,7 +3140,7 @@
 /obj/effect/mapping_helpers/door/autoname,
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ls" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/handcuffs{
@@ -3216,7 +3221,7 @@
 "lA" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "lC" = (
 /obj/structure/vampdoor/wood,
 /obj/effect/mapping_helpers/door/access/camarilla,
@@ -3335,7 +3340,7 @@
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "lU" = (
 /mob/living/basic/pet/cat/darkpack/cain,
 /turf/open/floor/plating/rough,
@@ -3399,7 +3404,7 @@
 /obj/effect/decal/cleanable/gasoline,
 /obj/item/clothing/mask/gas/vampire,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "mg" = (
 /obj/structure/table,
 /obj/item/tattoo_kit,
@@ -3453,7 +3458,7 @@
 "mm" = (
 /obj/structure/table/countertop/black,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "mn" = (
 /obj/structure/table,
 /obj/item/stack/dollar/thousand,
@@ -3561,7 +3566,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "mt" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 8
@@ -3575,7 +3580,7 @@
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "mv" = (
 /obj/structure/closet,
 /obj/effect/turf_decal/siding/white{
@@ -3584,10 +3589,13 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/interior/police)
+"mx" = (
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/gas_station/outside)
 "my" = (
 /obj/effect/decal/wallpaper/light,
 /turf/closed/wall/vampwall/painted,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "mz" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
@@ -3664,6 +3672,13 @@
 /obj/effect/landmark/start/darkpack/forest_wolves/council,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/caves)
+"mJ" = (
+/obj/effect/turf_decal/bordur{
+	dir = 1
+	},
+/obj/effect/landmark/latejoin,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "mK" = (
 /obj/structure/railing{
 	dir = 1
@@ -3687,7 +3702,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "mO" = (
 /obj/effect/gibspawner/human,
 /turf/open/floor/city/factory,
@@ -3697,7 +3712,7 @@
 /obj/item/reagent_containers/cup/glass/waterbottle,
 /obj/item/reagent_containers/cup/glass/waterbottle,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "mR" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small/directional/east,
@@ -3717,7 +3732,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "mW" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/landmark/start/darkpack/anarch/bruiser,
@@ -3776,7 +3791,7 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/access/pentex_leader,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "nj" = (
 /obj/structure/vampfence{
 	dir = 8
@@ -3807,7 +3822,7 @@
 /obj/effect/decal/cleanable/gasoline,
 /obj/machinery/light/small/broken/directional/north,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "no" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/litter,
@@ -3819,7 +3834,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "nq" = (
 /obj/structure/vampdoor/glass,
 /obj/effect/mapping_helpers/door/unlock,
@@ -3884,7 +3899,7 @@
 /obj/item/storage/medkit/darkpack/brute,
 /obj/item/storage/medkit/darkpack/brute,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "nz" = (
 /obj/structure/table,
 /obj/item/hairbrush/comb{
@@ -3937,7 +3952,7 @@
 "nI" = (
 /obj/structure/chair/office/darkpack/green,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "nK" = (
 /turf/open/floor/carpet/red,
 /area/vtm/interior)
@@ -3979,10 +3994,10 @@
 	},
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "nT" = (
 /obj/effect/landmark/latejoin,
-/turf/open/floor/plating/asphalt,
+/turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "nU" = (
 /obj/structure/platform/lowwall/brick/window,
@@ -4086,7 +4101,7 @@
 /obj/structure/table/wood,
 /obj/item/clothing/under/vampire/janitor,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "om" = (
 /obj/structure/railing{
 	dir = 6
@@ -4101,7 +4116,7 @@
 "oo" = (
 /obj/structure/table/optable,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "oq" = (
 /obj/effect/decal/pallet,
 /obj/item/cultivator/rake{
@@ -4147,7 +4162,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "ox" = (
 /obj/weapon_showcase,
 /obj/effect/turf_decal/bordur,
@@ -4178,7 +4193,7 @@
 /obj/item/gun/ballistic/automatic/darkpack/ar15,
 /obj/item/gun/ballistic/automatic/darkpack/sniper,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "oD" = (
 /turf/open/genturf,
 /area/vtm/planetgeneration/desert)
@@ -4235,7 +4250,7 @@
 "oP" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "oQ" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/vampire/burlesque,
@@ -4268,6 +4283,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/city/factory,
 /area/vtm/interior/police)
+"oV" = (
+/obj/effect/turf_decal/floor_graffiti/random,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert/interior/farm)
 "oW" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/vampire/heels,
@@ -4311,7 +4330,7 @@
 /area/vtm/palm_desert/interior/millennium)
 "oX" = (
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "oY" = (
 /obj/structure/vampdoor/prison{
 	dir = 4
@@ -4320,7 +4339,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/nine,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "pa" = (
 /obj/structure/sink/directional/west,
 /obj/structure/toilet{
@@ -4332,7 +4351,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "pb" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 4
@@ -4378,7 +4397,7 @@
 	},
 /obj/item/smartphone/clean,
 /turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "pj" = (
 /obj/structure/table,
 /obj/machinery/computer/order_console/mining/restricted/police,
@@ -4447,7 +4466,7 @@
 "pE" = (
 /obj/machinery/light/cold/directional/north,
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "pF" = (
 /obj/darkpack_car/rand{
 	dir = 4
@@ -4505,13 +4524,13 @@
 "pO" = (
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "pP" = (
 /obj/structure/rack/food{
 	dir = 4
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "pQ" = (
 /obj/structure/lattice,
 /turf/open/openspace,
@@ -4561,7 +4580,7 @@
 "qe" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "qg" = (
 /obj/structure/table/wood,
 /obj/structure/fluff/tv{
@@ -4575,7 +4594,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "qi" = (
 /obj/structure/chair/darkpack/green{
 	dir = 4;
@@ -4619,7 +4638,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "qt" = (
 /obj/structure/closet/crate,
 /obj/item/storage/pill_bottle/potassiodide,
@@ -4627,7 +4646,7 @@
 /obj/item/reagent_containers/cup/bottle/fentanyl,
 /obj/item/reagent_containers/cup/bottle/fentanyl,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "qw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/tracks,
@@ -4656,8 +4675,9 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
 "qy" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/plating/asphalt,
+/obj/effect/turf_decal/bordur,
+/obj/effect/landmark/latejoin,
+/turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "qz" = (
 /obj/machinery/libraryscanner,
@@ -4688,7 +4708,7 @@
 /obj/item/pushbroom,
 /obj/item/pushbroom,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "qF" = (
 /obj/structure/table/wood,
 /obj/structure/stone_tile/slab/cracked,
@@ -4820,7 +4840,7 @@
 /obj/effect/mapping_helpers/door/unlock,
 /obj/effect/mapping_helpers/door/lock_difficulty/two,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "rk" = (
 /obj/structure/vampdoor/woodglass{
 	dir = 4
@@ -4832,13 +4852,13 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "rl" = (
 /obj/darkpack_car/track/ambulance{
 	dir = 1
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "rm" = (
 /obj/structure/chair/sofa/corp/right{
 	color = "#5aa2fa";
@@ -4897,7 +4917,7 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/access/clinic,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "rC" = (
 /obj/effect/decal/cleanable/trash{
 	icon_state = "trash30"
@@ -4980,7 +5000,7 @@
 /obj/item/stack/medical/bone_gel,
 /obj/item/clothing/suit/apron/surgical,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "rW" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
@@ -5056,6 +5076,11 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"sk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/graffiti,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/outside/residential)
 "sl" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_pp/style_random,
@@ -5063,7 +5088,7 @@
 /area/vtm/palm_desert/interior/hotel)
 "sm" = (
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "so" = (
 /obj/effect/decal/pallet,
 /obj/structure/bonfire/prelit/fire_barrel{
@@ -5204,7 +5229,7 @@
 "sM" = (
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "sN" = (
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/poor,
@@ -5264,7 +5289,7 @@
 /obj/item/ammo_box/darkpack/c12g/buck,
 /obj/item/ammo_box/darkpack/c12g/buck,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "tb" = (
 /obj/structure/sink/directional/east,
 /turf/open/floor/plating/concrete{
@@ -5273,7 +5298,7 @@
 /area/vtm/interior/police)
 "tc" = (
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "td" = (
 /obj/structure/curtain/bounty{
 	pixel_y = 15;
@@ -5281,6 +5306,13 @@
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/ghetto)
+"tf" = (
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
+/obj/effect/turf_decal/floor_graffiti,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "tg" = (
 /obj/structure/railing{
 	dir = 8
@@ -5302,7 +5334,7 @@
 /obj/machinery/light/directional/east,
 /obj/structure/closet,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "tk" = (
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 4
@@ -5382,7 +5414,7 @@
 /obj/effect/mapping_helpers/door/access/clinic,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "tw" = (
 /obj/effect/turf_decal/siding/wood/dark,
 /turf/open/floor/wood/smooth/old,
@@ -5417,14 +5449,14 @@
 /obj/effect/turf_decal/siding/wood/dark,
 /obj/structure/vampdoor/wood,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "tF" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/structure/hedge,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "tG" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 1
@@ -5492,7 +5524,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "tL" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/city/plating,
@@ -5565,7 +5597,7 @@
 /obj/structure/platform/lowwall/painted/window/reinforced,
 /obj/effect/decal/wallpaper/light/low,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ug" = (
 /obj/structure/closet/crate/dumpster{
 	pixel_y = 13;
@@ -5574,7 +5606,7 @@
 /obj/fusebox,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "uh" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
@@ -5627,7 +5659,11 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
+"un" = (
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/interior/motel/outside)
 "uo" = (
 /obj/structure/noticeboard/directional/north,
 /obj/item/gun/ballistic/automatic/darkpack/ak74{
@@ -5636,6 +5672,13 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/gun_store)
+"uq" = (
+/obj/effect/turf_decal/bordur{
+	dir = 8
+	},
+/obj/effect/landmark/latejoin,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "us" = (
 /obj/structure/railing{
 	dir = 1
@@ -5664,7 +5707,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "uC" = (
 /obj/structure/railing,
 /turf/open/floor/wood/smooth/old,
@@ -5682,7 +5725,7 @@
 "uG" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "uH" = (
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 1
@@ -5716,7 +5759,8 @@
 /area/vtm/palm_desert/interior/millennium)
 "uM" = (
 /obj/effect/decal/cleanable/trash,
-/obj/effect/decal/graffiti,
+/obj/effect/decal/anarch_graffiti,
+/obj/machinery/light/small/pink/directional/north,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "uP" = (
@@ -5862,7 +5906,7 @@
 /obj/structure/platform/lowwall/painted/window/reinforced,
 /obj/effect/decal/wallpaper/light/low,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "vv" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -6125,7 +6169,7 @@
 "wh" = (
 /obj/structure/railing,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "wi" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/concrete,
@@ -6167,7 +6211,7 @@
 /obj/structure/platform/lowwall/painted,
 /obj/effect/decal/wallpaper/light/low,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "wp" = (
 /obj/structure/platform/lowwall/rich,
 /obj/structure/vampstatue/angel{
@@ -6212,7 +6256,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "wC" = (
 /obj/structure/chair/wood/darkpack{
 	dir = 1
@@ -6244,6 +6288,12 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/nine,
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/giovanni)
+"wG" = (
+/obj/effect/turf_decal/nightclub_graffiti{
+	pixel_y = 0
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "wH" = (
 /obj/machinery/light/small/directional/west,
 /obj/item/kirbyplants/random,
@@ -6299,12 +6349,12 @@
 "wT" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "wU" = (
 /obj/structure/bed/maint,
 /obj/item/restraints/handcuffs/cable,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "wV" = (
 /obj/effect/turf_decal/stock{
 	dir = 1
@@ -6378,7 +6428,7 @@
 	pixel_y = 23
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "xm" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/stone,
@@ -6417,7 +6467,7 @@
 	dir = 6
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "xt" = (
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/city/gummaguts,
@@ -6441,7 +6491,7 @@
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "xx" = (
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior/ghetto)
@@ -6461,7 +6511,7 @@
 	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "xz" = (
 /obj/structure/curtain/cloth{
 	color = "#525252"
@@ -6487,6 +6537,9 @@
 "xC" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
+"xD" = (
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert/interior/motel/outside)
 "xE" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
@@ -6561,7 +6614,7 @@
 "xW" = (
 /obj/machinery/vending/cola,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "xY" = (
 /obj/machinery/bookbinder,
 /turf/open/floor/city/plating,
@@ -6573,7 +6626,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "yb" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/vampdoor/glass,
@@ -6607,7 +6660,7 @@
 "yg" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "yh" = (
 /obj/structure/chair/sofa/city_bench/metal/middle{
 	dir = 8
@@ -6647,7 +6700,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ym" = (
 /obj/structure/table/modern,
 /obj/item/hairbrush/comb{
@@ -6692,7 +6745,7 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/access/clinic,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "yv" = (
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
@@ -6702,6 +6755,9 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/restaurant)
+"yx" = (
+/turf/closed/wall/vampwall/old,
+/area/vtm/palm_desert/interior/motel/outside)
 "yy" = (
 /obj/machinery/light/directional/north{
 	pixel_x = -16
@@ -6857,7 +6913,7 @@
 /obj/structure/table,
 /obj/vampire_computer,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "zg" = (
 /obj/structure/table/wood,
 /obj/effect/turf_decal/siding/wood/dark{
@@ -6889,7 +6945,7 @@
 "zm" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "zn" = (
 /obj/structure/chair/darkpack/green{
 	dir = 4;
@@ -6942,7 +6998,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "zA" = (
 /obj/structure/chair/sofa/left/brown{
 	dir = 1
@@ -6954,7 +7010,7 @@
 /obj/effect/decal/rugs,
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "zF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/west,
@@ -6966,7 +7022,13 @@
 	pixel_y = 12
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
+"zH" = (
+/obj/effect/turf_decal/floor_graffiti{
+	icon_state = "graffiti_floor2"
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "zI" = (
 /obj/structure/bookcase/random/nonfiction,
 /turf/open/floor/wood/smooth/old,
@@ -7030,7 +7092,7 @@
 /obj/machinery/iv_drip,
 /obj/machinery/light/directional/east,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "zV" = (
 /obj/structure/vampfence/rich{
 	dir = 4
@@ -7108,7 +7170,7 @@
 	pixel_x = 11
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ai" = (
 /obj/effect/turf_decal/siding/dark{
 	dir = 10
@@ -7163,7 +7225,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ap" = (
 /obj/effect/turf_decal/bordur,
 /obj/machinery/light/prince/directional/west,
@@ -7178,7 +7240,7 @@
 /area/vtm/palm_desert/interior/anarch)
 "As" = (
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "At" = (
 /obj/effect/decal/cleanable/litter,
 /obj/effect/decal/cleanable/dirt,
@@ -7199,7 +7261,7 @@
 /obj/structure/table,
 /obj/structure/platform/lowwall/market,
 /turf/open/floor/plating/rough,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "AA" = (
 /obj/machinery/door/poddoor/shutters{
 	damage_deflection = 60;
@@ -7289,7 +7351,7 @@
 "AR" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "AS" = (
 /obj/effect/decal/cleanable/trash,
 /obj/effect/decal/cleanable/dirt,
@@ -7393,14 +7455,14 @@
 	dir = 1
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Bf" = (
 /obj/structure/platform/lowwall/painted/window/reinforced,
 /obj/structure/curtain/bounty{
 	pixel_y = 15
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Bg" = (
 /obj/effect/decal/cleanable/trash{
 	icon_state = "trash8"
@@ -7449,7 +7511,7 @@
 "Bs" = (
 /obj/structure/hedge,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Bt" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave{
@@ -7511,7 +7573,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "By" = (
 /obj/effect/turf_decal/asphaltline{
 	dir = 8
@@ -7646,15 +7708,15 @@
 "Cc" = (
 /obj/structure/platform/lowwall/market/window,
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Cd" = (
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Cf" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_yw/style_random,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Cj" = (
 /obj/weapon_showcase,
 /turf/open/floor/wood/smooth/old,
@@ -7832,7 +7894,11 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
+"CW" = (
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/gas_station/outside)
 "CZ" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
@@ -7956,7 +8022,10 @@
 	pixel_x = 7
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
+"DE" = (
+/turf/open/openspace,
+/area/vtm/palm_desert/interior/clinic)
 "DF" = (
 /obj/structure/table,
 /obj/vampire_computer,
@@ -7977,7 +8046,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "DI" = (
 /turf/open/floor/carpet/darkpack/greengold,
 /area/vtm/interior/ghetto)
@@ -8099,7 +8168,7 @@
 "Ea" = (
 /obj/fusebox,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Ec" = (
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk,
@@ -8145,7 +8214,7 @@
 /obj/structure/railing,
 /obj/machinery/vending/cola,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "Eo" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/wood/smooth/old,
@@ -8244,6 +8313,10 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/five,
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
+"EG" = (
+/obj/effect/decal/graffiti,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "EH" = (
 /obj/structure/chair/wood/darkpack{
 	dir = 1
@@ -8283,7 +8356,7 @@
 /obj/machinery/light/small/broken/directional/south,
 /obj/effect/decal/cleanable/gasoline,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ER" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/theatre)
@@ -8292,7 +8365,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "EU" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/concrete,
@@ -8332,7 +8405,7 @@
 /obj/item/clothing/mask/breath/medical,
 /obj/item/tank/internals/anesthetic,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Fa" = (
 /obj/structure/chair/comfy/darkpack/green{
 	dir = 1
@@ -8390,7 +8463,7 @@
 /turf/open/floor/carpet/green,
 /area/vtm/interior)
 "Fl" = (
-/obj/effect/decal/graffiti,
+/obj/effect/decal/anarch_graffiti,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
 "Fm" = (
@@ -8440,7 +8513,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Fw" = (
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -8483,7 +8556,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "FE" = (
 /obj/structure/flora/tree/vamp{
 	icon_state = "tree3"
@@ -8514,11 +8587,11 @@
 	dir = 4
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "FI" = (
 /obj/structure/closet,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "FJ" = (
 /obj/structure/bonfire/prelit,
 /obj/structure/stone_tile/surrounding,
@@ -8588,11 +8661,11 @@
 	dir = 9
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "FZ" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ga" = (
 /obj/structure/table,
 /turf/open/floor/plating/concrete,
@@ -8617,13 +8690,17 @@
 	icon_state = "stone8"
 	},
 /area/vtm/interior/caves)
+"Gf" = (
+/obj/effect/decal/graffiti,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/outside/residential)
 "Gg" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/turf_decal/siding/white{
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Gi" = (
 /obj/structure/platform/lowwall/painted,
 /obj/structure/table/wood,
@@ -8647,6 +8724,10 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/hotel)
+"Gl" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert/interior/motel/outside)
 "Gm" = (
 /obj/structure/closet,
 /obj/item/clothing/under/vampire/police,
@@ -8679,7 +8760,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Gq" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/rough/cave{
@@ -8744,7 +8825,7 @@
 "GC" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "GD" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 1
@@ -8757,11 +8838,11 @@
 	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "GG" = (
 /obj/effect/decal/cleanable/gasoline,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "GH" = (
 /obj/effect/turf_decal/bordur{
 	dir = 1
@@ -8849,7 +8930,7 @@
 /obj/structure/table,
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "GL" = (
 /obj/structure/closet,
 /obj/item/gun/ballistic/automatic/darkpack/mp5,
@@ -8892,7 +8973,7 @@
 /area/vtm/interior)
 "GQ" = (
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "GS" = (
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/anarch)
@@ -8943,13 +9024,17 @@
 	dir = 1
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "GY" = (
 /obj/effect/decal/cleanable/trash{
 	icon_state = "trash30"
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"GZ" = (
+/obj/effect/turf_decal/bordur,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/interior/motel/outside)
 "Hb" = (
 /obj/effect/landmark/start/darkpack/camarilla/hound,
 /obj/structure/chair/office/darkpack/red{
@@ -8979,6 +9064,13 @@
 /obj/effect/turf_decal/asphaltline/alt,
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/residential)
+"Hg" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/floor_graffiti,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "Hh" = (
 /obj/structure/vampfence/rich{
 	dir = 4
@@ -9017,7 +9109,7 @@
 	},
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "Hm" = (
 /obj/effect/turf_decal/darkpack/dirt{
 	dir = 8
@@ -9042,7 +9134,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "Hs" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk/poor,
@@ -9115,12 +9207,17 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/access/clinic,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "HL" = (
 /turf/open/floor/plating/rough/cave{
 	icon_state = "stone8"
 	},
 /area/vtm/palm_desert/interior/anarch)
+"HM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/latejoin_daytime,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/interior/ghetto)
 "HN" = (
 /obj/structure/roofstuff/vent,
 /turf/open/floor/plating/roofwalk,
@@ -9141,7 +9238,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "HR" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/sidewalk,
@@ -9176,7 +9273,7 @@
 	},
 /obj/structure/fuelstation,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "HV" = (
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
@@ -9192,7 +9289,7 @@
 	pixel_y = 25
 	},
 /turf/open/floor/city/circled,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "HZ" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/carpet/darkpack/greengold,
@@ -9200,7 +9297,7 @@
 "Ib" = (
 /obj/machinery/photocopier/prebuilt,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ic" = (
 /obj/effect/turf_decal/siding/grey{
 	dir = 1
@@ -9283,7 +9380,7 @@
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Im" = (
 /obj/structure/vampdoor/wood{
 	dir = 4;
@@ -9310,7 +9407,7 @@
 "Iq" = (
 /obj/structure/railing,
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ir" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 1
@@ -9368,7 +9465,7 @@
 "Iz" = (
 /obj/structure/table/wood,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "IB" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/asphalt,
@@ -9381,7 +9478,7 @@
 /area/vtm/palm_desert/interior/farm)
 "IF" = (
 /turf/closed/wall/vampwall/rock,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "IG" = (
 /obj/structure/stairs/north,
 /obj/structure/railing{
@@ -9464,7 +9561,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "IR" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /turf/open/misc/dirt,
@@ -9577,7 +9674,7 @@
 "Jo" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Jp" = (
 /obj/structure/bed/dogbed,
 /turf/open/floor/plating/rough/cave,
@@ -9632,7 +9729,7 @@
 /obj/item/ammo_box/darkpack/c45acp,
 /obj/item/ammo_box/darkpack/c45acp,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Jy" = (
 /obj/structure/hedge,
 /turf/open/floor/city/gummaguts,
@@ -9662,7 +9759,7 @@
 /obj/structure/closet,
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "JD" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/suit/hooded/mysticrobe,
@@ -9687,7 +9784,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "JF" = (
 /obj/structure/stone_tile/slab,
 /turf/open/floor/plating/stone,
@@ -9721,7 +9818,7 @@
 "JN" = (
 /obj/structure/table/optable,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "JO" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/city/circled/large,
@@ -9734,7 +9831,7 @@
 /obj/structure/table,
 /obj/item/clothing/head/hats/hos/beret,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "JR" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/carpet/darkpack/greengold,
@@ -9756,7 +9853,7 @@
 	},
 /obj/structure/curtain,
 /turf/open/floor/plating/canal,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "JV" = (
 /obj/structure/table/wood,
 /obj/item/food/grown/berries{
@@ -9783,7 +9880,7 @@
 /area/vtm/palm_desert/interior/gun_store)
 "JX" = (
 /turf/open/floor/city/plating,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "JY" = (
 /obj/structure/railing{
 	dir = 8
@@ -9819,7 +9916,7 @@
 	dir = 8
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Kd" = (
 /obj/effect/landmark/start/darkpack/anarch/bruiser,
 /turf/open/floor/city/plating_mono,
@@ -9866,7 +9963,7 @@
 "Ki" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Kj" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/railing{
@@ -9929,16 +10026,16 @@
 "Kz" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "KA" = (
 /obj/machinery/chem_master,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "KB" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/bedsheet,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "KC" = (
 /obj/structure/closet,
 /obj/effect/turf_decal/siding/white{
@@ -9963,7 +10060,7 @@
 	},
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "KJ" = (
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /turf/open/floor/city/gummaguts,
@@ -9979,7 +10076,7 @@
 	dir = 10
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "KO" = (
 /obj/structure/chair/comfy/darkpack/dark{
 	dir = 1
@@ -10022,7 +10119,7 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/access/clinic,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "KV" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/asphalt,
@@ -10091,7 +10188,7 @@
 "Lg" = (
 /obj/structure/chair/sofa/city_bench/metal/left,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Li" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
@@ -10103,7 +10200,7 @@
 	},
 /obj/structure/table,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Lk" = (
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
@@ -10146,11 +10243,11 @@
 /obj/machinery/chem_heater/withbuffer,
 /obj/structure/table/countertop/black,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ls" = (
 /obj/structure/stairs/south,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Lt" = (
 /obj/structure/roofstuff/vent_end{
 	dir = 8
@@ -10184,8 +10281,8 @@
 /area/vtm/interior/caves)
 "LB" = (
 /obj/effect/decal/cleanable/trash,
-/obj/machinery/light/small/directional/north,
 /obj/effect/landmark/start/darkpack/anarch/bruiser,
+/obj/machinery/light/small/pink/directional/north,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert)
 "LC" = (
@@ -10212,7 +10309,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "LH" = (
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/city/plating_stone,
@@ -10241,7 +10338,7 @@
 /obj/structure/table/wood,
 /obj/item/veil_contract,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "LL" = (
 /turf/closed/wall/vampwall/rock,
 /area/vtm/interior/police)
@@ -10434,7 +10531,7 @@
 "MA" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "MB" = (
 /obj/structure/curtain,
 /obj/structure/closet/crate/freezer/blood,
@@ -10442,7 +10539,7 @@
 	dir = 1
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "MC" = (
 /obj/effect/decal/cleanable/trash{
 	icon_state = "trash30"
@@ -10547,7 +10644,7 @@
 "MV" = (
 /obj/effect/decal/wallpaper/paper,
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "MW" = (
 /obj/structure/chair/darkpack/green{
 	dir = 8
@@ -10557,7 +10654,7 @@
 "MZ" = (
 /obj/machinery/smartfridge/chemistry/preloaded,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Na" = (
 /mob/living/carbon/human/npc/shop,
 /turf/open/floor/city/circled/large,
@@ -10575,7 +10672,7 @@
 "Nf" = (
 /obj/structure/platform/lowwall/painted/window/reinforced,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ng" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/smooth/old,
@@ -10607,7 +10704,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating/rough,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Nn" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/rough,
@@ -10645,7 +10742,7 @@
 /obj/item/ammo_box/darkpack/c44,
 /obj/item/ammo_box/darkpack/c44,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Nu" = (
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior)
@@ -10739,7 +10836,7 @@
 	},
 /obj/structure/table/wood,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "NH" = (
 /obj/structure/table,
 /obj/item/newspaper,
@@ -10757,11 +10854,11 @@
 "NK" = (
 /obj/structure/platform/lowwall/old/window,
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "NM" = (
 /obj/structure/stairs/south,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "NQ" = (
 /obj/effect/decal/fakelattice{
 	density = 0
@@ -10840,7 +10937,7 @@
 /obj/effect/decal/cleanable/litter,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Oe" = (
 /obj/structure/sign/flag/california/directional/north,
 /obj/machinery/photocopier/prebuilt,
@@ -10867,7 +10964,7 @@
 	},
 /obj/structure/hedge,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "Oj" = (
 /obj/structure/bookcase/random/religion,
 /turf/open/floor/wood/smooth/old,
@@ -10972,7 +11069,7 @@
 /obj/machinery/light/directional/east,
 /obj/structure/bed/medical/emergency,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "OE" = (
 /obj/structure/closet,
 /obj/machinery/light/directional/north,
@@ -10980,7 +11077,7 @@
 	color = "#636363"
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "OF" = (
 /obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
@@ -11118,7 +11215,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Pa" = (
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
@@ -11165,7 +11262,7 @@
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Pj" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plating/concrete,
@@ -11241,11 +11338,11 @@
 /obj/effect/decal/cleanable/gasoline,
 /obj/structure/methlab,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Pz" = (
 /obj/structure/sign/city/hotel/directional/east,
 /turf/open/floor/plating/sidewalk,
-/area/vtm/palm_desert/outside/residential)
+/area/vtm/palm_desert/interior/motel/outside)
 "PA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/sidewalk/poor,
@@ -11266,7 +11363,7 @@
 "PD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/city/plating,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "PE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/smooth/old,
@@ -11281,7 +11378,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel/outside)
 "PH" = (
 /obj/structure/table/wood,
 /obj/effect/decal/rugs,
@@ -11312,6 +11409,12 @@
 /obj/item/reagent_containers/cup/glass/shaker,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"PO" = (
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/interior/gas_station/outside)
 "PP" = (
 /obj/structure/stone_tile/block/cracked{
 	dir = 4
@@ -11361,7 +11464,7 @@
 /obj/machinery/shower/directional/south,
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/rough,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "PV" = (
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
@@ -11548,7 +11651,7 @@
 /obj/item/storage/pill_bottle/iron,
 /obj/item/storage/pill_bottle/iron,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "QB" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/semi9mm{
@@ -11583,7 +11686,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "QF" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
@@ -11700,7 +11803,7 @@
 /area/vtm/interior)
 "Re" = (
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Rf" = (
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/iron/stairs{
@@ -11765,7 +11868,7 @@
 "Rt" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Rv" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/roofwalk,
@@ -11784,7 +11887,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Ry" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plating/concrete,
@@ -11925,11 +12028,18 @@
 	},
 /turf/open/genturf,
 /area/vtm/planetgeneration/desert)
+"Sd" = (
+/obj/effect/turf_decal/bordur{
+	dir = 4
+	},
+/obj/effect/landmark/latejoin,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "Se" = (
 /obj/structure/railing,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/concrete,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Sh" = (
 /obj/structure/table,
 /obj/item/storage/box/evidence{
@@ -11976,7 +12086,7 @@
 	icon_state = "wood"
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Sn" = (
 /turf/open/openspace,
 /area/vtm/palm_desert/interior/millennium)
@@ -12004,14 +12114,14 @@
 "Su" = (
 /obj/structure/platform/lowwall/painted/window/reinforced,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Sv" = (
 /obj/structure/closet/mini_fridge,
 /obj/item/reagent_containers/cup/glass/waterbottle,
 /obj/item/reagent_containers/cup/glass/waterbottle,
 /obj/item/reagent_containers/cup/glass/bottle/beer/vampire/blue_stripe,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Sx" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 5
@@ -12141,11 +12251,11 @@
 	dir = 5
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "SZ" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ta" = (
 /obj/structure/table/countertop/red,
 /turf/open/floor/city/circled/large,
@@ -12190,6 +12300,10 @@
 /obj/machinery/washing_machine,
 /turf/open/floor/city/circled,
 /area/vtm/interior/laundromat)
+"Ti" = (
+/obj/structure/ladder/manhole/up,
+/turf/open/floor/plating,
+/area/vtm/palm_desert)
 "Tj" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 4
@@ -12202,7 +12316,7 @@
 	pixel_y = -4
 	},
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Tm" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/rough,
@@ -12229,7 +12343,7 @@
 /obj/effect/turf_decal/asphaltline/alt,
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Tr" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
@@ -12301,7 +12415,7 @@
 "TC" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/concrete,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "TD" = (
 /obj/structure/vampdoor/prison,
 /obj/effect/mapping_helpers/door/access/park_ranger,
@@ -12319,7 +12433,7 @@
 /obj/structure/table/reinforced,
 /obj/item/veil_contract,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "TJ" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/bed/dogbed,
@@ -12333,7 +12447,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "TL" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/effect/turf_decal/darkpack/dirt{
@@ -12366,7 +12480,7 @@
 	pixel_x = 17
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "TQ" = (
 /obj/structure/vampdoor/glass,
 /obj/effect/mapping_helpers/door/access/chef,
@@ -12383,7 +12497,7 @@
 /obj/vampire_computer,
 /obj/structure/table,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "TT" = (
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/city/circled,
@@ -12396,7 +12510,7 @@
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "TV" = (
 /obj/structure/chair/office/darkpack{
 	dir = 1
@@ -12432,7 +12546,7 @@
 /obj/structure/table,
 /obj/item/veil_contract,
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ud" = (
 /obj/item/flashlight/flare/candle/infinite{
 	pixel_x = -9;
@@ -12569,7 +12683,7 @@
 	dir = 1
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "UD" = (
 /obj/structure/chair/sofa/left/brown{
 	dir = 1
@@ -12673,8 +12787,8 @@
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/giovanni)
 "Va" = (
-/turf/closed/wall/vampwall/old,
-/area/vtm/palm_desert/outside/residential)
+/turf/open/floor/plating/sidewalk,
+/area/vtm/palm_desert/interior/motel/outside)
 "Vc" = (
 /obj/effect/mapping_helpers/door/lock_difficulty/six,
 /obj/effect/mapping_helpers/door/lock,
@@ -12684,7 +12798,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Vd" = (
 /obj/structure/table/countertop/red,
 /obj/structure/sink/basin/directional/east{
@@ -12698,7 +12812,7 @@
 	dir = 8
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Vf" = (
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_br/style_random,
@@ -12711,7 +12825,7 @@
 	},
 /obj/item/clothing/suit/hooded/heisenberg,
 /turf/open/floor/city/toilet,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Vh" = (
 /obj/structure/bonfire/prelit{
 	pixel_y = 7
@@ -12739,7 +12853,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Vl" = (
 /obj/structure/railing{
 	dir = 1
@@ -13073,7 +13187,7 @@
 "Wt" = (
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "Wv" = (
 /turf/open/floor/iron/stairs{
 	dir = 4
@@ -13138,7 +13252,7 @@
 "WH" = (
 /obj/structure/platform/lowwall/market/window,
 /turf/open/floor/plating/rough,
-/area/vtm/interior/shop)
+/area/vtm/palm_desert/interior/gas_station)
 "WJ" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/city/factory,
@@ -13149,7 +13263,7 @@
 /area/vtm/palm_desert/interior/giovanni)
 "WL" = (
 /turf/open/floor/carpet/darkpack/bluesilver,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "WO" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood/smooth/old,
@@ -13190,7 +13304,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "WY" = (
 /obj/structure/vampfence/rich,
 /obj/effect/turf_decal/bordur{
@@ -13310,7 +13424,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "XA" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood/smooth/old,
@@ -13331,7 +13445,7 @@
 /obj/structure/table,
 /obj/item/ammo_box/darkpack/c50,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "XG" = (
 /obj/machinery/light/prince/directional/west,
 /turf/open/floor/carpet/darkpack/purplegold,
@@ -13439,7 +13553,7 @@
 "XX" = (
 /obj/structure/railing,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "XY" = (
 /turf/open/floor/plating/roofwalk,
 /area/vtm/palm_desert)
@@ -13449,6 +13563,9 @@
 /obj/machinery/light/prince/directional/east,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"Yb" = (
+/turf/closed/wall/vampwall/painted,
+/area/vtm/palm_desert/interior/clinic)
 "Ye" = (
 /obj/structure/railing,
 /obj/machinery/light/small/directional/north,
@@ -13557,7 +13674,7 @@
 /area/vtm/interior/library)
 "Yx" = (
 /turf/open/floor/city/toilet,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Yy" = (
 /obj/structure/table/countertop/red,
 /turf/open/floor/city/gummaguts,
@@ -13574,7 +13691,7 @@
 /area/vtm/palm_desert/interior/xxx_store)
 "YC" = (
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "YD" = (
 /obj/structure/table/countertop/red,
 /obj/effect/turf_decal/siding/grey{
@@ -13596,6 +13713,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/city/circled,
 /area/vtm/interior/laundromat)
+"YH" = (
+/obj/effect/turf_decal/bordur,
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/sidewalk/rich,
+/area/vtm/palm_desert/outside/office)
 "YL" = (
 /obj/structure/platform/lowwall/junk/window,
 /turf/open/floor/carpet/darkpack/bluesilver,
@@ -13617,7 +13739,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "YO" = (
 /obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
@@ -13631,7 +13753,7 @@
 "YR" = (
 /obj/structure/chair/office/darkpack/blue,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "YS" = (
 /obj/structure/flora/tree/vamp{
 	icon_state = "tree3"
@@ -13662,7 +13784,7 @@
 /obj/structure/hedge,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/wood/smooth,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Za" = (
 /obj/structure/vampdoor/reinf,
 /obj/effect/mapping_helpers/door/access/police,
@@ -13686,7 +13808,7 @@
 	dir = 4
 	},
 /turf/open/floor/city/factory,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "Ze" = (
 /obj/structure/curtain/bounty{
 	pixel_y = -27
@@ -13791,7 +13913,7 @@
 /obj/structure/platform/lowwall/painted,
 /obj/effect/decal/wallpaper/light/low,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ZE" = (
 /obj/structure/railing,
 /turf/open/floor/city/plating_mono,
@@ -13827,7 +13949,7 @@
 "ZK" = (
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert/outside/commercial)
+/area/vtm/palm_desert/interior/gas_station/outside)
 "ZM" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/vampire_computer/prince,
@@ -13867,7 +13989,7 @@
 /obj/structure/platform/lowwall/painted,
 /obj/effect/decal/wallpaper/light/low,
 /turf/open/floor/city/circled,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/clinic)
 "ZT" = (
 /obj/structure/vampdoor,
 /obj/effect/mapping_helpers/door/autoname,
@@ -13894,7 +14016,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood/smooth/old,
-/area/vtm/interior/hotel)
+/area/vtm/palm_desert/interior/motel)
 "ZZ" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/carpet/darkpack/bluesilver,
@@ -19145,7 +19267,7 @@ kw
 kw
 kw
 kw
-kw
+Ti
 kw
 kw
 kw
@@ -27018,6 +27140,7 @@ kw
 kw
 kw
 kw
+Ti
 kw
 kw
 kw
@@ -27048,8 +27171,7 @@ kw
 kw
 kw
 kw
-kw
-kw
+Ti
 kw
 kw
 kw
@@ -37382,15 +37504,15 @@ FR
 Af
 FR
 FR
-FR
-xa
+nT
+qy
 jM
 jM
 By
 jM
 jM
-hI
-FR
+mJ
+nT
 bE
 kO
 kO
@@ -38456,14 +38578,14 @@ jM
 TY
 uJ
 uJ
-uJ
-uJ
-uJ
-uJ
-uJ
-uJ
-uJ
-uJ
+PO
+PO
+PO
+PO
+PO
+PO
+PO
+PO
 uJ
 uJ
 ga
@@ -38608,14 +38730,14 @@ jM
 jM
 EW
 jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -38760,14 +38882,14 @@ jM
 jM
 EW
 jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -38882,7 +39004,7 @@ sO
 xE
 sO
 sF
-FR
+nP
 FR
 ZT
 ac
@@ -38912,14 +39034,14 @@ jM
 Bw
 nW
 sN
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -39064,7 +39186,7 @@ jM
 hI
 FR
 xa
-jM
+mx
 ZK
 gR
 hY
@@ -39216,14 +39338,14 @@ jM
 hI
 FR
 xa
-jM
-jM
-jM
-jM
-jM
-IB
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+CW
+mx
+mx
 jM
 jM
 hI
@@ -39368,14 +39490,14 @@ jM
 hI
 Ma
 xa
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -39520,14 +39642,14 @@ jM
 hI
 FR
 xa
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -39672,7 +39794,7 @@ jM
 hI
 FR
 xa
-jM
+mx
 ZK
 gR
 hY
@@ -39824,14 +39946,14 @@ jM
 TY
 uJ
 Vq
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -39958,7 +40080,7 @@ VK
 OH
 EN
 BU
-VK
+oV
 VK
 db
 Rs
@@ -39976,14 +40098,14 @@ jM
 jM
 EW
 jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -40128,14 +40250,14 @@ jM
 jM
 EW
 jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
-jM
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 jM
 jM
 hI
@@ -40419,7 +40541,7 @@ vx
 Oy
 Rs
 Rs
-mK
+Hg
 xa
 id
 id
@@ -40722,7 +40844,7 @@ VK
 AX
 db
 FR
-FR
+wG
 FR
 xa
 id
@@ -40866,7 +40988,7 @@ FR
 EN
 mr
 XS
-VK
+oV
 VK
 VK
 VK
@@ -41330,7 +41452,7 @@ Rr
 vr
 IX
 FR
-FR
+zH
 FR
 FR
 FR
@@ -41627,7 +41749,7 @@ uJ
 uJ
 uJ
 uJ
-uJ
+tf
 uJ
 uJ
 uJ
@@ -41915,7 +42037,7 @@ jM
 EW
 jM
 jM
-YO
+jM
 jM
 jM
 EW
@@ -42514,7 +42636,7 @@ jM
 jM
 jM
 jM
-qy
+jM
 jM
 QZ
 jM
@@ -42820,7 +42942,7 @@ jM
 jM
 jM
 jM
-nT
+jM
 jM
 jM
 hI
@@ -43392,7 +43514,7 @@ DL
 (45,1,2) = {"
 DL
 xS
-FR
+nT
 ab
 FR
 FR
@@ -43544,7 +43666,7 @@ DL
 (46,1,2) = {"
 DL
 xS
-FR
+nT
 FR
 FR
 FR
@@ -43696,7 +43818,7 @@ DL
 (47,1,2) = {"
 DL
 xS
-uJ
+Sd
 uJ
 uJ
 uJ
@@ -44608,7 +44730,7 @@ DL
 (53,1,2) = {"
 DL
 xS
-nW
+uq
 nW
 nW
 nW
@@ -44760,7 +44882,7 @@ DL
 (54,1,2) = {"
 DL
 xS
-FR
+nT
 FR
 FR
 FR
@@ -44912,7 +45034,7 @@ DL
 (55,1,2) = {"
 DL
 xS
-FR
+nT
 iS
 FR
 FR
@@ -45743,7 +45865,7 @@ kG
 IT
 Tv
 RP
-Fy
+YH
 Fj
 Fj
 Fj
@@ -46599,7 +46721,7 @@ lx
 mS
 RL
 Yz
-FR
+EG
 FR
 VG
 Pa
@@ -46611,8 +46733,8 @@ pT
 Pa
 Pa
 vn
+nP
 FR
-FR
 xx
 xx
 xx
@@ -46623,7 +46745,7 @@ xx
 xx
 xx
 xx
-Sy
+sk
 LO
 Uh
 CS
@@ -47067,7 +47189,7 @@ Zg
 Zg
 tL
 vn
-FR
+EG
 FR
 Qg
 kQ
@@ -49341,7 +49463,7 @@ oD
 gc
 LO
 MP
-Hd
+HM
 fn
 Fc
 fn
@@ -49493,7 +49615,7 @@ oD
 gc
 LO
 MP
-fn
+iB
 xE
 xE
 xE
@@ -49645,7 +49767,7 @@ oD
 gc
 vE
 MP
-fn
+iB
 fn
 xE
 xE
@@ -50758,33 +50880,33 @@ fM
 fM
 EK
 EK
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
 Cc
 dW
 dW
 Cc
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 EK
 EK
-yZ
-yZ
+Yb
+Yb
 Gp
 Gp
 Gp
-yZ
-yZ
+Yb
+Yb
 EK
 EK
 gd
@@ -50927,16 +51049,16 @@ As
 UA
 WW
 JN
-yZ
+Yb
 EK
 EK
-yZ
+Yb
 aU
 YC
 YC
 YC
 YC
-yZ
+Yb
 EK
 EK
 gd
@@ -51079,16 +51201,16 @@ As
 UA
 sm
 sm
-yZ
+Yb
 EK
 EK
-yZ
+Yb
 YC
 YC
 YC
 YC
 YC
-yZ
+Yb
 EK
 EK
 gd
@@ -51231,16 +51353,16 @@ As
 UA
 sm
 dm
-yZ
+Yb
 EK
 EK
-yZ
+Yb
 kg
 YC
 aZ
 aZ
 Tq
-yZ
+Yb
 EK
 EK
 gd
@@ -51383,16 +51505,16 @@ As
 MB
 zU
 hs
-yZ
+Yb
 EK
 EK
-yZ
+Yb
 YC
 YC
 YC
 rl
 YC
-yZ
+Yb
 EK
 EK
 gd
@@ -51532,19 +51654,19 @@ my
 FZ
 As
 As
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
 EK
 EK
-yZ
+Yb
 YC
 YC
 aZ
 aZ
 aZ
-yZ
+Yb
 EK
 EK
 gd
@@ -51674,12 +51796,12 @@ my
 sm
 sm
 sm
-yZ
+Yb
 my
 HK
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
 my
 jG
 As
@@ -51687,16 +51809,16 @@ As
 UA
 WW
 JN
-yZ
+Yb
 EK
 VA
-yZ
+Yb
 ap
 YC
 YC
 rl
 YC
-yZ
+Yb
 EK
 EK
 gd
@@ -51839,16 +51961,16 @@ As
 UA
 sm
 sm
-yZ
+Yb
 EK
 Pe
-yZ
+Yb
 Se
 YC
 aZ
 aZ
 Tq
-yZ
+Yb
 EK
 EK
 gd
@@ -51991,7 +52113,7 @@ As
 UA
 sm
 kf
-yZ
+Yb
 EK
 Pe
 io
@@ -52000,7 +52122,7 @@ YC
 YC
 YC
 YC
-yZ
+Yb
 EK
 EK
 gd
@@ -52143,16 +52265,16 @@ As
 MB
 zU
 hs
-yZ
+Yb
 EK
 Pe
-yZ
+Yb
 hx
 YC
 aZ
 aZ
 aZ
-yZ
+Yb
 EK
 EK
 gd
@@ -52278,33 +52400,33 @@ Sa
 qH
 mF
 EK
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
 eH
 rB
-yZ
-yZ
+Yb
+Yb
 tv
-yZ
-yZ
+Yb
+Yb
 eH
 nh
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
 EK
 wX
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 EK
 EK
 gd
@@ -52385,8 +52507,8 @@ Cd
 Cd
 Cd
 Cd
-LO
-Uh
+Va
+GZ
 CS
 CS
 gb
@@ -52447,7 +52569,7 @@ jp
 dN
 oC
 XC
-yZ
+Yb
 EK
 EK
 EK
@@ -52537,8 +52659,8 @@ fz
 Re
 Re
 tE
-LO
-Uh
+Va
+GZ
 CS
 CS
 gb
@@ -52599,7 +52721,7 @@ oX
 oX
 oX
 oX
-yZ
+Yb
 EK
 EK
 EK
@@ -52690,7 +52812,7 @@ Re
 Re
 Cd
 AR
-Uh
+GZ
 CS
 CS
 gb
@@ -52751,7 +52873,7 @@ oX
 oX
 Zd
 Ub
-yZ
+Yb
 EK
 EK
 EK
@@ -52841,7 +52963,7 @@ GC
 TP
 Re
 cS
-LO
+Va
 iY
 Uv
 Uv
@@ -52903,7 +53025,7 @@ Ve
 JP
 TS
 Lj
-yZ
+Yb
 EK
 EK
 EK
@@ -52993,20 +53115,20 @@ Re
 Re
 bw
 cS
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
-LO
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
+Va
 LO
 Ec
 Uh
@@ -53038,24 +53160,24 @@ Sa
 fM
 EK
 EK
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 EK
 EK
 EK
@@ -53145,18 +53267,18 @@ aY
 Rt
 OY
 Cd
-LO
-LO
-HR
+Va
+Va
+un
 Pz
 Hp
 Hp
 uG
-LO
-LO
-LO
-NM
 Va
+Va
+Va
+NM
+yx
 ug
 uG
 LO
@@ -53463,7 +53585,7 @@ Be
 dr
 Iz
 Cd
-LO
+Gf
 LO
 Uh
 CS
@@ -73559,24 +73681,24 @@ fM
 fM
 gd
 gd
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 gd
 gd
 gd
@@ -73728,7 +73850,7 @@ FI
 FI
 JC
 FI
-yZ
+Yb
 gd
 gd
 gd
@@ -73880,7 +74002,7 @@ wB
 aw
 aw
 LG
-yZ
+Yb
 gd
 gd
 gd
@@ -74032,7 +74154,7 @@ Yx
 Yx
 Yx
 Yx
-yZ
+Yb
 gd
 gd
 gd
@@ -74184,7 +74306,7 @@ Kc
 fG
 fG
 ge
-yZ
+Yb
 gd
 gd
 gd
@@ -74336,7 +74458,7 @@ FI
 FI
 tj
 FI
-yZ
+Yb
 gd
 gd
 gd
@@ -74475,20 +74597,20 @@ eH
 xs
 oX
 SY
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 my
 ms
-yZ
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
+Yb
 gd
 gd
 gd
@@ -74631,8 +74753,8 @@ my
 kD
 As
 XX
-gd
-gd
+DE
+DE
 As
 As
 As
@@ -74640,7 +74762,7 @@ As
 As
 FZ
 Bs
-yZ
+Yb
 gd
 gd
 gd
@@ -74792,7 +74914,7 @@ As
 As
 As
 As
-yZ
+Yb
 gd
 gd
 gd
@@ -74944,7 +75066,7 @@ As
 As
 As
 As
-yZ
+Yb
 gd
 gd
 gd
@@ -75079,11 +75201,11 @@ SO
 fM
 gd
 gd
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
 my
 ue
 um
@@ -75092,11 +75214,11 @@ my
 vu
 rk
 Nf
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
 gd
 gd
 gd
@@ -75248,7 +75370,7 @@ WL
 WL
 oP
 mu
-yZ
+Yb
 gd
 gd
 gd
@@ -75338,7 +75460,7 @@ qE
 as
 TC
 Cd
-Re
+xD
 wh
 gd
 gd
@@ -75400,7 +75522,7 @@ gw
 gw
 WL
 WL
-yZ
+Yb
 gd
 gd
 gd
@@ -75490,7 +75612,7 @@ aq
 as
 as
 lr
-Re
+xD
 wh
 gd
 gd
@@ -75552,7 +75674,7 @@ Kz
 Kz
 QE
 WL
-yZ
+Yb
 gd
 gd
 gd
@@ -75642,7 +75764,7 @@ ee
 as
 as
 Cd
-Re
+xD
 wh
 gd
 gd
@@ -75704,7 +75826,7 @@ Vk
 Vk
 WL
 WL
-yZ
+Yb
 gd
 gd
 gd
@@ -75794,7 +75916,7 @@ as
 nI
 ol
 Cd
-Re
+xD
 mV
 ow
 ow
@@ -75839,24 +75961,24 @@ Sa
 fM
 gd
 gd
-yZ
+Yb
 my
 Bf
 Bf
-yZ
+Yb
 my
 Bf
 Bf
-yZ
-yZ
-yZ
-yZ
-yZ
+Yb
+Yb
+Yb
+Yb
+Yb
 my
 Bf
 Bf
-yZ
-yZ
+Yb
+Yb
 gd
 gd
 gd
@@ -75946,18 +76068,18 @@ Ea
 as
 ax
 Cd
-fz
-Re
-Re
+Gl
+xD
+xD
 aa
 lT
 aa
-fz
-Re
+Gl
+xD
 wh
 eV
 eV
-Re
+xD
 dz
 En
 gd
