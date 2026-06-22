@@ -16,7 +16,7 @@
 	job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/secchief
 
-	allowed_splats = list(SPLAT_GAROU, SPLAT_KINDRED)
+	// allowed_splats = list(SPLAT_GAROU, SPLAT_KINDRED) // NOCTURNE REMOVAL
 	minimal_masquerade = 4
 	// minimal_renown_rank = 3
 	allowed_tribes = list(TRIBE_BLACK_SPIRAL_DANCERS, TRIBE_RONIN)

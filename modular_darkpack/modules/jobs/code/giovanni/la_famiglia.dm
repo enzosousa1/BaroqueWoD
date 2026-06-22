@@ -19,6 +19,12 @@
 	description = "Your family is a strange one. Maybe you are strange too, because sitting next to your great uncles as an equal is something you are greatly interested in."
 	minimal_masquerade = 0
 
+	// NOCTURNE ADDITION BEGIN
+	alt_titles = list(
+		"Bianchi Bank Employee",
+	)
+	// NOCTURNE ADDITION END
+
 /datum/outfit/job/vampire/famiglia
 	name = "La Famiglia"
 	jobtype = /datum/job/vampire/famiglia
