@@ -1,0 +1,5 @@
+author: "FalloutFalcon"
+delete-after: True
+changes:
+  - rscadd: "Two options for intercepting long range clicks for melee attacks"
+  - config: "Configs for \"Swing\" or \"Directional\" attacks"
