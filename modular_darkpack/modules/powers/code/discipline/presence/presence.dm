@@ -179,6 +179,7 @@
 					target.apply_status_effect(/datum/status_effect/dread_gaze)	//Debuffs for set time
 				REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, DISCIPLINE_TRAIT(type))
 				return TRUE
+	/* // NOCTURNE REMOVAL - THIS SHIT ACTUALLY RUINED MY RP WITH SOMEBODY
 	if(successes <= 3) // already checked for above 0 in pre_activation
 		to_chat(target, span_userdanger("You are consumed with terror toward [owner]!"))
 		to_chat(owner, span_warning("You've struck terror into [target]'s heart with your dreadful gaze!"))
@@ -188,6 +189,12 @@
 
 		//V20's 'dread gaze' section states that with 3 or more successes targets will find themselves scratching at the walls or fleeing against their will because they are so terrified.
 		GLOB.move_manager.move_away(target, owner, 10, target.cached_multiplicative_slowdown)
+	*/ // NOCTURNE REMOVAL END
+
+	// NOCTURNE ADDITION START
+	to_chat(target, span_userdanger("You are consumed with terror toward [owner]!"))
+	to_chat(owner, span_warning("You've struck terror into [target]'s heart with your dreadful gaze!"))
+	// NOCTURNE ADDITION END
 
 /datum/discipline_power/presence/dread_gaze/deactivate(mob/living/carbon/human/target)
 	. = ..()
