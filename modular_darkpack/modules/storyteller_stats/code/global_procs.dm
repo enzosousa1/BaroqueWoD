@@ -10,6 +10,9 @@
 
 // This entire snowflake code is done purely so that we can properly update stats that are based on other stats.
 /proc/update_middleware_stats(list/preference_storyteller_stats)
+	// BAROQUE EDIT ADD START - TRUE_FAITH
+	merge_missing_stat_prefs(preference_storyteller_stats)
+	// BAROQUE EDIT ADD END
 	var/datum/st_stat/stat_courage = preference_storyteller_stats[STAT_COURAGE]
 	var/datum/st_stat/stat_permenant_willpower = preference_storyteller_stats[STAT_PERMANENT_WILLPOWER]
 	stat_permenant_willpower.add_stat_mod(clamp(-(stat_permenant_willpower.get_score(include_bonus = FALSE) - 10), 0, stat_courage.get_score(include_bonus = TRUE)), "COURAGE")

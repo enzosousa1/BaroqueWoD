@@ -378,7 +378,7 @@
 "ayt" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "ayB" = (
 /obj/effect/turf_decal/siding/white{
 	color = "#636363";
@@ -3586,7 +3586,7 @@
 "ezD" = (
 /obj/structure/vampfence,
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "ezV" = (
 /obj/structure/rack/tall/store_shelf_metal{
 	dir = 8
@@ -4859,7 +4859,7 @@
 	dir = 8
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "gmu" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/concrete,
@@ -5346,7 +5346,7 @@
 "gRs" = (
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "gTG" = (
 /obj/structure/bed/maint{
 	pixel_y = 2
@@ -6143,7 +6143,7 @@
 	dir = 1
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "hYB" = (
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/gas_station)
@@ -7284,7 +7284,7 @@
 	dir = 4
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "jFa" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/carpet/darkpack/blackgold,
@@ -9996,7 +9996,7 @@
 /area/vtm/interior)
 "ncp" = (
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "ncM" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/handcuffs{
@@ -11948,7 +11948,7 @@
 	dir = 8
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "ptl" = (
 /obj/structure/table,
 /obj/effect/turf_decal/siding/grey/inner_corner{
@@ -12233,7 +12233,7 @@
 	dir = 8
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "pKd" = (
 /obj/effect/turf_decal/asphaltline/alt,
 /turf/open/floor/plating/asphalt,
@@ -12666,7 +12666,7 @@
 	dir = 4
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "qkl" = (
 /obj/structure/table/wood,
 /obj/structure/sink/basin/directional/south,
@@ -14637,7 +14637,7 @@
 	dir = 8
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "sAl" = (
 /obj/structure/vampfence{
 	dir = 8
@@ -16315,7 +16315,7 @@
 "uNy" = (
 /obj/structure/vampfence/corner,
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "uNR" = (
 /obj/effect/turf_decal/siding/wood/dark,
 /turf/open/floor/city/bacotell,
@@ -17393,7 +17393,7 @@
 	dir = 1
 	},
 /turf/open/genturf,
-/area/vtm/planetgeneration/desert)
+/area/vtm/planetgeneration/woodland)
 "wyi" = (
 /obj/sabbatrune,
 /turf/open/floor/plating/canalplating,

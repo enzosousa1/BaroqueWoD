@@ -1,0 +1,2 @@
+#define JOB_BUSINESSMAN "Businessman"
+#define JOB_DISPLAY_ORDER_BUSINESSMAN 61
