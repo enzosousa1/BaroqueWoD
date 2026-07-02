@@ -1,8 +1,8 @@
 // True Faith storyteller stat
 #define STAT_FAITH /datum/st_stat/pooled/faith
 
-// Freebie point cost per faith dot (matches virtue cost)
-#define FREEBIE_COST_FAITH 2
+// Freebie point cost per faith dot
+#define FREEBIE_COST_FAITH 4
 
 // Cross interaction tuning
 #define FAITH_CROSS_CHANNEL_TIME 3 SECONDS

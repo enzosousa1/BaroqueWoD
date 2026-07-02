@@ -1,2 +1,14 @@
+// Departments
+#define DEPARTMENT_BITFLAG_TV_AUGUSTA (1<<17)
+#define DEPARTMENT_TV_AUGUSTA "TV Augusta"
+
+// Civilian
 #define JOB_BUSINESSMAN "Businessman"
 #define JOB_DISPLAY_ORDER_BUSINESSMAN 61
+
+// TV AUGUSTA
+#define JOB_TVAUG_REPORTER "Reporter"
+#define JOB_DISPLAY_ORDER_TVAUG_REPORTER 62
+
+#define JOB_TVAUG_CAMERA "Cameraman"
+#define JOB_DISPLAY_ORDER_TVAUG_CAMERA 63
