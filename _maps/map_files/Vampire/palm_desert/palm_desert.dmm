@@ -5638,6 +5638,7 @@
 /obj/structure/chair/sofa/city_bench/metal/right{
 	dir = 4
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "how" = (
@@ -6180,6 +6181,7 @@
 /obj/structure/chair/sofa/city_bench/metal/right{
 	dir = 8
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "idG" = (
@@ -9276,6 +9278,7 @@
 /obj/structure/chair/sofa/city_bench/metal/left{
 	dir = 8
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "mcN" = (
@@ -9760,6 +9763,7 @@
 /obj/structure/chair/sofa/city_bench/metal/middle{
 	dir = 8
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "mLH" = (
@@ -9792,6 +9796,7 @@
 /obj/structure/chair/sofa/city_bench/metal/left{
 	dir = 4
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "mOa" = (
@@ -15203,6 +15208,7 @@
 /obj/structure/chair/sofa/city_bench/metal/middle{
 	dir = 4
 	},
+/obj/effect/landmark/ert_spawn,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
 "tqX" = (

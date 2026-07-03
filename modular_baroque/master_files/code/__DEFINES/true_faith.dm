@@ -1,6 +1,9 @@
 // True Faith storyteller stat
 #define STAT_FAITH /datum/st_stat/pooled/faith
 
+// Maximum faith dots available during character creation
+#define FAITH_MAX_SCORE 5
+
 // Freebie point cost per faith dot
 #define FREEBIE_COST_FAITH 4
 
