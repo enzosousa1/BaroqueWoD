@@ -25,13 +25,13 @@ $include nocturne_config.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME darkpack
+SERVERNAME Baroque [BR]
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME darkpack
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-# STATIONNAME San Francisco
+# STATIONNAME Santa Augusta
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -658,3 +658,7 @@ GENERATE_ASSETS_IN_INIT
 ## Path from the config folder to the policy json
 POLICY_JSON_PATH policy.json
 
+## REGION GATE CONFIGS
+REGION_GATE_ENABLED TRUE
+REGION_GATE_REJECT_UNKNOWN TRUE
+REGION_GATE_ADMIN_BYPASS TRUE
