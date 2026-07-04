@@ -53,3 +53,208 @@
     background-color: #d26f3850;
   }
 }
+
+@keyframes instaflogFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes instaflogSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.InstaFlog__App {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.InstaFlog__Header {
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.InstaFlog__Content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.InstaFlog__Scroll--centered,
+.InstaFlog__Scroll--form {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.InstaFlog__Content--form {
+  width: 100%;
+  padding: 10px 8px 12px;
+  box-sizing: border-box;
+}
+
+.InstaFlog__Scroll--registration {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 0;
+  scroll-padding: 6px 0;
+}
+
+.InstaFlog__Content--centered-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 6px 0;
+}
+
+.InstaFlog__RegistrationSpacer--top {
+  flex: 1 1 0;
+  min-height: 8px;
+}
+
+.InstaFlog__RegistrationSpacer--bottom {
+  /* Larger than top spacer: lifts panel toward visual center above the phone nav bar. */
+  flex: 4 4 0;
+  min-height: 3rem;
+}
+
+.InstaFlog__RegistrationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.InstaFlog__RegistrationForm .InstaFlog__FieldLabel {
+  font-size: 9px;
+  font-weight: bold;
+  color: #6d4a1f;
+  margin-bottom: 1px;
+}
+
+.InstaFlog__RegistrationForm .InstaFlog__FormField {
+  padding: 4px 6px;
+  font-size: 10px;
+  line-height: 1.4;
+  min-height: 22px;
+}
+
+.InstaFlog__RegistrationForm .InstaFlog__FieldError {
+  font-size: 8px;
+  color: #a83232;
+  line-height: 1.1;
+}
+
+.InstaFlog__Content--centered {
+  --instaflog-center-bleed: 24px;
+  --instaflog-compose-offset: -16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100%;
+  padding: var(--instaflog-center-bleed) 8px;
+  box-sizing: border-box;
+}
+
+.InstaFlog__Panel--compose {
+  width: 100%;
+  flex-shrink: 0;
+  transform: translateY(var(--instaflog-compose-offset));
+}
+
+.InstaFlog__Panel--registration {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.InstaFlog__Header--minimal {
+  flex-shrink: 0;
+}
+
+.InstaFlog__Panel,
+.InstaFlog__Card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.InstaFlog__BottomNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.InstaFlog__NavButton {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.InstaFlog__PostHeader {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.InstaFlog__PostMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.InstaFlog__PostTitleRow {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.InstaFlog__ActionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  align-items: center;
+}
+
+.InstaFlog__CommentRow {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+  align-items: center;
+
+  input {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.InstaFlog__FormField {
+  width: 100%;
+  box-sizing: border-box;
+}

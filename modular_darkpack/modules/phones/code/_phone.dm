@@ -62,7 +62,7 @@
 	var/current_viewed_conversation = null
 	var/phone_background = ""
 	var/custom_background = null // ori's request to add a custom background URL
-	var/endpost_username = null //username for the endpost app
+	// BAROQUE EDIT REMOVAL - ENDPOST username replaced by instaflog_account in modular_baroque/instaflog
 
 /obj/item/smartphone/Initialize(mapload)
 	. = ..()
@@ -138,6 +138,9 @@
 		QDEL_NULL(irc_channel)
 	if(wiki_book)
 		QDEL_NULL(wiki_book)
+	// BAROQUE EDIT ADD START - PHONE_CAMERA
+	cleanup_phone_camera()
+	// BAROQUE EDIT ADD END
 	return ..()
 
 /obj/item/smartphone/examine(mob/user)
@@ -304,10 +307,15 @@
 	else
 		data["current_conversation_messages"] = list()
 
-	data["posts"] = SSphones.endpost_posts
-	data["endpost_username"] = endpost_username
-	data["show_endpost_registration"] = !endpost_username || user.st_get_stat(STAT_TECHNOLOGY) >= 3 //only let big brains change their usernames
 	data["is_admin"] = is_admin(user)
+
+	// BAROQUE EDIT ADD START - INSTAFLOG
+	data += get_instaflog_ui_data(user)
+	// BAROQUE EDIT ADD END
+
+	// BAROQUE EDIT ADD START - PHONE_CAMERA
+	data += get_phone_camera_ui_data()
+	// BAROQUE EDIT ADD END
 
 	return data
 
@@ -502,25 +510,6 @@
 				conversation = new(current_viewed_conversation)
 			return TRUE
 
-		if("submit_post")
-			submit_post(params["body"])
-			return TRUE
-
-		if("endpost_registration")
-			endpost_registration()
-			return TRUE
-
-		if("remove_endpost")
-			var/post_index = text2num(params["post_index"])
-			if(!post_index)
-				to_chat(usr, "Invalid post index.")
-				return FALSE
-			var/list/selected_post = SSphones.endpost_posts[post_index]
-			SSphones.endpost_posts.Cut(post_index, post_index + 1)
-			to_chat(usr, "Post '[selected_post["body"]]' by [selected_post["author"]] removed.")
-			log_phone("[key_name(usr)] removed an endpost: [selected_post["body"]] by [selected_post["author"]]", list("author" = selected_post["author"], "body" = selected_post["body"]))
-			return TRUE
-
 		if("keyboard_click")
 			if(ringer)
 				playsound(loc, 'modular_darkpack/modules/phones/sounds/keyboard_click.ogg', 75, TRUE)
@@ -535,6 +524,16 @@
 			if(ringer)
 				playsound(loc, 'modular_darkpack/modules/phones/sounds/text_send.ogg', 50, TRUE)
 			return TRUE
+
+	// BAROQUE EDIT ADD START - PHONE_CAMERA
+	if(handle_phone_camera_ui_act(action, params, ui))
+		return TRUE
+	// BAROQUE EDIT ADD END
+
+	// BAROQUE EDIT ADD START - INSTAFLOG
+	if(handle_instaflog_ui_act(action, params, ui))
+		return TRUE
+	// BAROQUE EDIT ADD END
 
 	return FALSE
 
@@ -601,31 +600,6 @@
 	icon_state = (phone_flags & PHONE_OPEN) ? "phone_on" : "phone"
 	inhand_icon_state = (phone_flags & PHONE_OPEN) ? "phone_on" : "phone"
 	update_icon()
-
-/obj/item/smartphone/proc/submit_post(body)
-	if(!body)
-		return FALSE
-
-	if(!endpost_username)
-		return FALSE
-
-	var/new_post = list(
-		"body" = trim(body),
-		"date" = server_timestamp("Day, Month DD, YYYY", ic_time = TRUE),
-		"time" = server_timestamp("hh:mm", ic_time = TRUE),
-		"author" = endpost_username
-	)
-
-	UNTYPED_LIST_ADD(SSphones.endpost_posts, new_post)
-	log_phone("[key_name(usr)] submitted a new endpost: [trim(body)] as [endpost_username]")
-
-	return TRUE
-
-/obj/item/smartphone/proc/endpost_registration()
-	var/new_username = tgui_input_text(usr, "Choose your username:", "EndPost Registration", "", 14) //max size of 14 chars or it starts bumping elements around
-	log_phone("[key_name(usr)] [endpost_username ? "updated" : "registered"] their username as [new_username]")
-	endpost_username = new_username
-	return TRUE
 
 /proc/log_phone(text, list/data)
 	logger.Log(LOG_CATEGORY_PDA_CHAT, text, data)

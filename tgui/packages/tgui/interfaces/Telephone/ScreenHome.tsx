@@ -274,6 +274,7 @@ export const ScreenHome = (props: {
                 text="Gallery"
                 iconName="file-image"
                 iconColor="orange"
+                onClick={() => navigateTo(NavigableApps.Gallery)}
               />
             </Stack.Item>
             <Stack.Item>
@@ -282,15 +283,16 @@ export const ScreenHome = (props: {
                 text="Camera"
                 iconName="camera"
                 iconColor="black"
+                onClick={() => navigateTo(NavigableApps.Camera)}
               />
             </Stack.Item>
             <Stack.Item>
               <AppIcon
-                backgroundColor="#4a90e2"
-                text="EndPost"
-                iconName="bullhorn"
-                iconColor="white"
-                onClick={() => navigateTo(NavigableApps.Endpost)}
+                backgroundColor="#c58f45"
+                text="InstaFlog"
+                iconName="camera-retro"
+                iconColor="#fff8e0"
+                onClick={() => navigateTo(NavigableApps.InstaFlog)}
               />
             </Stack.Item>
           </Stack>

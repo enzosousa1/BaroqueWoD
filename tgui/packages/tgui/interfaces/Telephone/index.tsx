@@ -13,10 +13,12 @@ import { ScreenHome } from './ScreenHome';
 import { ScreenCalling, ScreenInCall } from './ScreenInCall';
 import { ScreenMessages } from './ScreenMessages';
 import { ScreenPhone } from './ScreenPhone';
-import { ScreenEndpost } from './ScreenEndpost';
+import { ScreenCamera } from './ScreenCamera';
+import { ScreenInstaFlog } from './ScreenInstaFlog';
 import { ScreenRecents } from './ScreenRecents';
 import { ScreenSettings } from './ScreenSettings';
 import { ScreenSoundSettings } from './ScreenSoundSettings';
+import { ScreenGallery } from './ScreenGallery';
 
 export type Contact = {
   name: string;
@@ -69,6 +71,60 @@ export type Conversation = {
   last_message_text: string;
 };
 
+export type PhonePhoto = {
+  id: number;
+  name: string;
+  time: string;
+  thumbnail: string | null;
+};
+
+export type PhonePhotoPreview = {
+  id: number;
+  name: string;
+  desc: string;
+  time: string;
+  image: string;
+};
+
+export type InstaFlogAccount = {
+  username: string;
+  display_name: string;
+  bio: string;
+  city: string;
+  profile_photo_url: string;
+  profile_photo_usable?: BooleanLike;
+};
+
+export type InstaFlogProfile = InstaFlogAccount & {
+  post_count?: number;
+};
+
+export type InstaFlogComment = {
+  body: string;
+  username: string;
+  display_name: string;
+  date: string;
+  time: string;
+};
+
+export type InstaFlogPost = {
+  post_id: number;
+  body: string;
+  date: string;
+  time: string;
+  timestamp?: number;
+  username: string;
+  display_name: string;
+  profile_photo_url: string;
+  profile_photo_usable?: BooleanLike;
+  city: string;
+  image?: string;
+  like_count?: number;
+  liked_by_me?: BooleanLike;
+  can_delete?: BooleanLike;
+  comments?: InstaFlogComment[];
+};
+
 export type Data = {
   phone_calling: BooleanLike;
   phone_in_call: BooleanLike;
@@ -97,6 +153,17 @@ export type Data = {
 
   conversations: Conversation[];
   current_conversation_messages: ConversationMessage[];
+
+  photos?: PhonePhoto[];
+  camera_mode?: BooleanLike;
+  viewing_photo?: PhonePhotoPreview | null;
+
+  instaflog_registered?: BooleanLike;
+  instaflog_account?: InstaFlogAccount | null;
+  instaflog_posts?: InstaFlogPost[];
+  instaflog_profiles?: Record<string, InstaFlogProfile>;
+  show_instaflog_registration?: BooleanLike;
+  is_admin?: BooleanLike;
 };
 
 export enum NavigableApps {
@@ -106,10 +173,12 @@ export enum NavigableApps {
   Contacts,
   Messages,
   IRC,
+  Camera,
+  Gallery,
   Backgrounds,
   Settings,
   SoundSettings,
-  Endpost,
+  InstaFlog,
 }
 
 const PhysicalScreen = memo((props: {
@@ -176,12 +245,16 @@ const PhysicalScreen = memo((props: {
         );
       case NavigableApps.Backgrounds:
         return <ScreenBackgrounds setApp={setApp} />;
+      case NavigableApps.Camera:
+        return <ScreenCamera setApp={setApp} />;
+      case NavigableApps.Gallery:
+        return <ScreenGallery setApp={setApp} />;
       case NavigableApps.Settings:
         return <ScreenSettings setApp={setApp} />;
       case NavigableApps.SoundSettings:
         return <ScreenSoundSettings setApp={setApp} />;
-      case NavigableApps.Endpost:
-        return <ScreenEndpost setApp={setApp} />;
+      case NavigableApps.InstaFlog:
+        return <ScreenInstaFlog setApp={setApp} />;
       default:
         return <ScreenHome setApp={setApp} />;
     }
@@ -205,7 +278,7 @@ const NavigationBar = memo((props: {
     app === NavigableApps.Recents ||
     app === NavigableApps.Messages ||
     app === NavigableApps.IRC ||
-    app === NavigableApps.Endpost
+    app === NavigableApps.InstaFlog
   ) {
     textColor = '#000';
   }
@@ -218,7 +291,7 @@ const NavigationBar = memo((props: {
     app === NavigableApps.Recents ||
     app === NavigableApps.Messages ||
     app === NavigableApps.IRC ||
-    app === NavigableApps.Endpost
+    app === NavigableApps.InstaFlog
   ) {
     backgroundColor = '#0004';
   }
