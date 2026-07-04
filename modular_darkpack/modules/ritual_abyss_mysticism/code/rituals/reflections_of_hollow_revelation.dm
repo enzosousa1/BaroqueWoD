@@ -56,7 +56,7 @@
 			to_chat(user, span_warning("You feel drained..."))
 			for(var/datum/st_stat/stat as anything in subtypesof(/datum/st_stat))
 				user.st_add_stat_mod(stat, -2, "reflections_of_hollow_revelation")
-			addtimer(CALLBACK(user, PROC_REF(restore_reflections_of_hollow_stats)), 1 SCENES, TIMER_DELETE_ME)
+			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living, restore_reflections_of_hollow_stats)), 1 SCENES, TIMER_DELETE_ME)
 			qdel(src)
 
 /mob/living/proc/restore_reflections_of_hollow_stats()

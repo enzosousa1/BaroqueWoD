@@ -41,7 +41,7 @@
 
 /obj/machinery/sprinkler/Destroy()
 	for(var/turf/open/open_turf in registered_turfs)
-		UnregisterSignals(open_turf, list(COMSIG_ATOM_FIRE_ACT, COMSIG_TURF_HOTSPOT_EXPOSE, COMSIG_TURF_IGNITED))
+		UnregisterSignal(open_turf, list(COMSIG_ATOM_FIRE_ACT, COMSIG_TURF_HOTSPOT_EXPOSE, COMSIG_TURF_IGNITED))
 	return ..()
 
 
