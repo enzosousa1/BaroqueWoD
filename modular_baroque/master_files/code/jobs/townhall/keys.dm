@@ -1,0 +1,12 @@
+/obj/item/vamp/keys/mayor
+	name = "mayor's keys"
+	accesslocks = list(
+		LOCKACCESS_MAYOR,
+		LOCKACCESS_CLEANING,
+		LOCKACCESS_SUPPLY,
+		LOCKACCESS_GRAVEYARD,
+		LOCKACCESS_FEDERAL,
+		LOCKACCESS_BANKBOSS,
+		LOCKACCESS_DIRECTOR
+	)
+	color = "#2d5a27"

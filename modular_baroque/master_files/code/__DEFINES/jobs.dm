@@ -12,3 +12,7 @@
 
 #define JOB_TVAUG_CAMERA "Cameraman"
 #define JOB_DISPLAY_ORDER_TVAUG_CAMERA 63
+
+// Townhall
+#define JOB_MAYOR "Mayor"
+#define JOB_DISPLAY_ORDER_MAYOR 64

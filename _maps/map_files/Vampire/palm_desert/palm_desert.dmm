@@ -1519,12 +1519,14 @@
 /area/vtm/palm_desert/interior/millennium)
 "cbX" = (
 /obj/structure/vampdoor/wood{
-	dir = 4
+	dir = 4;
+	name = "mayor's office"
 	},
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 4
 	},
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/mapping_helpers/door/access/mayor,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/townhall)
 "cda" = (
@@ -2026,6 +2028,7 @@
 /obj/structure/chair/comfy/darkpack/dark{
 	dir = 4
 	},
+/obj/effect/landmark/start/darkpack/townhall/mayor,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/townhall)
 "cRy" = (
@@ -11559,8 +11562,8 @@
 /area/vtm/interior)
 "oUB" = (
 /obj/structure/table/wood,
-/obj/vampire_computer,
 /obj/structure/platform/lowwall/brick,
+/obj/structure/mayor_console,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/townhall)
 "oVe" = (

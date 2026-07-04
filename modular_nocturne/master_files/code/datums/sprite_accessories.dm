@@ -40,7 +40,7 @@
 		var/found_plain_layer = FALSE
 		var/found_primary_layer = FALSE
 		for(var/layer in relevant_layers)
-			var/layertext
+			var/layertext = "FRONT"
 			switch(layer)
 				if(BODY_BEHIND_LAYER)
 					layertext = "BEHIND"
@@ -48,8 +48,6 @@
 					layertext = "ADJ"
 				else if(BODY_FRONT_UNDER_CLOTHES_LAYER)
 					layertext = "FRONT_UNDER"
-				else
-					layertext = "FRONT"
 			var/base_state = "m_[key]_[icon_state]_[layertext]"
 			if(base_state in cached_states)
 				found_plain_layer = TRUE
