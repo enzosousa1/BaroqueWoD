@@ -36,21 +36,39 @@
 	if(color_src == USE_MATRIXED_COLORS)
 		if(!SSaccessories.cached_mutant_icon_files[icon])
 			SSaccessories.cached_mutant_icon_files[icon] = icon_states(new /icon(icon))
+		var/list/cached_states = SSaccessories.cached_mutant_icon_files[icon]
+		var/found_plain_layer = FALSE
+		var/found_primary_layer = FALSE
 		for(var/layer in relevant_layers)
 			var/layertext
 			switch(layer)
 				if(BODY_BEHIND_LAYER)
 					layertext = "BEHIND"
-				if(BODY_ADJ_LAYER)
+				else if(BODY_ADJ_LAYER)
 					layertext = "ADJ"
-				if (BODY_FRONT_UNDER_CLOTHES_LAYER)
-					layertext =  "FRONT_UNDER"
+				else if(BODY_FRONT_UNDER_CLOTHES_LAYER)
+					layertext = "FRONT_UNDER"
 				else
 					layertext = "FRONT"
-			if("m_[key]_[icon_state]_[layertext]_2" in SSaccessories.cached_mutant_icon_files[icon])
-				color_layer_names["2"] = "2"
-			if("m_[key]_[icon_state]_[layertext]_3" in SSaccessories.cached_mutant_icon_files[icon])
-				color_layer_names["3"] = "3"
+			var/base_state = "m_[key]_[icon_state]_[layertext]"
+			if(base_state in cached_states)
+				found_plain_layer = TRUE
+			if("[base_state]_primary" in cached_states)
+				found_primary_layer = TRUE
+			if(!("2" in color_layer_names))
+				if("[base_state]_2" in cached_states)
+					color_layer_names["2"] = "2"
+				else if("[base_state]_secondary" in cached_states)
+					color_layer_names["2"] = "secondary"
+			if(!("3" in color_layer_names))
+				if("[base_state]_3" in cached_states)
+					color_layer_names["3"] = "3"
+				else if("[base_state]_tertiary" in cached_states)
+					color_layer_names["3"] = "tertiary"
+		if(found_plain_layer)
+			color_layer_names["1"] = MUTANT_ACCESSORY_NO_AFFIX
+		else if(found_primary_layer)
+			color_layer_names["1"] = "primary"
 
 // sock overrides
 

@@ -48,14 +48,9 @@
 		body = uni_icon('icons/mob/human/human.dmi', "human_basic", SOUTH)
 	var/datum/universal_icon/final_icon = body.copy()
 
-	if (!isnull(sprite_accessory))
-		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT"))
-			var/datum/universal_icon/accessory_icon = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT", SOUTH)
-			final_icon.blend_icon(accessory_icon, ICON_OVERLAY)
-		if(icon_exists(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT_2"))
-			var/datum/universal_icon/accessory_icon_2 = uni_icon(sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT_2", SOUTH)
-			accessory_icon_2.blend_color(COLOR_RED, ICON_MULTIPLY)
-			final_icon.blend_icon(accessory_icon_2, ICON_OVERLAY)
+	if(!isnull(sprite_accessory) && sprite_accessory.icon_state != "none")
+		blend_mutant_accessory_preview_layer(final_icon, sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT", 1, SOUTH, apply_default_tint = FALSE)
+		blend_mutant_accessory_preview_layer(final_icon, sprite_accessory.icon, "m_pintle_[sprite_accessory.icon_state]_aroused_FRONT", 2, SOUTH, tint_color = COLOR_RED)
 
 	final_icon.crop(8, 1, 24, 16)
 	final_icon.scale(32, 32)
