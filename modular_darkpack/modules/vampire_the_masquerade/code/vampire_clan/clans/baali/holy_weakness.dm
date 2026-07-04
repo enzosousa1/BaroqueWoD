@@ -35,6 +35,9 @@
 	if (!istype(entered_area, /area/vtm/interior/church))
 		return
 
+	if(source in exposed_to_holiness)
+		return
+
 	to_chat(source, span_danger("Leave this holy place!"))
 
 	// Start repeatedly setting this mob on fire if they stay in the holy area

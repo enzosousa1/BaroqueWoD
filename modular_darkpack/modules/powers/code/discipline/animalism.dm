@@ -117,6 +117,12 @@
 
 	shapeshift_spell.cast(owner)
 
+/datum/discipline_power/animalism/rat_shapeshift/post_loss()
+	if(shapeshift_spell)
+		UnregisterSignal(shapeshift_spell, COMSIG_ACTION_TRIGGER)
+		shapeshift_spell.Remove(owner)
+		QDEL_NULL(shapeshift_spell)
+
 /datum/discipline_power/animalism/rat_shapeshift/proc/on_shapeshift_toggle(datum/source)
 	SIGNAL_HANDLER
 	if(!is_type_in_list(owner, shapeshift_spell.possible_shapes))

@@ -97,11 +97,11 @@ GLOBAL_LIST_INIT(derangement_phrases,list(
 	var/offset = pick(-3,-2, -1, 1, 2, 3)
 	var/disappearfirst = rand(1 SECONDS, 3 SECONDS) * abs(offset)
 	animate(fake_floor, pixel_y = offset, time = disappearfirst, flags = ANIMATION_RELATIVE)
-	addtimer(CALLBACK(src, PROC_REF(malk_floor_stage1), quirk_holder, offset, fake_floor), disappearfirst, TIMER_CLIENT_TIME)
+	addtimer(CALLBACK(src, PROC_REF(malk_floor_stage1), quirk_holder, offset, fake_floor), disappearfirst, TIMER_CLIENT_TIME | TIMER_DELETE_ME)
 
 /datum/quirk/darkpack/derangement/proc/malk_floor_stage1(mob/living/malk, offset, mutable_appearance/fake_floor)
 	animate(fake_floor, pixel_y = -offset, time = FLOOR_DISAPPEAR, flags = ANIMATION_RELATIVE)
-	addtimer(CALLBACK(src, PROC_REF(malk_floor_stage2), malk, fake_floor), FLOOR_DISAPPEAR, TIMER_CLIENT_TIME)
+	addtimer(CALLBACK(src, PROC_REF(malk_floor_stage2), malk, fake_floor), FLOOR_DISAPPEAR, TIMER_CLIENT_TIME | TIMER_DELETE_ME)
 
 /datum/quirk/darkpack/derangement/proc/malk_floor_stage2(mob/living/malk, mutable_appearance/fake_floor)
 	malk.client?.images -= fake_floor
@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(derangement_phrases,list(
 	var/language = hallucinator.get_random_understood_language()
 	var/message = hallucinator.compose_message(speaker, language, speech)
 	hallucinator.playsound_local(hallucinator, audible_hallucinations[speech], vol = 20, vary = TRUE)
-	if(hallucinator.client.prefs.read_preference(/datum/preference/toggle/see_rc_emotes))
+	if(hallucinator.client?.prefs?.read_preference(/datum/preference/toggle/see_rc_emotes))
 		hallucinator.create_chat_message(speaker, language, speech, spans = list("italics"))
 	to_chat(hallucinator, span_cult_italic(message))
 

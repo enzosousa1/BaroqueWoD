@@ -55,3 +55,8 @@
 	to_chat(lacking_soil, span_danger("Your home soil has been destroyed! Its loss debilitates you."))
 
 	qdel(src)
+
+/datum/component/needs_home_soil/UnregisterFromParent()
+	UnregisterSignal(soil, list(COMSIG_QDELETING, COMSIG_MOVABLE_MOVED))
+	STOP_PROCESSING(SSdcs, src)
+	return ..()

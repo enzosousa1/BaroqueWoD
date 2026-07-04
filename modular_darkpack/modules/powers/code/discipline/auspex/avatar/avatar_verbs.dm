@@ -20,6 +20,8 @@
 	if(mind.current.stat == DEAD)
 		to_chat(src, span_warning("To leave your body again use the Ghost verb."))
 	mind.current.PossessByPlayer(key)
+	if(!mind.current.client)
+		return FALSE
 	mind.current.client.init_verbs()
 	qdel(src)
 	return TRUE

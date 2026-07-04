@@ -133,6 +133,8 @@ SUBSYSTEM_DEF(bad_guys_party)
 	SSjob.AssignRole(src, "Citizen", 1)
 
 	var/mob/living/character = create_character(TRUE)	//creates the human and transfers vars and mind
+	if(!character?.client)
+		return
 	SSbad_guys_party.Next.equip(H = character, visualsOnly = FALSE)
 	var/atom/movable/screen/splash/Spl = new(character.client, TRUE)
 	Spl.Fade(TRUE)

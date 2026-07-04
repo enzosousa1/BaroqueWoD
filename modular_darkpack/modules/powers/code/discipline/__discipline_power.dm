@@ -75,6 +75,8 @@
 	if(cooldown_timer)
 		deltimer(cooldown_timer)
 		cooldown_timer = null
+	if(owner)
+		post_loss()
 	QDEL_LIST(duration_timers)
 	grouped_powers = null
 	owner = null

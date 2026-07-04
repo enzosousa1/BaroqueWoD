@@ -12,6 +12,11 @@
 	if(level >= 4)
 		RegisterSignal(owner, COMSIG_MOB_EMOTE, PROC_REF(on_snap))
 
+/datum/discipline/dominate/post_loss()
+	. = ..()
+	if(level >= 4)
+		UnregisterSignal(owner, COMSIG_MOB_EMOTE)
+
 /datum/discipline/dominate/proc/on_snap(atom/source, datum/emote/emote_args)
 	SIGNAL_HANDLER
 	INVOKE_ASYNC(src, PROC_REF(handle_snap), source, emote_args)
@@ -266,6 +271,10 @@
 	var/datum/weakref/current_target_ref
 	var/datum/weakref/end_action_ref
 	var/pulse_active = FALSE
+	var/pulse_timer_id
+
+/datum/discipline_power/dominate/mesmerize/post_loss()
+	cleanup_mesmerization()
 
 /datum/discipline_power/dominate/mesmerize/pre_activation_checks(mob/living/carbon/human/target)
 	//you can't mesmerize someone already mesmerized
@@ -321,7 +330,7 @@
 	//the message pangs in the victim's mind every couple minutes depending on successes rolled.
 	var/interval_minutes = max(1, 5 - pulse_interval)
 	var/interval_deciseconds = interval_minutes * 60 * 10
-	addtimer(CALLBACK(src, PROC_REF(mesmerization_pulse), target, interval_deciseconds, 1), interval_deciseconds)
+	pulse_timer_id = addtimer(CALLBACK(src, PROC_REF(mesmerization_pulse), target, interval_deciseconds, 1), interval_deciseconds, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 /datum/discipline_power/dominate/mesmerize/proc/mesmerization_pulse(mob/living/carbon/human/target, interval, pulse_count)
 	if(!pulse_active || !target || target.stat == DEAD)
@@ -341,7 +350,7 @@
 		return
 
 	if(pulse_active)
-		addtimer(CALLBACK(src, PROC_REF(mesmerization_pulse), target, interval, pulse_count + 1), interval)
+		pulse_timer_id = addtimer(CALLBACK(src, PROC_REF(mesmerization_pulse), target, interval, pulse_count + 1), interval, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 //for use in the /datum/action/vampire/end_mesmerization
 /datum/discipline_power/dominate/mesmerize/proc/force_end_mesmerization()
@@ -356,6 +365,9 @@
 	cleanup_mesmerization()
 
 /datum/discipline_power/dominate/mesmerize/proc/cleanup_mesmerization()
+	if(pulse_timer_id)
+		deltimer(pulse_timer_id)
+		pulse_timer_id = null
 	var/mob/living/carbon/human/current_target = current_target_ref?.resolve()
 	pulse_active = FALSE
 	if(current_target)

@@ -114,7 +114,7 @@
 
 /datum/discipline_power/melpominee/phantom_speaker/activate()
 	. = ..()
-	if(!owner.mind.guestbook.known_names) // Who do we know
+	if(!owner.mind?.guestbook?.known_names) // Who do we know
 		to_chat(owner, span_warning("You don't seem to know anyone you can speak to right now...")) // You have no friends.
 		return
 	// Guys we add to the input below
@@ -126,7 +126,7 @@
 		if(owner.mind.guestbook.known_names[character.real_name] && character.client) // Everyone we know who has a client
 			targets += character
 
-	var/list/mob/living/listener_list
+	var/list/listener_list = list()
 	var/mob/living/listener
 
 	if(!HAS_TRAIT_FROM(owner, TRAIT_VIRTUOSA, type))

@@ -13,6 +13,9 @@
 	var/mob/living/carbon/human/vamp = vampire_original?.resolve()
 	var/mob/living/carbon/human/mortal = mortal_body?.resolve()
 
+	if(!vamp?.mind || !vamp.ckey)
+		return
+
 	var/mob/living/possession_observer/observer = new(mortal, src)
 	mortal_observer = WEAKREF(observer)
 	observer.ckey = mortal.ckey

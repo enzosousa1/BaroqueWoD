@@ -178,6 +178,8 @@
 	. = ..()
 	if(gangy_form)
 		CRASH("[src] somehow already has a spell?")
+	if(!owner.mind)
+		return
 	owner.drop_all_held_items()
 	gangy_form = new(owner.mind)
 	gangy_form.Grant(owner)
@@ -226,6 +228,8 @@
 	. = ..()
 	if(mist_form)
 		CRASH("[src] somehow already has a spell?")
+	if(!owner.mind)
+		return
 	owner.drop_all_held_items()
 	mist_form = new(owner.mind)
 	mist_form.Grant(owner)

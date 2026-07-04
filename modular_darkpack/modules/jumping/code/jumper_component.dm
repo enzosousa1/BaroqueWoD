@@ -15,6 +15,10 @@
 	RegisterSignal(parent, COMSIG_MOB_CLICKON, PROC_REF(try_jump))
 	RegisterSignal(parent, COMSIG_LIVING_JUMP_PREP_TOGGLE, PROC_REF(toggle_jumping))
 
+/datum/component/jumper/UnregisterFromParent()
+	UnregisterSignal(parent, list(COMSIG_MOB_CLICKON, COMSIG_LIVING_JUMP_PREP_TOGGLE))
+	return ..()
+
 //Toggles whether a left click will perform a jump.
 //We have this functionality so players without a 3rd mouse button can still jump around.
 /datum/component/jumper/proc/toggle_jumping(datum/source)

@@ -59,14 +59,14 @@
 		receivers[parent_mob] = list()
 	for(var/mob/living/carbon/living_carbon in orange(parent_mob.client?.view, get_turf(parent_mob)))
 		var/obj/item/organ/heart/beating_heart = living_carbon.get_organ_slot(ORGAN_SLOT_HEART)
-		if(!istype(beating_heart) && !(beating_heart.is_beating()))
+		if(!istype(beating_heart) || !beating_heart.is_beating())
 			continue
 		show_heartbeat_image(living_carbon)
 
 /datum/component/heartbeat_sensing/proc/show_heartbeat_image(mob/living_mob)
 	var/current_time = "[world.time]"
 	show_image(generate_appearance(living_mob), living_mob, current_time)
-	addtimer(CALLBACK(src, PROC_REF(fade_images), current_time), image_expiry_time)
+	addtimer(CALLBACK(src, PROC_REF(fade_images), current_time), image_expiry_time, TIMER_DELETE_ME)
 
 /datum/component/heartbeat_sensing/proc/show_image(image/input_appearance, atom/input, current_time)
 	var/image/final_image = image(input_appearance)
@@ -105,7 +105,7 @@
 				fade_outs |= receivers[echolocate_receiver][rendered_atom]["image"]
 	for(var/image_echo in fade_outs)
 		animate(image_echo, alpha = 0, time = fade_out_time)
-	addtimer(CALLBACK(src, PROC_REF(delete_images), from_when), fade_out_time)
+	addtimer(CALLBACK(src, PROC_REF(delete_images), from_when), fade_out_time, TIMER_DELETE_ME)
 
 /datum/component/heartbeat_sensing/proc/delete_images(from_when)
 	for(var/mob/living/echolocate_receiver as anything in receivers)

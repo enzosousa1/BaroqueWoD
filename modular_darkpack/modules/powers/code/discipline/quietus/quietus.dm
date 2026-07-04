@@ -123,8 +123,11 @@
 	RegisterSignal(owner, COMSIG_CARBON_HELP_ACT, PROC_REF(on_touch))
 	RegisterSignal(owner, COMSIG_CARBON_HELPED, PROC_REF(on_touch))
 
+/datum/discipline_power/quietus/dagons_call/post_loss()
+	UnregisterSignal(owner, list(COMSIG_HUMAN_PUNCHED, COMSIG_HUMAN_GOT_PUNCHED, COMSIG_CARBON_HELP_ACT, COMSIG_CARBON_HELPED))
+
 /datum/discipline_power/quietus/dagons_call/Destroy()
-	UnregisterSignal(owner, list(COMSIG_HUMAN_PUNCHED, COMSIG_CARBON_HELP_ACT, COMSIG_CARBON_HELPED))
+	UnregisterSignal(owner, list(COMSIG_HUMAN_PUNCHED, COMSIG_HUMAN_GOT_PUNCHED, COMSIG_CARBON_HELP_ACT, COMSIG_CARBON_HELPED))
 	marked_targets.Cut()
 	return ..()
 

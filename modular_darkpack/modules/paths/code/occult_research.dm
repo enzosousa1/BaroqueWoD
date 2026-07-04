@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(occult_research)
 			if("Obtenebration")
 				research_gain += obtenebration_bonus
 
-		user.research_points += research_gain
+	user.research_points += research_gain
 
 	if(COOLDOWN_FINISHED(src, research_notification_cooldown))
 		COOLDOWN_START(src, research_notification_cooldown, 10 MINUTES)

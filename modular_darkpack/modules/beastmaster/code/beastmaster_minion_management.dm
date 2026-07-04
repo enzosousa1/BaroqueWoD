@@ -30,6 +30,9 @@
 	else
 		return FALSE
 
+	if(minion in beastmaster_minions)
+		return TRUE
+
 	//all mobs that we want to control need an ai_controller. if they don't have it - they just cant be controlled.
 	if(!minion.ai_controller)
 		to_chat(src, span_warning("[minion] cannot be commanded!"))
@@ -97,6 +100,13 @@
 	//delete the obeys commands component
 	var/datum/component/obeys_commands/component = minion_command_components[minion]
 	if(component)
+		var/datum/pet_command/attack/beastmaster/attack_cmd = component.available_commands["Attack"]
+		if(attack_cmd && minion.ai_controller)
+			var/list/enemies = minion.ai_controller.blackboard[BB_BEASTMASTER_ENEMIES_LIST]
+			if(enemies)
+				for(var/mob/living/enemy in enemies)
+					UnregisterSignal(enemy, COMSIG_LIVING_DEATH)
+				enemies.Cut()
 		qdel(component)
 
 	//remove them from the owner's minion's list and unregister signals if the list is now empty

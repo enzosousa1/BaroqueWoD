@@ -67,6 +67,8 @@
 
 	// NOCTURNE ADDITION START - thank GOD players cant change their character prefs mid round
 	if(form_to_transform == /datum/species/human/shifter/homid)
+		if(!owner.client)
+			return
 		var/original_species_type = owner.client.prefs.read_preference(/datum/preference/choiced/species)
 		switch(original_species_type)
 			if(/datum/species/human/anthro)
@@ -74,6 +76,8 @@
 			if(/datum/species/human/demihuman)
 				form_to_transform = /datum/species/human/shifter/homid/demihuman
 	else if(form_to_transform == /datum/species/human/shifter/bestial)
+		if(!owner.client)
+			return
 		var/original_species_type = owner.client.prefs.read_preference(/datum/preference/choiced/species)
 		switch(original_species_type)
 			if(/datum/species/human/anthro)
@@ -90,6 +94,8 @@
 	return abs(first_index - second_index)
 
 /datum/splat/werewolf/shifter/proc/revert_to_breed_form()
+	SIGNAL_HANDLER
+
 	if(HAS_TRAIT(owner, TRAIT_METAMORPH))
 		var/datum/storyteller_roll/metamorph/roll_datum = new()
 		if(roll_datum.st_roll(owner, bonus = PRIMAL_URGE_PLACEHOLDER) == ROLL_SUCCESS)

@@ -158,6 +158,8 @@
 	. = ..()
 	if(dust_transformation)
 		CRASH("[src] somehow already has a spell?")
+	if(!owner.mind)
+		return
 	owner.drop_all_held_items()
 	dust_transformation = new(owner.mind)
 	dust_transformation.Grant(owner)

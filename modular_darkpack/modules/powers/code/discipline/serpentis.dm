@@ -191,6 +191,8 @@
 	if(cobra_form)
 		CRASH("[src] somehow already has a spell?")
 
+	if(!owner.mind)
+		return
 	owner.drop_all_held_items()
 	cobra_form = new(owner.mind)
 	cobra_form.Grant(owner)

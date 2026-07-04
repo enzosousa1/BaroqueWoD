@@ -106,33 +106,6 @@
 	if (fire_stacks >= 1)
 		INVOKE_ASYNC(src, PROC_REF(execute_resist))
 
-	if (staying)
-		return
-	if (!walktarget)
-		walktarget = ChoosePath()
-	if(walktarget)
-		EVLOG_PATH(src, EVLOG_CATEGORY_MOVELOOPS, "Set walktarget: [walktarget]", list(loc, get_turf(walktarget)))
-	if (loc == tupik_loc)
-		tupik_steps += 1
-	else
-		tupik_loc = loc
-		tupik_steps = 0
-
-	if (tupik_steps <= 3)
-		return
-	var/turf/T = get_step(src, pick(NORTH, SOUTH, WEST, EAST))
-	face_atom(T)
-	step_to(src, T, 0)
-
-	if (!walktarget || old_movement)
-		return
-	if (observed_by_player())
-		return
-	var/turf/old_loc = loc
-	var/turf/new_loc = get_turf(walktarget)
-	forceMove(new_loc)
-	EVLOG_PATH(src, EVLOG_CATEGORY_MOVELOOPS, "Teleported using evil russian shitcode", list(old_loc, new_loc))
-
 /mob/living/carbon/human/npc/proc/CreateWay(direction)
 	var/turf/location = get_turf(src)
 	for(var/distance = 1 to 50)

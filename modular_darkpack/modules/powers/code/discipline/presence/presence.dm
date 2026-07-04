@@ -249,6 +249,7 @@
 /datum/discipline_power/presence/entrancement/proc/end_entrancement(mob/living/carbon/human/target)
 	to_chat(target, span_hypnophrase("Your desire to fulfill [owner]'s every desire fades."))
 	target.clear_alert("entrancement")
+	target.remove_overlay(POWERS_LAYER)
 
 /datum/discipline_power/presence/entrancement/deactivate(mob/living/carbon/human/target)
 	. = ..()

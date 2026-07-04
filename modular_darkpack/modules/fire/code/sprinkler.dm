@@ -23,6 +23,7 @@
 	/// If the sprinkler triggers and is triggered my the area being set to on fire
 	var/area_managed = FALSE
 	var/datum/looping_sound/sprinkler/looping_sound
+	var/list/registered_turfs
 
 /obj/machinery/sprinkler/Initialize(mapload)
 	. = ..()
@@ -33,8 +34,15 @@
 	AddComponent(/datum/component/seethrough, SEE_THROUGH_MAP_DEFAULT)
 	//AddComponent(/datum/component/plumbing/simple_demand)
 
+	registered_turfs = list()
 	for(var/turf/open/open_turf in RANGE_TURFS(fire_detection_range, src))
+		registered_turfs += open_turf
 		RegisterSignals(open_turf, list(COMSIG_ATOM_FIRE_ACT, COMSIG_TURF_HOTSPOT_EXPOSE, COMSIG_TURF_IGNITED), PROC_REF(fire_act_listener))
+
+/obj/machinery/sprinkler/Destroy()
+	for(var/turf/open/open_turf in registered_turfs)
+		UnregisterSignals(open_turf, list(COMSIG_ATOM_FIRE_ACT, COMSIG_TURF_HOTSPOT_EXPOSE, COMSIG_TURF_IGNITED))
+	return ..()
 
 
 /obj/machinery/sprinkler/proc/fire_act_listener()

@@ -55,6 +55,9 @@
 		return FALSE
 
 	var/datum/data/vending_product/prize = locate(params["ref"]) in products_list
+	if(!prize)
+		to_chat(user, span_alert("Error: Invalid choice!"))
+		return FALSE
 
 	user.collected_souls -= prize.price
 	to_chat(user, span_notice("The necromancy tome resonates with dark energy as it dispenses [prize.name]!"))

@@ -36,21 +36,24 @@
 	RegisterSignal(living_parent, COMSIG_ENTER_AREA, PROC_REF(start_slime_prodaction))
 
 /datum/component/slime_friends/Destroy(force)
-	. = ..()
+	if(timer)
+		deltimer(timer)
+		timer = null
 	var/mob/living/living_parent = parent
-	living_parent.remove_faction(FACTION_SLIME)
-	timer = null
+	living_parent?.remove_faction(FACTION_SLIME)
+	UnregisterSignal(living_parent, COMSIG_ENTER_AREA)
+	return ..()
 
 /// Start slime prodaction when we leave wizden.
 /datum/component/slime_friends/proc/start_slime_prodaction(mob/living/friend, area/new_area)
 	if(new_area == GLOB.areas_by_type[/area/centcom/wizard_station])
 		return
-	timer = addtimer(CALLBACK(src, PROC_REF(make_slime_friend), friend), 20 SECONDS)
+	timer = addtimer(CALLBACK(src, PROC_REF(make_slime_friend), friend), 20 SECONDS, TIMER_STOPPABLE | TIMER_DELETE_ME)
 	UnregisterSignal(friend, COMSIG_ENTER_AREA)
 
 /// Slime prodactor proc.
 /datum/component/slime_friends/proc/make_slime_friend(mob/living/friend)
-	timer = addtimer(CALLBACK(src, PROC_REF(make_slime_friend), friend), 20 SECONDS)
+	timer = addtimer(CALLBACK(src, PROC_REF(make_slime_friend), friend), 20 SECONDS, TIMER_STOPPABLE | TIMER_DELETE_ME)
 	if(get_area(friend) == GLOB.areas_by_type[/area/centcom/wizard_station])
 		return
 	var/turf/where = get_turf(friend)

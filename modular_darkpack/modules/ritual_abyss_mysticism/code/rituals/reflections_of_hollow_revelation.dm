@@ -53,15 +53,15 @@
 			qdel(src)
 			to_chat(user, span_warning("The Nocturne collapses!"))
 		if(ROLL_BOTCH)
-			qdel(src)
 			to_chat(user, span_warning("You feel drained..."))
 			for(var/datum/st_stat/stat as anything in subtypesof(/datum/st_stat))
 				user.st_add_stat_mod(stat, -2, "reflections_of_hollow_revelation")
-			addtimer(CALLBACK(src, PROC_REF(restore_stats), user), 1 SCENES)
+			addtimer(CALLBACK(user, PROC_REF(restore_reflections_of_hollow_stats)), 1 SCENES, TIMER_DELETE_ME)
+			qdel(src)
 
-/obj/ritual_rune/abyss/reflections_of_hollow_revelation/proc/restore_stats(mob/living/user)
-	for(var/datum/st_stat/stat as anything in subtypesof(/datum/st_stat))
-		user.st_remove_stat_mod(stat, "reflections_of_hollow_revelation")
+/mob/living/proc/restore_reflections_of_hollow_stats()
+	for(var/stat_type in subtypesof(/datum/st_stat))
+		st_remove_stat_mod(stat_type, "reflections_of_hollow_revelation")
 
 /obj/ritual_rune/abyss/reflections_of_hollow_revelation/proc/scry_target(mob/living/carbon/human/target, mob/living/user)
 	// If the target has Obtenebration or Auspex, roll to see if they detect the shadows
@@ -74,7 +74,7 @@
 	shadowview(target, user)
 	to_chat(user, span_notice("You peer through the shadows near [target.name]..."))
 
-	addtimer(CALLBACK(src, PROC_REF(on_end),user), 1 SCENES) // 3 minute timer, AKA 1 Scene
+	addtimer(CALLBACK(src, PROC_REF(on_end), user), 1 SCENES, TIMER_DELETE_ME) // 3 minute timer, AKA 1 Scene
 
 /obj/ritual_rune/abyss/reflections_of_hollow_revelation/proc/shadowview(mob/living/target, mob/user)
 	nocturne_user = user
@@ -124,12 +124,16 @@
 
 	if(window_target)
 		UnregisterSignal(window_target, COMSIG_MOVABLE_MOVED)
+		window_target = null
+
+	if(nocturne_user)
+		UnregisterSignal(nocturne_user, COMSIG_MOB_RESET_PERSPECTIVE)
+	else if(user)
+		UnregisterSignal(user, COMSIG_MOB_RESET_PERSPECTIVE)
 
 	QDEL_NULL(shadow_window)
-	qdel(src)
-	UnregisterSignal(user, COMSIG_MOB_RESET_PERSPECTIVE)
-
 	nocturne_user = null
+	qdel(src)
 	to_chat(user, span_notice("You stop viewing through your summoned Nocturne."))
 	playsound(user, 'sound/effects/magic/ethereal_exit.ogg', 50, FALSE)
 

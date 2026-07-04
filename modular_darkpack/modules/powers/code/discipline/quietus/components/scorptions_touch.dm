@@ -61,7 +61,7 @@
 
 	// stamina stat mod reduction goes here
 	victim.st_add_stat_mod(STAT_STAMINA, -poison_potency, "quietus")
-	addtimer(CALLBACK(src, PROC_REF(remove_poison), victim), poison_duration MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(remove_poison), victim), poison_duration MINUTES, TIMER_DELETE_ME)
 
 	if(victim.st_get_stat(STAT_STAMINA) <= 0)
 		if(get_kindred_splat(victim))

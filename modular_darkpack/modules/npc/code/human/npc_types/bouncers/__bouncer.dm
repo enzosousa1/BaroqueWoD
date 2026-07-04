@@ -55,6 +55,7 @@
 		CRASH("A Bouncer was created for vip_barrier_perms that were not loaded!")
 
 /mob/living/carbon/human/npc/bouncer/Destroy()
+	UnregisterSignal(src, list(COMSIG_MOVABLE_MOVED, COMSIG_MOB_STATCHANGE))
 	if(linked_perm)
 		linked_perm.linked_bouncers -= src
 		linked_perm = null

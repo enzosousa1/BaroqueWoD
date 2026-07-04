@@ -31,6 +31,7 @@
 	var/obj/effect/aura_overlay/aura_smoke_image
 
 	var/obj/effect/aura_overlay/aura_classic_image
+	var/obj/effect/aura_overlay/aura_anxious_static
 
 /datum/component/aura/RegisterWithParent()
 	. = ..()
@@ -51,7 +52,15 @@
 	var/datum/atom_hud/data/auspex_aura/target_hud = GLOB.huds[DATA_HUD_AUSPEX_AURAS]
 	target_hud.remove_atom_from_hud(parent_mob)
 	examine_message = ""
-	UnregisterSignal(parent_mob, list(COMSIG_MOB_EMOTION_CHANGED, COMSIG_MOB_UPDATE_AURA, COMSIG_LIVING_GAINED_SPLAT, COMSIG_LIVING_LOSE_SPLAT, SIGNAL_ADDTRAIT(TRAIT_IN_FRENZY), SIGNAL_REMOVETRAIT(TRAIT_IN_FRENZY)), COMSIG_ATOM_EXAMINE)
+	UnregisterSignal(parent_mob, list(
+		COMSIG_MOB_EMOTION_CHANGED,
+		COMSIG_MOB_UPDATE_AURA,
+		COMSIG_LIVING_GAINED_SPLAT,
+		COMSIG_LIVING_LOSE_SPLAT,
+		SIGNAL_ADDTRAIT(TRAIT_IN_FRENZY),
+		SIGNAL_REMOVETRAIT(TRAIT_IN_FRENZY),
+		COMSIG_ATOM_EXAMINE,
+	))
 	if(isnpc(parent_mob))
 		UnregisterSignal(parent_mob, list(COMSIG_COMBAT_MODE_TOGGLED))
 	QDEL_NULL(aura_smoke)
@@ -60,6 +69,7 @@
 	QDEL_NULL(aura_smoke_image)
 
 	QDEL_NULL(aura_classic_image)
+	QDEL_NULL(aura_anxious_static)
 	return ..()
 
 /datum/component/aura/proc/update_emotions(mob/changed_mob, new_emotion)
@@ -303,16 +313,17 @@
 		aura_classic_image.color = "#1717178b"
 
 	if(current_aura == AURA_ANXIOUS)
-		var/icon/temporary_icon_holder = icon('modular_darkpack/modules/powers/icons/auras.dmi', "old_aura")
-		var/icon/static_icon = getStaticIcon(temporary_icon_holder)
-		var/obj/effect/aura_overlay/static_image = new(null)
-		static_image.icon = static_icon
-		static_image.icon_state = "old_aura"
-		static_image.layer = ABOVE_MOB_LAYER + 2
-		static_image.plane = ABOVE_LIGHTING_PLANE
-		static_image.appearance_flags |= RESET_COLOR
-		static_image.alpha = 150
-		holder.vis_contents += static_image
+		if(!aura_anxious_static)
+			var/icon/temporary_icon_holder = icon('modular_darkpack/modules/powers/icons/auras.dmi', "old_aura")
+			var/icon/static_icon = getStaticIcon(temporary_icon_holder)
+			aura_anxious_static = new(null)
+			aura_anxious_static.icon = static_icon
+			aura_anxious_static.icon_state = "old_aura"
+			aura_anxious_static.layer = ABOVE_MOB_LAYER + 2
+			aura_anxious_static.plane = ABOVE_LIGHTING_PLANE
+			aura_anxious_static.appearance_flags |= RESET_COLOR
+		aura_anxious_static.alpha = 150
+		holder.vis_contents += aura_anxious_static
 
 	if(has_pale_blotches(parent_mob))
 		var/list/hsv_color_value = rgb2hsv(aura_appearance.color)

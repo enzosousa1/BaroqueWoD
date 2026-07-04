@@ -288,6 +288,11 @@
 	// warning message sent to mobs that stand on the tile
 	RegisterSignal(loc, COMSIG_ATOM_ENTERED, PROC_REF(warn_entering_mob))
 
+/obj/effect/temp_visual/inferno_warning/Destroy()
+	if(loc)
+		UnregisterSignal(loc, COMSIG_ATOM_ENTERED)
+	return ..()
+
 /obj/effect/temp_visual/inferno_warning/proc/warn_entering_mob(datum/source, atom/movable/entered)
 	SIGNAL_HANDLER
 

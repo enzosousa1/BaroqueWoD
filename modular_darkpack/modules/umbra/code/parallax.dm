@@ -19,6 +19,8 @@
 /atom/movable/screen/parallax_layer/umbra/proc/on_mob_logout(mob/source)
 	SIGNAL_HANDLER
 	var/client/boss = source.canon_client
+	if(!boss?.mob)
+		return
 	on_z_change(boss.mob)
 
 /atom/movable/screen/parallax_layer/umbra/proc/on_z_change(mob/source)

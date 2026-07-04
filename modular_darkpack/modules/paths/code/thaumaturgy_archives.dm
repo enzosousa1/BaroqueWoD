@@ -216,6 +216,9 @@
 		return FALSE
 
 	var/mob/living/carbon/human/target = locate(target_ref)
+	if(!istype(target) || QDELETED(target))
+		to_chat(sender, span_alert("Error: Target not found!"))
+		return FALSE
 
 	sender.research_points -= amount
 	target.research_points += amount
@@ -244,6 +247,9 @@
 		return FALSE
 
 	var/mob/living/carbon/human/target = locate(target_ref)
+	if(!istype(target) || QDELETED(target))
+		to_chat(regent, span_alert("Error: Target not found!"))
+		return FALSE
 
 	var/actual_amount = min(amount, target.research_points)
 

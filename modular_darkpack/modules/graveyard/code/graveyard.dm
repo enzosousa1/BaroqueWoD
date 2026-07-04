@@ -119,15 +119,19 @@
 	var/spawn_interval = 15 MINUTES
 	var/max_zombies_per_grave = 2
 	var/list/spawned_zombies = list()
+	var/spawn_timer_id
 
 /obj/vampgrave/Initialize(mapload)
 	. = ..()
 	randomize_appearance()
 	spawn_interval += rand(-10 SECONDS, 10 SECONDS) // Prevent them from all spawning at the same time.
-	addtimer(CALLBACK(src, PROC_REF(try_spawn_zombie)), spawn_interval, TIMER_STOPPABLE | TIMER_LOOP)
+	spawn_timer_id = addtimer(CALLBACK(src, PROC_REF(try_spawn_zombie)), spawn_interval, TIMER_STOPPABLE | TIMER_LOOP | TIMER_DELETE_ME)
 
 //they have the indestructible flag so this should never happen but just in case
 /obj/vampgrave/Destroy()
+	if(spawn_timer_id)
+		deltimer(spawn_timer_id)
+		spawn_timer_id = null
 	spawned_zombies.Cut()
 	return ..()
 

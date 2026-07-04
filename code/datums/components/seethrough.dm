@@ -65,6 +65,7 @@
 	if(mob in tricked_mobs)
 		return
 
+	UnregisterSignal(mob, COMSIG_MOB_LOGIN)
 	trick_mob(mob)
 
 ///Remove the screen object and make us appear solid to the client again
@@ -96,6 +97,13 @@
 
 ///Apply the trickery image and animation
 /datum/component/seethrough/proc/trick_mob(mob/fool)
+	SIGNAL_HANDLER
+
+	UnregisterSignal(fool, COMSIG_MOB_LOGIN)
+
+	if(!fool.client)
+		return
+
 	var/datum/hud/our_hud = fool.hud_used
 	for(var/atom/movable/screen/plane_master/seethrough in our_hud.get_true_plane_masters(SEETHROUGH_PLANE))
 		seethrough.unhide_plane(fool)
@@ -142,7 +150,7 @@
 	for(var/mob/fool in tricked_mobs)
 		var/image/trickery_image = tricked_mobs[fool]
 		fool.client?.images -= trickery_image
-		UnregisterSignal(fool, COMSIG_MOB_LOGOUT)
+		UnregisterSignal(fool, list(COMSIG_MOB_LOGOUT, COMSIG_MOB_LOGIN))
 		var/datum/hud/our_hud = fool.hud_used
 
 		for(var/atom/movable/screen/plane_master/seethrough in our_hud.get_true_plane_masters(SEETHROUGH_PLANE))
@@ -156,7 +164,19 @@
 
 	LAZYREMOVE(tricked_mobs, fool)
 	UnregisterSignal(fool, COMSIG_MOB_LOGOUT)
-	RegisterSignal(fool, COMSIG_MOB_LOGIN, PROC_REF(trick_mob))
+	var/turf/mob_turf = get_turf(fool)
+	if(mob_turf in watched_turfs)
+		UnregisterSignal(fool, COMSIG_MOB_LOGIN)
+		RegisterSignal(fool, COMSIG_MOB_LOGIN, PROC_REF(trick_mob))
 	var/datum/hud/our_hud = fool.hud_used
-	for(var/atom/movable/screen/plane_master/seethrough in our_hud.get_true_plane_masters(SEETHROUGH_PLANE))
+	for(var/atom/movable/screen/plane_master/seethrough in our_hud?.get_true_plane_masters(SEETHROUGH_PLANE))
 		seethrough.hide_plane(fool)
+
+/datum/component/seethrough/UnregisterFromParent()
+	for(var/turf/T in watched_turfs)
+		UnregisterSignal(T, list(COMSIG_ATOM_ENTERED, COMSIG_ATOM_EXITED))
+	for(var/mob/M in tricked_mobs)
+		UnregisterSignal(M, list(COMSIG_MOB_LOGIN, COMSIG_MOB_LOGOUT))
+	clear_all_images()
+	watched_turfs = null
+	return ..()

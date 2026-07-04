@@ -457,7 +457,7 @@
 	if(length(exit_side))
 		dumpe.Move(get_step(dumpe, angle2dir(pick(exit_side))))
 	else if(length(exit_alt))
-		dumpe.Move(get_step(dumpe, exit_alt))
+		dumpe.Move(get_step(dumpe, pick(exit_alt)))
 
 	to_chat(dumpe, span_notice("You exit [src]."))
 	if(dumpe?.client)
@@ -556,7 +556,9 @@
 		if(speed_in_pixels == 0 && !light_on)
 			return PROCESS_KILL
 
-	forceMove(locate(last_pos["x"], last_pos["y"], z))
+	var/turf/restore_turf = locate(last_pos["x"], last_pos["y"], z)
+	if(restore_turf)
+		forceMove(restore_turf)
 	if(on)
 		new /obj/effect/temp_visual/car(loc)
 

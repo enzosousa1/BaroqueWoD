@@ -7,6 +7,7 @@ SUBSYSTEM_DEF(city_time)
 	var/second_warning = FALSE
 	var/time_till_daytime = 5.5 HOURS
 	var/daytime_started = FALSE
+	var/daytime_effects_applied = FALSE
 
 	var/time_till_roundend = 6.5 HOURS
 	var/roundend_started = FALSE
@@ -45,7 +46,8 @@ SUBSYSTEM_DEF(city_time)
 	if(city_time_passed() > time_till_roundend && !roundend_started)
 		roundend_started = TRUE
 
-	if(daytime_started)
+	if(daytime_started && !daytime_effects_applied)
+		daytime_effects_applied = TRUE
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			H.apply_status_effect(/datum/status_effect/day_time_notif)
 			H.apply_status_effect(/datum/status_effect/sunlight_burning)

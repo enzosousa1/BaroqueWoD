@@ -36,6 +36,7 @@
 	var/integrity
 	/// A list of body parts saved at the beginning of the effect
 	var/list/datum/saved_bodypart/saved_bodyparts
+	var/rewind_timer_id
 
 /datum/component/dejavu/Initialize(rewinds = 1, interval = 10 SECONDS, add_component = FALSE)
 	if(!isatom(parent))
@@ -70,9 +71,12 @@
 		integrity = O.get_integrity()
 		rewind_type = PROC_REF(rewind_obj)
 
-	addtimer(CALLBACK(src, rewind_type), rewind_interval)
+	rewind_timer_id = addtimer(CALLBACK(src, rewind_type), rewind_interval, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 /datum/component/dejavu/Destroy()
+	if(rewind_timer_id)
+		deltimer(rewind_timer_id)
+		rewind_timer_id = null
 	starting_turf = null
 	saved_bodyparts = null
 	return ..()
@@ -90,7 +94,7 @@
 
 	rewinds_remaining --
 	if(rewinds_remaining || rewinds_remaining < 0)
-		addtimer(CALLBACK(src, rewind_type), rewind_interval)
+		rewind_timer_id = addtimer(CALLBACK(src, rewind_type), rewind_interval, TIMER_STOPPABLE | TIMER_DELETE_ME)
 	else
 		to_chat(parent, span_notice(no_rewinds_message))
 		qdel(src)

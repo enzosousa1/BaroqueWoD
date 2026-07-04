@@ -34,7 +34,7 @@ SERVERNAME Baroque [BR]
 # STATIONNAME Santa Augusta
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-#HUB
+HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 120
