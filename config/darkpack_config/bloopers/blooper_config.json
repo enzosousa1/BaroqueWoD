@@ -1,24 +1,72 @@
 [
-    {
-        "name":  "Ehh 1",
-        "id":  "ehh1",
-        "files":  [
-                      "ehh.ogg"
-                  ]
-    },
-
-    {
-        "name":  "Pencil",
-        "id":  "pencil",
-        "files":  [
-                      "pencil.ogg"
-                  ]
-    },
-    {
-        "name":  "Dot",
-        "id":  "dot",
-        "files":  [
-                      "dot.ogg"
-                  ]
-    }
+	{
+		"name": "Ehh 1",
+		"id": "ehh1",
+		"files": ["ehh.ogg"]
+	},
+	{
+		"name": "Pencil",
+		"id": "pencil",
+		"files": ["pencil.ogg"]
+	},
+	{
+		"name": "Dot",
+		"id": "dot",
+		"files": ["dot.ogg"]
+	},
+	{
+		"name": "Cow",
+		"id": "cow",
+		"files": ["cow.ogg"]
+	},
+	{
+		"name": "Blub",
+		"id": "blub",
+		"files": ["blub.ogg"]
+	},
+	{
+		"name": "Buwoo",
+		"id": "buwoo",
+		"files": ["buwoo.ogg"]
+	},
+	{
+		"name": "Lizard",
+		"id": "lizard",
+		"files": ["lizard.ogg"]
+	},
+	{
+		"name": "Pug",
+		"id": "pug",
+		"files": ["pug.ogg"]
+	},
+	{
+		"name": "Pugg",
+		"id": "pugg",
+		"files": ["pugg.ogg"]
+	},
+	{
+		"name": "Skelly",
+		"id": "skelly",
+		"files": ["skelly.ogg"]
+	},
+	{
+		"name": "Speak 1",
+		"id": "speak_1",
+		"files": ["speak_1.ogg"]
+	},
+	{
+		"name": "Speak 2",
+		"id": "speak_2",
+		"files": ["speak_2.ogg"]
+	},
+	{
+		"name": "Speak 3",
+		"id": "speak_3",
+		"files": ["speak_3.ogg"]
+	},
+	{
+		"name": "Speak 4",
+		"id": "speak_4",
+		"files": ["speak_4.ogg"]
+	}
 ]
