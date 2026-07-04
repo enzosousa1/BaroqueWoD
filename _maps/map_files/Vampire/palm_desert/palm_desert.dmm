@@ -1031,6 +1031,11 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/supply)
+"brp" = (
+/obj/machinery/light/directional/north,
+/obj/effect/landmark/start/darkpack/hospital/clinic_director,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "brZ" = (
 /obj/structure/railing{
 	dir = 8
@@ -4804,6 +4809,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/city/toilet,
 /area/vtm/interior/ghetto)
+"ggv" = (
+/obj/effect/landmark/start/darkpack/hospital/doctor,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "gid" = (
 /obj/structure/chair/sofa/corner/brown,
 /obj/structure/sign/poster/city/dmc/directional/north,
@@ -10536,6 +10545,10 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/police)
+"nMB" = (
+/obj/effect/landmark/start/darkpack/hospital/doctor,
+/turf/open/floor/city/circled,
+/area/vtm/palm_desert/interior/clinic)
 "nMH" = (
 /obj/effect/turf_decal/bordur{
 	dir = 9
@@ -17295,6 +17308,7 @@
 /area/vtm/interior/police)
 "wpf" = (
 /obj/structure/chair/office/darkpack/blue,
+/obj/effect/landmark/start/darkpack/hospital/doctor,
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
 "wpi" = (
@@ -56263,7 +56277,7 @@ gYM
 gYM
 tYk
 vAl
-qZS
+nMB
 qZS
 tYk
 xMF
@@ -56272,7 +56286,7 @@ bZI
 sOp
 gIG
 tYk
-mKN
+brp
 sOp
 sOp
 jTS
@@ -56871,7 +56885,7 @@ gYM
 gYM
 tYk
 rzk
-qZS
+nMB
 qZS
 nxj
 sOp
@@ -79682,7 +79696,7 @@ wBP
 wBP
 sOp
 sOp
-sOp
+ggv
 sOp
 sOp
 sOp
