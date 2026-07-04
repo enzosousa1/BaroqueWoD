@@ -33,7 +33,6 @@
 		return
 
 	var/restricted = is_faith_restricted_splat(prefs.read_preference(/datum/preference/choiced/splats))
-	faith_stat.faith_restricted = restricted
 	if(restricted)
 		strip_faith_from_prefs(prefs)
 		faith_stat.editable = FALSE

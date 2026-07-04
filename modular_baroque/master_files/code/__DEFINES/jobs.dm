@@ -1,6 +1,6 @@
 // Departments
 #define DEPARTMENT_BITFLAG_TV_AUGUSTA (1<<17)
-#define DEPARTMENT_TV_AUGUSTA "TV Augusta"
+#define DEPARTMENT_TV_AUGUSTA "TV Augustina"
 
 // Civilian
 #define JOB_BUSINESSMAN "Businessman"

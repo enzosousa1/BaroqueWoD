@@ -95,6 +95,11 @@
 
 /datum/splat/werewolf/shifter/proc/revert_to_breed_form()
 	SIGNAL_HANDLER
+	INVOKE_ASYNC(src, PROC_REF(revert_to_breed_form_async))
+
+/datum/splat/werewolf/shifter/proc/revert_to_breed_form_async()
+	if(QDELETED(owner))
+		return
 
 	if(HAS_TRAIT(owner, TRAIT_METAMORPH))
 		var/datum/storyteller_roll/metamorph/roll_datum = new()

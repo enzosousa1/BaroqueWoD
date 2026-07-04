@@ -1,6 +1,6 @@
 /datum/job/vampire/cameraman
 	title = JOB_TVAUG_CAMERA
-	description = "A cameraman for TV Augusta, capturing footage and managing equipment."
+	description = "A cameraman for TV Augustina, capturing footage and managing equipment."
 	faction = FACTION_TVAUG
 	total_positions = 2
 	spawn_positions = 2
@@ -17,7 +17,7 @@
 
 /obj/item/card/cameraman
 	name = "cameraman card"
-	desc = "A badge which shows that he is a cameraman for TV Augusta."
+	desc = "A badge which shows that he is a cameraman for TV Augustina."
 	icon = 'modular_darkpack/modules/jobs/icons/id_items.dmi'
 	icon_state = "grey_id"
 	ONFLOOR_ICON_HELPER('modular_darkpack/modules/jobs/icons/id_onfloors.dmi')

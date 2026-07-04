@@ -4,7 +4,7 @@
 
 /datum/job/vampire/reporter
 	title = JOB_TVAUG_REPORTER
-	description = "A reporter for TV Augusta, investigating stories and interviewing sources."
+	description = "A reporter for TV Augustina, investigating stories and interviewing sources."
 	faction = FACTION_TVAUG
 	total_positions = 2
 	spawn_positions = 2
@@ -21,7 +21,7 @@
 
 /obj/item/card/reporter
 	name = "reporter card"
-	desc = "A badge which shows that he is a reporter for TV Augusta."
+	desc = "A badge which shows that he is a reporter for TV Augustina."
 	icon = 'modular_darkpack/modules/jobs/icons/id_items.dmi'
 	icon_state = "grey_id"
 	ONFLOOR_ICON_HELPER('modular_darkpack/modules/jobs/icons/id_onfloors.dmi')

@@ -82,3 +82,4 @@
 
 #define LOCK_OWNERSHIP_CAR "car"
 #define LOCK_OWNERSHIP_APARTMENT "apartment"
+#define LOCK_OWNERSHIP_PROPERTY "property"
