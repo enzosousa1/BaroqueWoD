@@ -1,21 +1,5 @@
 import type { CSSProperties } from 'react';
 
-export const instaflogAppRoot: CSSProperties = {
-  width: '100%',
-  height: '100%',
-  maxWidth: '100%',
-  overflow: 'hidden',
-  boxSizing: 'border-box',
-};
-
-export const instaflogScrollArea: CSSProperties = {
-  flex: '1 1 auto',
-  width: '100%',
-  minHeight: 0,
-  overflowX: 'hidden',
-  overflowY: 'auto',
-};
-
 export const instaflogFullWidth: CSSProperties = {
   width: '100%',
   maxWidth: '100%',
@@ -90,19 +74,17 @@ export const instaflogCard: CSSProperties = {
 
 export const instaflogBottomNav: CSSProperties = {
   width: '100%',
-  transform: 'translateY(64px)',
   boxSizing: 'border-box',
   background: 'linear-gradient(180deg, #fff4d6 0%, #d4a96a 55%, #9a6d2a 100%)',
   borderTop: '2px solid #7a5520',
   boxShadow: 'inset 0 1px 0 #fff8e0, 0 -2px 4px rgba(0,0,0,0.2)',
-  padding: '18px 2px 3px',
-  flexShrink: 0,
+  padding: '4px 2px 2px',
 };
 
 export const instaflogNavButton = (active = false): CSSProperties => ({
   flex: 1,
   textAlign: 'center',
-  padding: '6px 2px',
+  padding: '4px 2px',
   borderRadius: '10px',
   border: active ? '2px solid #6d3f10' : '2px solid transparent',
   background: active

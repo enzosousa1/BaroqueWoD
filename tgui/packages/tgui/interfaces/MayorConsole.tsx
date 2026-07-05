@@ -68,7 +68,7 @@ export const MayorConsole = () => {
 
         <Section title="Issue Announcement">
           {on_cooldown > 0 && (
-            <NoticeBox warning>
+            <NoticeBox color="orange">
               Please wait {Math.ceil(on_cooldown / 10)}s before sending another
               announcement.
             </NoticeBox>

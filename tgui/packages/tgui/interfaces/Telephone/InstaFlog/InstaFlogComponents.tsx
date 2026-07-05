@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Box, Icon, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 import {
+  instaflogBottomNav,
   instaflogChrome,
   instaflogGlossButton,
   instaflogLogo,
@@ -153,25 +154,30 @@ export const InstaFlogAppHeader = (props: AppHeaderProps) => {
   }
 
   return (
-    <Box className="InstaFlog__Header" style={instaflogChrome} p={1} width="100%">
-      <Stack vertical width="100%">
+    <Box
+      className="InstaFlog__Header"
+      style={instaflogChrome}
+      px={1}
+      py={0.5}
+      width="100%"
+    >
+      <Stack fill align="center" width="100%">
         <Stack.Item>
-          <Stack align="center" width="100%">
-            <Stack.Item>
-              <Icon
-                name="arrow-left"
-                onClick={onBack}
-                style={{ cursor: 'pointer' }}
-              />
-            </Stack.Item>
-          </Stack>
+          <Icon
+            name="arrow-left"
+            onClick={onBack}
+            style={{ cursor: 'pointer' }}
+          />
         </Stack.Item>
-        <Stack.Item textAlign="center" pb={0.25}>
-          <InstaFlogLogo />
-          <Box fontSize="9px" color="#6d4a1f">
+        <Stack.Item grow textAlign="center">
+          <Box style={instaflogLogo} fontSize="13px">
+            InstaFlog
+          </Box>
+          <Box fontSize="8px" color="#6d4a1f" mt={-0.25}>
             {title}
           </Box>
         </Stack.Item>
+        <Stack.Item width={1.2} />
       </Stack>
     </Box>
   );
@@ -187,14 +193,14 @@ export const InstaFlogBottomNav = (props: BottomNavProps) => {
   const { activeTab, onTabChange, onClickSound } = props;
 
   const tabs: { id: InstaFlogTab; label: string; icon: string }[] = [
-    { id: 'home', label: 'Início', icon: '🏠' },
-    { id: 'trending', label: 'Em Alta', icon: '🔥' },
-    { id: 'compose', label: 'Nova', icon: '➕' },
-    { id: 'profile', label: 'Perfil', icon: '👤' },
+    { id: 'home', label: 'Início', icon: 'home' },
+    { id: 'trending', label: 'Em Alta', icon: 'fire' },
+    { id: 'compose', label: 'Flog', icon: 'plus' },
+    { id: 'profile', label: 'Perfil', icon: 'user' },
   ];
 
   return (
-    <div className="InstaFlog__BottomNav">
+    <nav className="InstaFlog__BottomNav" style={instaflogBottomNav}>
       {tabs.map((tab) => (
         <div
           key={tab.id}
@@ -205,10 +211,10 @@ export const InstaFlogBottomNav = (props: BottomNavProps) => {
             onTabChange(tab.id);
           }}
         >
-          <div style={{ fontSize: '13px', lineHeight: 1}}>{tab.icon}</div>
+          <Icon name={tab.icon} size={1.1} />
           <div>{tab.label}</div>
         </div>
       ))}
-    </div>
+    </nav>
   );
 };

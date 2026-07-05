@@ -76,66 +76,61 @@
   }
 }
 
+// Matches Telephone NavigationBar height={3} in index.tsx (~2.4rem).
+$instaflog-phone-nav-clearance: 2.4rem;
+
 .InstaFlog__App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  max-width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
-  flex-direction: column;
+}
+
+.InstaFlog__HeaderSlot {
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 .InstaFlog__Header {
   width: 100%;
   box-sizing: border-box;
+}
+
+.InstaFlog__Header--minimal {
   flex-shrink: 0;
 }
 
-.InstaFlog__Content {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-.InstaFlog__Scroll--centered,
-.InstaFlog__Scroll--form {
-  overflow-x: hidden;
-  overflow-y: auto;
-  min-height: 0;
-}
-
-.InstaFlog__Content--form {
-  width: 100%;
-  padding: 10px 8px 12px;
-  box-sizing: border-box;
-}
-
-.InstaFlog__Scroll--registration {
-  overflow-x: hidden;
-  overflow-y: auto;
-  min-height: 0;
-  scroll-padding: 6px 0;
-}
-
-.InstaFlog__Content--centered-registration {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  min-height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 4px 6px 0;
-}
-
-.InstaFlog__RegistrationSpacer--top {
+.InstaFlog__Main {
   flex: 1 1 0;
-  min-height: 8px;
+  min-height: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0 6px 4px;
 }
 
-.InstaFlog__RegistrationSpacer--bottom {
-  /* Larger than top spacer: lifts panel toward visual center above the phone nav bar. */
-  flex: 4 4 0;
-  min-height: 3rem;
+.InstaFlog__Main--solo {
+  padding-bottom: $instaflog-phone-nav-clearance;
+}
+
+.InstaFlog__Footer {
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: $instaflog-phone-nav-clearance;
+}
+
+.InstaFlog__Feed {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .InstaFlog__RegistrationForm {
@@ -143,7 +138,6 @@
   flex-direction: column;
   gap: 3px;
   width: 100%;
-  flex-shrink: 0;
 }
 
 .InstaFlog__RegistrationForm .InstaFlog__FieldLabel {
@@ -166,33 +160,6 @@
   line-height: 1.1;
 }
 
-.InstaFlog__Content--centered {
-  --instaflog-center-bleed: 24px;
-  --instaflog-compose-offset: -16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  min-height: 100%;
-  padding: var(--instaflog-center-bleed) 8px;
-  box-sizing: border-box;
-}
-
-.InstaFlog__Panel--compose {
-  width: 100%;
-  flex-shrink: 0;
-  transform: translateY(var(--instaflog-compose-offset));
-}
-
-.InstaFlog__Panel--registration {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-.InstaFlog__Header--minimal {
-  flex-shrink: 0;
-}
-
 .InstaFlog__Panel,
 .InstaFlog__Card {
   width: 100%;
@@ -205,13 +172,16 @@
   flex-direction: row;
   gap: 2px;
   box-sizing: border-box;
-  flex-shrink: 0;
-  margin: 0;
 }
 
 .InstaFlog__NavButton {
   flex: 1 1 0;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
 }
 
 .InstaFlog__PostHeader {

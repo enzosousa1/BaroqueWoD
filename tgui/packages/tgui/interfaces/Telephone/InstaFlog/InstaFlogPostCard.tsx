@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box } from 'tgui-core/components';
+import { Box, Icon } from 'tgui-core/components';
 import type { InstaFlogPost } from '..';
 import { instaflogCard, instaflogInsetField } from '../instaflogStyles';
 import {
@@ -43,7 +43,7 @@ export const InstaFlogPostCard = (props: PostCardProps) => {
   return (
     <div
       className="InstaFlog__Card"
-      style={{ ...instaflogCard, padding: '8px', marginBottom: '8px' }}
+      style={{ ...instaflogCard, padding: '8px', marginBottom: '6px' }}
     >
       <div className="InstaFlog__PostHeader">
         <InstaFlogAvatar
@@ -127,10 +127,12 @@ export const InstaFlogPostCard = (props: PostCardProps) => {
             onLike();
           }}
         >
-          {post.liked_by_me ? '♥' : '♡'} {post.like_count}
+          <Icon name={post.liked_by_me ? 'heart' : 'heart-o'} mr={0.25} />
+          {post.like_count}
         </GlossButton>
         <GlossButton tone="gray" onClick={() => setCommentOpen(!commentOpen)}>
-          💬 {post.comments?.length ?? 0}
+          <Icon name="comment" mr={0.25} />
+          {post.comments?.length ?? 0}
         </GlossButton>
         {canDelete && onDelete && (
           <GlossButton tone="gray" onClick={onDelete}>

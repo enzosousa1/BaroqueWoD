@@ -6,6 +6,7 @@
 	COOLDOWN_DECLARE(instaflog_post_cooldown)
 	COOLDOWN_DECLARE(instaflog_comment_cooldown)
 	COOLDOWN_DECLARE(instaflog_like_cooldown)
+	COOLDOWN_DECLARE(instaflog_follow_cooldown)
 
 /obj/item/smartphone/proc/instaflog_resolve_user(mob/user)
 	return isliving(user) ? user : null
@@ -65,13 +66,27 @@
 /datum/controller/subsystem/phones/proc/sync_instaflog_profile(datum/instaflog_account/account, ckey = null)
 	if(!account?.username)
 		return
+	var/list/existing_profile = instaflog_profiles[account.username]
 	var/list/profile_data = account.serialize()
 	if(ckey)
 		profile_data["owner_ckey"] = ckey
+	if(islist(existing_profile?["followers"]))
+		profile_data["followers"] = existing_profile["followers"]
+	else
+		profile_data["followers"] = list()
+	if(islist(existing_profile?["following"]))
+		profile_data["following"] = existing_profile["following"]
+	else
+		profile_data["following"] = list()
 	instaflog_profiles[account.username] = profile_data
 
-/datum/controller/subsystem/phones/proc/format_instaflog_profiles()
+/datum/controller/subsystem/phones/proc/format_instaflog_profiles(datum/instaflog_account/viewer = null)
 	var/list/formatted = list()
+	var/list/viewer_following = list()
+	if(viewer?.username)
+		var/list/viewer_profile = instaflog_profiles[viewer.username]
+		if(islist(viewer_profile?["following"]))
+			viewer_following = viewer_profile["following"]
 	for(var/username in instaflog_profiles)
 		var/list/profile = instaflog_profiles[username]
 		if(!profile)
@@ -80,7 +95,16 @@
 		for(var/datum/instaflog_post/post as anything in instaflog_posts)
 			if(post?.username == username)
 				post_count++
-		formatted[username] = profile | list("post_count" = post_count)
+		var/list/followers = profile["followers"]
+		var/list/following = profile["following"]
+		var/list/entry = profile | list(
+			"post_count" = post_count,
+			"follower_count" = islist(followers) ? length(followers) : 0,
+			"following_count" = islist(following) ? length(following) : 0,
+		)
+		if(viewer?.username && username != viewer.username)
+			entry["is_followed_by_viewer"] = (username in viewer_following)
+		formatted[username] = entry
 	return formatted
 
 /datum/controller/subsystem/phones/proc/format_instaflog_posts(datum/instaflog_account/viewer = null, mob/living/viewer_mob = null)
@@ -124,7 +148,13 @@
 	data["instaflog_registered"] = session_active
 	data["instaflog_account"] = session_active ? instaflog_account?.serialize() : null
 	data["instaflog_posts"] = SSphones.format_instaflog_posts(session_active ? instaflog_account : null, user)
-	data["instaflog_profiles"] = SSphones.format_instaflog_profiles()
+	data["instaflog_profiles"] = SSphones.format_instaflog_profiles(session_active ? instaflog_account : null)
+	var/list/following = list()
+	if(session_active && instaflog_account?.username)
+		var/list/my_profile = SSphones.instaflog_profiles[instaflog_account.username]
+		if(islist(my_profile?["following"]))
+			following = my_profile["following"]
+	data["instaflog_following"] = following
 	data["show_instaflog_registration"] = !session_active || user.st_get_stat(STAT_TECHNOLOGY) >= 3
 	return data
 
@@ -272,6 +302,53 @@
 	COOLDOWN_START(src, instaflog_comment_cooldown, INSTAFLOG_COMMENT_COOLDOWN)
 	return TRUE
 
+/obj/item/smartphone/proc/toggle_instaflog_follow(target_username, mob/living/user = null)
+	user = instaflog_resolve_user(user || usr)
+	if(!instaflog_require_session(user))
+		return FALSE
+	if(!COOLDOWN_FINISHED(src, instaflog_follow_cooldown))
+		return FALSE
+
+	target_username = sanitize_instaflog_username(target_username)
+	if(!target_username)
+		to_chat(user, span_warning("Nome de usuário inválido."))
+		return FALSE
+	if(target_username == instaflog_account.username)
+		to_chat(user, span_warning("Você não pode seguir a si mesmo."))
+		return FALSE
+
+	var/list/my_profile = SSphones.instaflog_profiles[instaflog_account.username]
+	var/list/their_profile = SSphones.instaflog_profiles[target_username]
+	if(!their_profile)
+		to_chat(user, span_warning("Perfil não encontrado."))
+		return FALSE
+	if(!my_profile)
+		my_profile = instaflog_account.serialize()
+		my_profile["followers"] = list()
+		my_profile["following"] = list()
+		SSphones.instaflog_profiles[instaflog_account.username] = my_profile
+
+	if(!islist(my_profile["following"]))
+		my_profile["following"] = list()
+	if(!islist(their_profile["followers"]))
+		their_profile["followers"] = list()
+
+	var/following_index = my_profile["following"].Find(target_username)
+	if(following_index)
+		my_profile["following"].Cut(following_index, following_index + 1)
+		var/follower_index = their_profile["followers"].Find(instaflog_account.username)
+		if(follower_index)
+			their_profile["followers"].Cut(follower_index, follower_index + 1)
+		log_phone("[key_name(user)] unfollowed @[target_username] on InstaFlog", list("username" = instaflog_account.username, "target" = target_username))
+	else
+		my_profile["following"] += target_username
+		if(!(instaflog_account.username in their_profile["followers"]))
+			their_profile["followers"] += instaflog_account.username
+		log_phone("[key_name(user)] followed @[target_username] on InstaFlog", list("username" = instaflog_account.username, "target" = target_username))
+
+	COOLDOWN_START(src, instaflog_follow_cooldown, INSTAFLOG_FOLLOW_COOLDOWN)
+	return TRUE
+
 /obj/item/smartphone/proc/delete_instaflog_post(post_id, mob/living/user = null)
 	user = instaflog_resolve_user(user || usr)
 	if(!user)
@@ -319,6 +396,8 @@
 			return add_instaflog_comment(params["post_id"], params["body"], user)
 		if("instaflog_delete_post")
 			return delete_instaflog_post(params["post_id"], user)
+		if("instaflog_follow")
+			return toggle_instaflog_follow(params["username"], user)
 		if("remove_instaflog_post", "remove_endpost")
 			return remove_instaflog_post(text2num(params["post_index"]))
 	return FALSE

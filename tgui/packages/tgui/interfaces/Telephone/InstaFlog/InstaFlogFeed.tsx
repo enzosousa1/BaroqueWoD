@@ -8,11 +8,32 @@ import { InstaFlogPostCard } from './InstaFlogPostCard';
 type FeedProps = {
   tab: InstaFlogTab;
   posts: InstaFlogPost[];
+  following?: string[];
+  ownUsername?: string;
   onLike: (postId: number) => void;
   onComment: (postId: number, body: string) => void;
   onDelete: (postId: number) => void;
   onViewProfile: (username: string) => void;
   onClickSound: () => void;
+};
+
+const filterPosts = (
+  posts: InstaFlogPost[],
+  tab: InstaFlogTab,
+  following: string[],
+  ownUsername?: string,
+) => {
+  if (tab !== 'home') {
+    return posts;
+  }
+  const followed = new Set(following);
+  if (ownUsername) {
+    followed.add(ownUsername);
+  }
+  if (followed.size === 0) {
+    return posts;
+  }
+  return posts.filter((post) => followed.has(post.username));
 };
 
 const sortPosts = (posts: InstaFlogPost[], tab: InstaFlogTab) => {
@@ -35,6 +56,8 @@ export const InstaFlogFeed = (props: FeedProps) => {
   const {
     tab,
     posts,
+    following = [],
+    ownUsername,
     onLike,
     onComment,
     onDelete,
@@ -42,18 +65,32 @@ export const InstaFlogFeed = (props: FeedProps) => {
     onClickSound,
   } = props;
 
-  const sortedPosts = useMemo(() => sortPosts(posts, tab), [posts, tab]);
+  const sortedPosts = useMemo(
+    () => sortPosts(filterPosts(posts, tab, following, ownUsername), tab),
+    [posts, tab, following, ownUsername],
+  );
 
   if (sortedPosts.length === 0) {
     return (
-      <Box textAlign="center" color="#6d4a1f" fontSize="11px" mt={2}>
-        Nenhum flog ainda. Seja o primeiro!
+      <Box
+        className="InstaFlog__Feed"
+        textAlign="center"
+        color="#6d4a1f"
+        fontSize="11px"
+        pt={0.5}
+      >
+        {tab === 'home' && following.length > 0
+          ? 'Nenhuma postagem de quem você segue. Siga mais perfis!'
+          : 'Nenhum flog ainda. Seja o primeiro!'}
       </Box>
     );
   }
 
   return (
-    <div style={{ ...instaflogFullWidth, ...instaflogFadeIn }}>
+    <div
+      className="InstaFlog__Feed"
+      style={{ ...instaflogFullWidth, ...instaflogFadeIn }}
+    >
       {sortedPosts.map((post) => (
         <InstaFlogPostCard
           key={post.post_id}

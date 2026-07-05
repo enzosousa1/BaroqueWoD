@@ -78,7 +78,6 @@ export const InstaFlogRegistration = (props: RegistrationProps) => {
   return (
     <InstaFlogScreen
       background="#e8d2a5"
-      centeredRegistration
       header={
         <InstaFlogAppHeader
           minimal

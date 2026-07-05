@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Box } from 'tgui-core/components';
-import type { InstaFlogAccount, InstaFlogPost, InstaFlogProfile } from '..';
+import { Box, Icon } from 'tgui-core/components';
+import type { InstaFlogPost, InstaFlogProfile } from '..';
 import { instaflogFadeIn, instaflogFullWidth, instaflogPanel } from '../instaflogStyles';
-import { InstaFlogAvatar } from './InstaFlogComponents';
+import { GlossButton, InstaFlogAvatar } from './InstaFlogComponents';
 import { InstaFlogPostCard } from './InstaFlogPostCard';
 
 type ProfileViewProps = {
-  profile: InstaFlogProfile | InstaFlogAccount;
+  profile: InstaFlogProfile;
   posts: InstaFlogPost[];
   postCount?: number;
   isOwnProfile?: boolean;
+  isFollowedByViewer?: boolean;
   onEdit?: () => void;
+  onFollow?: () => void;
   onLike: (postId: number) => void;
   onComment: (postId: number, body: string) => void;
   onDelete: (postId: number) => void;
@@ -24,7 +26,9 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
     posts,
     postCount,
     isOwnProfile,
+    isFollowedByViewer,
     onEdit,
+    onFollow,
     onLike,
     onComment,
     onDelete,
@@ -39,9 +43,14 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
     .sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0));
 
   const count = postCount ?? userPosts.length;
+  const followerCount = profile.follower_count ?? 0;
+  const followingCount = profile.following_count ?? 0;
 
   return (
-    <div style={{ ...instaflogFullWidth, ...instaflogFadeIn }}>
+    <div
+      className="InstaFlog__Feed"
+      style={{ ...instaflogFullWidth, ...instaflogFadeIn }}
+    >
       <div
         className="InstaFlog__Panel"
         style={{ ...instaflogPanel, padding: '10px', borderRadius: '10px', marginBottom: '8px' }}
@@ -79,11 +88,18 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
             </Box>
             {profile.city ? (
               <Box fontSize="10px" color="#6d4a1f" mt={0.25}>
-                📍 {profile.city}
+                <Icon name="map-marker" mr={0.25} />
+                {profile.city}
               </Box>
             ) : null}
             <Box fontSize="10px" color="#8a6a3c" mt={0.5}>
+              <Icon name="image" mr={0.25} />
               {count} flogs
+              <span style={{ margin: '0 6px' }}>•</span>
+              <Icon name="users" mr={0.25} />
+              {followerCount} seguidores
+              <span style={{ margin: '0 6px' }}>•</span>
+              {followingCount} seguindo
             </Box>
           </div>
         </div>
@@ -92,6 +108,23 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
             {profile.bio}
           </Box>
         ) : null}
+        {!isOwnProfile && onFollow && (
+          <Box mt={1}>
+            <GlossButton
+              tone={isFollowedByViewer ? 'gray' : 'green'}
+              onClick={() => {
+                onClickSound();
+                onFollow();
+              }}
+            >
+              <Icon
+                name={isFollowedByViewer ? 'user-times' : 'user-plus'}
+                mr={0.25}
+              />
+              {isFollowedByViewer ? 'Deixar de seguir' : 'Seguir'}
+            </GlossButton>
+          </Box>
+        )}
         {profile.profile_photo_url &&
         (!profile.profile_photo_usable || photoLoadFailed) ? (
           <Box mt={0.5} fontSize="9px" color="#a83232">

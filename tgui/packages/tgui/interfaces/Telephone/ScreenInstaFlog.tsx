@@ -13,7 +13,6 @@ import { InstaFlogFeed } from './InstaFlog/InstaFlogFeed';
 import { InstaFlogProfileView } from './InstaFlog/InstaFlogProfile';
 import { InstaFlogRegistration } from './InstaFlog/InstaFlogRegistration';
 import { InstaFlogScreen } from './InstaFlog/InstaFlogScreen';
-import { instaflogBottomNav } from './instaflogStyles';
 
 export const ScreenInstaFlog = (props: {
   setApp: React.Dispatch<React.SetStateAction<NavigableApps | null>>;
@@ -24,6 +23,7 @@ export const ScreenInstaFlog = (props: {
   const registered = !!data.instaflog_registered;
   const posts = data.instaflog_posts ?? [];
   const profiles = data.instaflog_profiles ?? {};
+  const following = data.instaflog_following ?? [];
   const photos = data.photos ?? [];
 
   const [activeTab, setActiveTab] = useState<InstaFlogTab>('home');
@@ -109,7 +109,14 @@ export const ScreenInstaFlog = (props: {
           posts={posts}
           postCount={viewedProfile.post_count}
           isOwnProfile={profileUsername === account?.username}
+          isFollowedByViewer={!!viewedProfile.is_followed_by_viewer}
           onEdit={() => setEditingProfile(true)}
+          onFollow={
+            profileUsername !== account?.username
+              ? () =>
+                  act('instaflog_follow', { username: profileUsername })
+              : undefined
+          }
           onLike={(postId) => act('instaflog_like', { post_id: postId })}
           onComment={(postId, body) =>
             act('instaflog_comment', { post_id: postId, body })
@@ -123,7 +130,7 @@ export const ScreenInstaFlog = (props: {
 
     if (activeTab === 'profile') {
       return (
-        <Box textAlign="center" color="#6d4a1f" fontSize="11px" mt={2}>
+        <Box textAlign="center" color="#6d4a1f" fontSize="11px" pt={1}>
           Perfil não encontrado.
         </Box>
       );
@@ -133,6 +140,8 @@ export const ScreenInstaFlog = (props: {
       <InstaFlogFeed
         tab={activeTab}
         posts={posts}
+        following={following}
+        ownUsername={account?.username}
         onLike={(postId) => act('instaflog_like', { post_id: postId })}
         onComment={(postId, body) =>
           act('instaflog_comment', { post_id: postId, body })
@@ -157,7 +166,6 @@ export const ScreenInstaFlog = (props: {
 
   return (
     <InstaFlogScreen
-      centered={activeTab === 'compose'}
       header={
         <InstaFlogAppHeader
           title={tabTitle}
@@ -168,18 +176,16 @@ export const ScreenInstaFlog = (props: {
         />
       }
       footer={
-        <Box style={instaflogBottomNav}>
-          <InstaFlogBottomNav
-            activeTab={activeTab}
-            onTabChange={(tab) => {
-              if (tab === 'profile') {
-                setViewingUsername(null);
-              }
-              setActiveTab(tab);
-            }}
-            onClickSound={clickSound}
-          />
-        </Box>
+        <InstaFlogBottomNav
+          activeTab={activeTab}
+          onTabChange={(tab) => {
+            if (tab === 'profile') {
+              setViewingUsername(null);
+            }
+            setActiveTab(tab);
+          }}
+          onClickSound={clickSound}
+        />
       }
     >
       {renderContent()}
