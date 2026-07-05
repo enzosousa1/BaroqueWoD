@@ -5,6 +5,35 @@
 	var/mob/living/carbon/human/human_mob = mob
 	return human_mob.dna?.unique_identity
 
+/proc/instaflog_generate_salt()
+	return copytext(md5("[world.realtime][world.timeofday][rand(1, 999999)]"), 1, 17)
+
+/proc/instaflog_hash_password(password, salt)
+	return rustg_hash_string(RUSTG_HASH_SHA256, "[salt][password]")
+
+/proc/validate_instaflog_password(password, mob/viewer = null, confirm_password = null)
+	if(!istext(password))
+		password = ""
+	password = trim(password)
+	if(length(password) < INSTAFLOG_MIN_PASSWORD)
+		if(viewer)
+			to_chat(viewer, span_warning("A senha deve ter pelo menos [INSTAFLOG_MIN_PASSWORD] caracteres."))
+		return FALSE
+	if(length(password) > INSTAFLOG_MAX_PASSWORD)
+		if(viewer)
+			to_chat(viewer, span_warning("A senha pode ter no máximo [INSTAFLOG_MAX_PASSWORD] caracteres."))
+		return FALSE
+	if(!isnull(confirm_password) && password != confirm_password)
+		if(viewer)
+			to_chat(viewer, span_warning("As senhas não coincidem."))
+		return FALSE
+	return TRUE
+
+/proc/instaflog_verify_password(password, password_hash, salt)
+	if(!length(password_hash) || !length(salt))
+		return FALSE
+	return instaflog_hash_password(password, salt) == password_hash
+
 /proc/sanitize_instaflog_text(text, max_length = MAX_MESSAGE_LEN)
 	if(!istext(text))
 		return ""

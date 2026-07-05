@@ -24,7 +24,6 @@ const FieldError = (props: { children: ReactNode }) => (
 
 export const InstaFlogRegistration = (props: RegistrationProps) => {
   const { initial, isUpdate, onBack, onSubmit, onClickSound } = props;
-  const [username, setUsername] = useState(initial?.username ?? '');
   const [displayName, setDisplayName] = useState(initial?.display_name ?? '');
   const [bio, setBio] = useState(initial?.bio ?? '');
   const [city, setCity] = useState(initial?.city ?? '');
@@ -32,21 +31,8 @@ export const InstaFlogRegistration = (props: RegistrationProps) => {
     initial?.profile_photo_url ?? '',
   );
   const [urlError, setUrlError] = useState(false);
-  const [usernameError, setUsernameError] = useState(false);
-
-  const normalizeUsername = (value: string) =>
-    value
-      .toLowerCase()
-      .replace(/\s+/g, '_')
-      .replace(/[^a-z0-9_]/g, '')
-      .slice(0, 16);
 
   const handleSubmit = () => {
-    const normalizedUsername = normalizeUsername(username);
-    if (!normalizedUsername) {
-      setUsernameError(true);
-      return;
-    }
     if (!displayName.trim()) {
       return;
     }
@@ -56,10 +42,8 @@ export const InstaFlogRegistration = (props: RegistrationProps) => {
       return;
     }
     setUrlError(false);
-    setUsernameError(false);
     onClickSound();
     onSubmit({
-      username: normalizedUsername,
       display_name: displayName.trim(),
       bio,
       city,
@@ -98,23 +82,18 @@ export const InstaFlogRegistration = (props: RegistrationProps) => {
         }}
       >
         <div className="InstaFlog__RegistrationForm">
-          <div>
-            <FieldLabel>Nome de usuário *</FieldLabel>
-            <input
-              className="InstaFlog__FormField"
-              style={compactField}
-              value={username}
-              maxLength={16}
-              placeholder="ex: maria_sp"
-              onChange={(event) => {
-                setUsernameError(false);
-                setUsername(normalizeUsername(event.target.value));
-              }}
-            />
-            {usernameError && (
-              <FieldError>Nome inválido. Use letras, números ou _.</FieldError>
-            )}
-          </div>
+          {initial?.username && (
+            <div>
+              <FieldLabel>Usuário</FieldLabel>
+              <input
+                className="InstaFlog__FormField"
+                style={{ ...compactField, opacity: 0.75 }}
+                value={`@${initial.username}`}
+                disabled
+                readOnly
+              />
+            </div>
+          )}
 
           <div>
             <FieldLabel>Nome de exibição *</FieldLabel>

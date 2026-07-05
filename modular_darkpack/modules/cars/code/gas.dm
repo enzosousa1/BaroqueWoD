@@ -134,6 +134,9 @@
 		return
 	return ..()
 
+#define FUEL_UNITS_PER_DOLLAR 20
+#define FUEL_NOZZLE_HOSE_LENGTH 6
+
 /obj/structure/fuelstation
 	name = "fuel station"
 	desc = "Fuel your car here. 50 dollars per 1000 units."
@@ -143,6 +146,49 @@
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
 	var/stored_money = 0
+	var/obj/item/fuel_noozzle/attached_nozzle
+
+/obj/structure/fuelstation/Initialize(mapload)
+	. = ..()
+	if(mapload && !attached_nozzle)
+		attach_nozzle(new /obj/item/fuel_noozzle(src))
+
+/obj/structure/fuelstation/Destroy()
+	if(attached_nozzle)
+		qdel(attached_nozzle)
+	return ..()
+
+/obj/structure/fuelstation/proc/attach_nozzle(obj/item/fuel_noozzle/nozzle)
+	if(!nozzle || attached_nozzle)
+		return FALSE
+	attached_nozzle = nozzle
+	nozzle.set_connected_pump(src)
+	nozzle.disconnect_hose()
+	nozzle.forceMove(src)
+	return TRUE
+
+/obj/structure/fuelstation/proc/detach_nozzle()
+	if(!attached_nozzle)
+		return
+	attached_nozzle = null
+
+/obj/structure/fuelstation/proc/try_fill_gas_can(obj/item/gas_can/can, mob/living/user)
+	if(!can || can.stored_gasoline >= 1000)
+		return FALSE
+	if(!stored_money)
+		to_chat(user, span_warning("[src] has no credit loaded."))
+		return FALSE
+	var/gas_to_dispense = min(stored_money * FUEL_UNITS_PER_DOLLAR, 1000 - can.stored_gasoline)
+	var/money_to_spend = round(gas_to_dispense / FUEL_UNITS_PER_DOLLAR)
+	if(money_to_spend < 1)
+		return FALSE
+	gas_to_dispense = money_to_spend * FUEL_UNITS_PER_DOLLAR
+	can.stored_gasoline = min(1000, can.stored_gasoline + gas_to_dispense)
+	stored_money = max(0, stored_money - money_to_spend)
+	playsound(loc, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 50, TRUE)
+	to_chat(user, span_notice("You fill [can]."))
+	say("Gas filled.")
+	return TRUE
 
 /obj/structure/fuelstation/click_alt(mob/user)
 	if(stored_money > 0)
@@ -155,6 +201,25 @@
 /obj/structure/fuelstation/examine(mob/user)
 	. = ..()
 	. += "<b>Balance</b>: [stored_money] [MONEY_NAME]"
+	if(attached_nozzle)
+		. += "The fuel nozzle is holstered on the pump."
+	else
+		. += "The fuel nozzle is not on the pump."
+
+/obj/structure/fuelstation/attack_hand(mob/living/user, list/modifiers)
+	if(attached_nozzle)
+		if(!user.put_in_hands(attached_nozzle))
+			to_chat(user, span_warning("You need a free hand to take the fuel nozzle."))
+			return CLICK_ACTION_BLOCKING
+		detach_nozzle()
+		user.visible_message(
+			span_notice("[user] takes the fuel nozzle from [src]."),
+			span_notice("You take the fuel nozzle from [src]."),
+		)
+		playsound(src, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 25, TRUE)
+		say("Nozzle removed.")
+		return CLICK_ACTION_SUCCESS
+	return ..()
 
 /obj/structure/fuelstation/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(iscash(tool))
@@ -163,16 +228,128 @@
 		qdel(tool)
 		say("Payment received.")
 		return ITEM_INTERACT_SUCCESS
+	if(istype(tool, /obj/item/fuel_noozzle))
+		var/obj/item/fuel_noozzle/nozzle = tool
+		if(attached_nozzle)
+			to_chat(user, span_warning("There is already a nozzle on [src]."))
+			return ITEM_INTERACT_BLOCKING
+		if(nozzle.connected_pump && nozzle.connected_pump != src)
+			to_chat(user, span_warning("This nozzle belongs to another pump."))
+			return ITEM_INTERACT_BLOCKING
+		if(!user.transferItemToLoc(nozzle, src))
+			return ITEM_INTERACT_BLOCKING
+		attach_nozzle(nozzle)
+		user.visible_message(
+			span_notice("[user] holsters the fuel nozzle on [src]."),
+			span_notice("You holster the fuel nozzle on [src]."),
+		)
+		say("Fuel nozzle attached.")
+		return ITEM_INTERACT_SUCCESS
 	if(istype(tool, /obj/item/gas_can))
-		var/obj/item/gas_can/G = tool
-		if(G.stored_gasoline < 1000 && stored_money)
-			var/gas_to_dispense = min(stored_money*20, 1000-G.stored_gasoline)
-			var/money_to_spend = round(gas_to_dispense/20)
-			G.stored_gasoline = min(1000, G.stored_gasoline+gas_to_dispense)
-			stored_money = max(0, stored_money-money_to_spend)
-			playsound(loc, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 50, TRUE)
-			to_chat(user, span_notice("You fill [tool]."))
-			say("Gas filled.")
-			return ITEM_INTERACT_SUCCESS
-		return ITEM_INTERACT_BLOCKING
+		return try_fill_gas_can(tool, user) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
 	return NONE
+
+// BAROQUE EDIT — Fuel nozzle holstered on the pump; hose beam while carried.
+/obj/item/fuel_noozzle
+	name = "fuel nozzle"
+	desc = "A nozzle for dispensing fuel. Keep it close to its pump."
+	icon = 'modular_darkpack/modules/deprecated/icons/items.dmi'
+	icon_state = "fuel_nozzle"
+	lefthand_file = 'modular_darkpack/modules/deprecated/icons/righthand.dmi'
+	righthand_file = 'modular_darkpack/modules/deprecated/icons/lefthand.dmi'
+	w_class = WEIGHT_CLASS_NORMAL
+	/// Pump this hose is tethered to.
+	var/obj/structure/fuelstation/connected_pump
+	var/datum/beam/hose_beam
+	var/max_hose_length = FUEL_NOZZLE_HOSE_LENGTH
+
+/obj/item/fuel_noozzle/Destroy()
+	disconnect_hose()
+	if(connected_pump?.attached_nozzle == src)
+		connected_pump.attached_nozzle = null
+	connected_pump = null
+	return ..()
+
+/obj/item/fuel_noozzle/examine(mob/user)
+	. = ..()
+	if(connected_pump)
+		. += "It is tethered to [connected_pump] by a rubber fuel hose."
+	else
+		. += "It is not tethered to a fuel pump."
+
+/obj/item/fuel_noozzle/equipped(mob/user, slot)
+	. = ..()
+	if(slot in list(ITEM_SLOT_HANDS))
+		connect_hose(user)
+	else
+		disconnect_hose()
+
+/obj/item/fuel_noozzle/dropped(mob/user)
+	. = ..()
+	disconnect_hose()
+
+/obj/item/fuel_noozzle/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	if(!connected_pump)
+		to_chat(user, span_warning("[src] isn't connected to a fuel pump."))
+		return ITEM_INTERACT_BLOCKING
+	if(istype(interacting_with, /obj/item/gas_can))
+		return connected_pump.try_fill_gas_can(interacting_with, user) \
+			? ITEM_INTERACT_SUCCESS \
+			: ITEM_INTERACT_BLOCKING
+	if(istype(interacting_with, /obj/darkpack_car))
+		var/obj/darkpack_car/car = interacting_with
+		return car.try_refuel_from_nozzle(user, src) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
+	return NONE
+
+/obj/item/fuel_noozzle/proc/connect_hose(mob/living/holder)
+	disconnect_hose()
+	if(!connected_pump || !holder)
+		return
+	hose_beam = connected_pump.Beam(
+		holder,
+		icon_state = "b_beam",
+		maxdistance = max_hose_length,
+		beam_color = "#1a1a1a",
+		emissive = FALSE,
+	)
+	RegisterSignal(hose_beam, COMSIG_QDELETING, PROC_REF(on_hose_broken))
+
+/obj/item/fuel_noozzle/proc/disconnect_hose()
+	if(hose_beam)
+		UnregisterSignal(hose_beam, COMSIG_QDELETING)
+		QDEL_NULL(hose_beam)
+
+/obj/item/fuel_noozzle/proc/on_hose_broken()
+	SIGNAL_HANDLER
+	hose_beam = null
+	var/mob/living/holder = get_holder()
+	if(holder)
+		to_chat(holder, span_warning("The fuel hose snaps taut and yanks the nozzle from your grip!"))
+		holder.visible_message(
+			span_warning("[holder]'s fuel hose snaps taut!"),
+			span_warning("Your fuel hose snaps taut!"),
+		)
+		holder.dropItemToGround(src)
+
+/obj/item/fuel_noozzle/proc/set_connected_pump(obj/structure/fuelstation/pump)
+	if(connected_pump)
+		UnregisterSignal(connected_pump, COMSIG_QDELETING)
+	connected_pump = pump
+	if(pump)
+		RegisterSignal(pump, COMSIG_QDELETING, PROC_REF(on_pump_destroyed))
+
+/obj/item/fuel_noozzle/proc/on_pump_destroyed(datum/source)
+	SIGNAL_HANDLER
+	connected_pump = null
+	disconnect_hose()
+	var/mob/living/holder = get_holder()
+	if(holder)
+		to_chat(holder, span_warning("The fuel pump connection goes dead!"))
+
+/obj/item/fuel_noozzle/proc/get_holder()
+	if(isliving(loc))
+		return loc
+	return null
+
+#undef FUEL_UNITS_PER_DOLLAR
+#undef FUEL_NOZZLE_HOSE_LENGTH

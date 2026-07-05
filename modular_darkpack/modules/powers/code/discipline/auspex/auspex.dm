@@ -389,24 +389,131 @@
 	return TRUE
 
 //PSYCHIC PROJECTION
+#define PSYCHIC_PROJECTION_TICK_LENGTH 1 TURNS
+#define PSYCHIC_PROJECTION_MAX_TICKS 12
+
 /datum/discipline_power/auspex/psychic_projection
 	name = "Psychic Projection"
-	desc = "Leave your body behind and fly across the land."
+	desc = "Leave your comatose body behind and roam as a spirit. Sustaining the projection drains blood; harm to your body snaps you back."
 
 	willpower_cost = 1
 	level = 5
 	check_flags = DISC_CHECK_CONSCIOUS
-	vitae_cost = 0
+	vitae_cost = 1
 	cooldown_length = 1 TURNS
+	toggled = TRUE
+	cancelable = TRUE
+	duration_length = PSYCHIC_PROJECTION_TICK_LENGTH
+
+	var/mob/living/basic/avatar/projection_avatar
+	var/projection_ticks = 0
 
 /datum/discipline_power/auspex/psychic_projection/activate()
 	. = ..()
-	var/roll = SSroll.storyteller_roll_datum(owner, difficulty = 7, applic_stats = list(STAT_PERCEPTION, STAT_AWARENESS))
-	if(roll == ROLL_SUCCESS)
-		owner.enter_avatar()
-	else
-		to_chat(owner, span_warning("Your mind fails to leave your body."))
+	if(!.)
+		return
 
+	projection_ticks = 0
+
+	var/roll = SSroll.storyteller_roll_datum(owner, difficulty = 7, applic_stats = list(STAT_PERCEPTION, STAT_AWARENESS))
+	if(roll != ROLL_SUCCESS)
+		to_chat(owner, span_warning("Your mind fails to leave your body."))
+		try_deactivate(direct = TRUE)
+		return
+
+	projection_avatar = owner.enter_avatar()
+	if(!projection_avatar)
+		to_chat(owner, span_warning("Your mind fails to leave your body."))
+		try_deactivate(direct = TRUE)
+		return
+
+	projection_avatar.psychic_projection_power = src
+	owner.SetSleeping(2 MINUTES)
+	RegisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(on_body_disturbed))
+	RegisterSignal(owner, COMSIG_LIVING_DEATH, PROC_REF(on_body_disturbed))
+	RegisterSignal(projection_avatar, COMSIG_QDELETING, PROC_REF(on_avatar_lost))
+
+	to_chat(projection_avatar, span_notice("Your consciousness drifts free. Use Re-enter Corpse to return from anywhere; harm to your body will drag you back."))
+
+/datum/discipline_power/auspex/psychic_projection/deactivate(atom/target, direct = FALSE)
+	end_projection()
+	. = ..()
+
+/datum/discipline_power/auspex/psychic_projection/post_loss()
+	end_projection()
+	return ..()
+
+/datum/discipline_power/auspex/psychic_projection/proc/end_projection(force_return = TRUE)
+	UnregisterSignal(owner, list(COMSIG_MOB_APPLY_DAMAGE, COMSIG_LIVING_DEATH))
+	owner.SetSleeping(0)
+
+	var/mob/living/basic/avatar/avatar = projection_avatar
+	projection_avatar = null
+
+	if(avatar && !QDELETED(avatar))
+		UnregisterSignal(avatar, COMSIG_QDELETING)
+		avatar.psychic_projection_power = null
+		if(force_return && avatar.client)
+			avatar.exit_avatar(force = TRUE, end_power = FALSE)
+
+/datum/discipline_power/auspex/psychic_projection/proc/on_body_disturbed(datum/source, damage, damage_type)
+	SIGNAL_HANDLER
+	if(!active)
+		return
+	if(damage_type == STAMINA)
+		return
+	if(projection_avatar?.client)
+		to_chat(projection_avatar, span_boldwarning("Your body is disturbed — you are wrenched back into the flesh!"))
+	try_deactivate(direct = TRUE)
+
+/datum/discipline_power/auspex/psychic_projection/proc/on_avatar_lost(datum/source)
+	SIGNAL_HANDLER
+	if(!active)
+		return
+	projection_avatar = null
+	try_deactivate(direct = TRUE)
+
+/datum/discipline_power/auspex/psychic_projection/do_refresh_checks(atom/target)
+	if(projection_ticks >= PSYCHIC_PROJECTION_MAX_TICKS)
+		if(projection_avatar?.client)
+			to_chat(projection_avatar, span_warning("Your focus falters — you can no longer sustain the projection."))
+		try_deactivate(direct = TRUE)
+		return FALSE
+
+	if(!projection_avatar || QDELETED(projection_avatar) || !projection_avatar.client)
+		try_deactivate(direct = TRUE)
+		return FALSE
+
+	if(owner.stat == DEAD)
+		if(projection_avatar?.client)
+			to_chat(projection_avatar, span_warning("Your body has died — the projection collapses."))
+		try_deactivate(direct = TRUE)
+		return FALSE
+
+	projection_ticks++
+	return TRUE
+
+/datum/discipline_power/auspex/psychic_projection/refresh(atom/target)
+	if(!active || !owner)
+		return
+	if(!do_refresh_checks(target))
+		return
+
+	if(owner.bloodpool < vitae_cost)
+		if(projection_avatar?.client)
+			to_chat(projection_avatar, span_warning("You don't have enough blood to keep [src] active!"))
+		try_deactivate(direct = TRUE)
+		return
+
+	owner.adjust_blood_pool(-vitae_cost)
+	if(projection_avatar?.client)
+		to_chat(projection_avatar, span_warning("[src] consumes your blood to stay active."))
+
+	if(!duration_override)
+		do_duration(target)
+
+#undef PSYCHIC_PROJECTION_TICK_LENGTH
+#undef PSYCHIC_PROJECTION_MAX_TICKS
 #undef TELEPATHY_MIND_READING
 #undef TELEPATHY_IMPLANT_THOUGHT
 #undef SENSE_VISION

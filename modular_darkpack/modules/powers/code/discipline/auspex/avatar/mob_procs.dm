@@ -9,3 +9,4 @@
 	SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
 	ghost.PossessByPlayer(key)
 	ghost.client?.init_verbs()
+	return ghost

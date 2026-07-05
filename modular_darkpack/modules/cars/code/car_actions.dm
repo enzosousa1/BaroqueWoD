@@ -23,7 +23,7 @@
 	var/obj/darkpack_car/owned_car = owner.loc
 	owned_car.set_headlight_on(!owned_car.headlight_on)
 	to_chat(owner, span_notice("You toggle [owned_car]'s lights."))
-	playsound(owned_car, 'sound/items/weapons/magout.ogg', 40, TRUE)
+	owned_car.play_sound_to_occupants_and_world('sound/items/weapons/magout.ogg', 40, TRUE)
 
 /datum/action/darkpack_car/beep
 	name = "Signal"
@@ -37,7 +37,7 @@
 	var/obj/darkpack_car/owned_car = owner.loc
 	if(COOLDOWN_FINISHED(owned_car, beep_cooldown))
 		COOLDOWN_START(owned_car, beep_cooldown, 1 SECONDS)
-		playsound(owned_car.loc, owned_car.beep_sound, 60, FALSE)
+		owned_car.play_sound_to_occupants_and_world(owned_car.beep_sound, 75, FALSE, 2)
 
 /datum/action/darkpack_car/stage
 	name = "Toggle Transmission"
@@ -117,6 +117,8 @@
 	var/obj/darkpack_car/owned_car = owner.loc
 	if(owned_car.driver == owner)
 		owned_car.driver = null
+		if(owned_car.on)
+			owned_car.stop_engine()
 	if(owner in owned_car.passengers)
 		owned_car.passengers -= owner
 	owner.forceMove(owned_car.loc)

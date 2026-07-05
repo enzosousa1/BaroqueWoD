@@ -15,6 +15,7 @@ import { ScreenMessages } from './ScreenMessages';
 import { ScreenPhone } from './ScreenPhone';
 import { ScreenCamera } from './ScreenCamera';
 import { ScreenInstaFlog } from './ScreenInstaFlog';
+import { ScreenNotepad } from './ScreenNotepad';
 import { ScreenRecents } from './ScreenRecents';
 import { ScreenSettings } from './ScreenSettings';
 import { ScreenSoundSettings } from './ScreenSoundSettings';
@@ -162,12 +163,16 @@ export type Data = {
   viewing_photo?: PhonePhotoPreview | null;
 
   instaflog_registered?: BooleanLike;
+  instaflog_logged_in?: BooleanLike;
   instaflog_account?: InstaFlogAccount | null;
   instaflog_posts?: InstaFlogPost[];
   instaflog_profiles?: Record<string, InstaFlogProfile>;
   instaflog_following?: string[];
   show_instaflog_registration?: BooleanLike;
   is_admin?: BooleanLike;
+
+  notepad_text?: string;
+  notepad_max_length?: number;
 };
 
 export enum NavigableApps {
@@ -183,6 +188,7 @@ export enum NavigableApps {
   Settings,
   SoundSettings,
   InstaFlog,
+  Notepad,
 }
 
 const PhysicalScreen = memo((props: {
@@ -259,6 +265,8 @@ const PhysicalScreen = memo((props: {
         return <ScreenSoundSettings setApp={setApp} />;
       case NavigableApps.InstaFlog:
         return <ScreenInstaFlog setApp={setApp} />;
+      case NavigableApps.Notepad:
+        return <ScreenNotepad setApp={setApp} />;
       default:
         return <ScreenHome setApp={setApp} />;
     }
@@ -282,7 +290,8 @@ const NavigationBar = memo((props: {
     app === NavigableApps.Recents ||
     app === NavigableApps.Messages ||
     app === NavigableApps.IRC ||
-    app === NavigableApps.InstaFlog
+    app === NavigableApps.InstaFlog ||
+    app === NavigableApps.Notepad
   ) {
     textColor = '#000';
   }
@@ -295,7 +304,8 @@ const NavigationBar = memo((props: {
     app === NavigableApps.Recents ||
     app === NavigableApps.Messages ||
     app === NavigableApps.IRC ||
-    app === NavigableApps.InstaFlog
+    app === NavigableApps.InstaFlog ||
+    app === NavigableApps.Notepad
   ) {
     backgroundColor = '#0004';
   }

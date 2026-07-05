@@ -12,6 +12,7 @@ type ProfileViewProps = {
   isOwnProfile?: boolean;
   isFollowedByViewer?: boolean;
   onEdit?: () => void;
+  onLogout?: () => void;
   onFollow?: () => void;
   onLike: (postId: number) => void;
   onComment: (postId: number, body: string) => void;
@@ -28,6 +29,7 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
     isOwnProfile,
     isFollowedByViewer,
     onEdit,
+    onLogout,
     onFollow,
     onLike,
     onComment,
@@ -108,8 +110,8 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
             {profile.bio}
           </Box>
         ) : null}
-        {!isOwnProfile && onFollow && (
-          <Box mt={1}>
+        <Box mt={1} className="InstaFlog__ActionRow">
+          {!isOwnProfile && onFollow && (
             <GlossButton
               tone={isFollowedByViewer ? 'gray' : 'green'}
               onClick={() => {
@@ -123,8 +125,20 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
               />
               {isFollowedByViewer ? 'Deixar de seguir' : 'Seguir'}
             </GlossButton>
-          </Box>
-        )}
+          )}
+          {isOwnProfile && onLogout && (
+            <GlossButton
+              tone="gray"
+              onClick={() => {
+                onClickSound();
+                onLogout();
+              }}
+            >
+              <Icon name="sign-out" mr={0.25} />
+              Sair
+            </GlossButton>
+          )}
+        </Box>
         {profile.profile_photo_url &&
         (!profile.profile_photo_usable || photoLoadFailed) ? (
           <Box mt={0.5} fontSize="9px" color="#a83232">

@@ -11,6 +11,7 @@ import {
 } from './InstaFlog/InstaFlogComponents';
 import { InstaFlogFeed } from './InstaFlog/InstaFlogFeed';
 import { InstaFlogProfileView } from './InstaFlog/InstaFlogProfile';
+import { InstaFlogAuth } from './InstaFlog/InstaFlogAuth';
 import { InstaFlogRegistration } from './InstaFlog/InstaFlogRegistration';
 import { InstaFlogScreen } from './InstaFlog/InstaFlogScreen';
 
@@ -32,21 +33,26 @@ export const ScreenInstaFlog = (props: {
 
   const clickSound = () => act('keyboard_click');
 
-  if (!registered || editingProfile) {
+  if (!registered) {
+    return (
+      <InstaFlogAuth
+        onBack={() => {
+          clickSound();
+          setApp(null);
+        }}
+        onClickSound={clickSound}
+      />
+    );
+  }
+
+  if (editingProfile) {
     return (
       <InstaFlogRegistration
         initial={account}
-        isUpdate={registered}
-        onBack={() => {
-          if (registered) {
-            setEditingProfile(false);
-          } else {
-            clickSound();
-            setApp(null);
-          }
-        }}
+        isUpdate
+        onBack={() => setEditingProfile(false)}
         onSubmit={(fields) => {
-          act('instaflog_register', fields);
+          act('instaflog_update_profile', fields);
           setEditingProfile(false);
           setActiveTab('profile');
         }}
@@ -111,6 +117,11 @@ export const ScreenInstaFlog = (props: {
           isOwnProfile={profileUsername === account?.username}
           isFollowedByViewer={!!viewedProfile.is_followed_by_viewer}
           onEdit={() => setEditingProfile(true)}
+          onLogout={
+            profileUsername === account?.username
+              ? () => act('instaflog_logout')
+              : undefined
+          }
           onFollow={
             profileUsername !== account?.username
               ? () =>

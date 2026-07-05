@@ -67,7 +67,7 @@
 	icon_state = "police"
 	max_passengers = 3
 	dir = WEST
-	beep_sound = 'modular_darkpack/modules/deprecated/sounds/migalka.ogg'
+	beep_sound = 'modular_darkpack/modules/cars/sounds/beep.ogg'
 	access = LOCKACCESS_POLICE
 	light_system = OVERLAY_LIGHT
 	light_range = 6
@@ -75,13 +75,31 @@
 	var/primary_light_color = "#ff0000"
 	var/secondary_light_color = "#0000ff"
 	var/next_color_primary = FALSE
+	var/datum/looping_sound/car_audio/car_siren/siren_sound_loop
 	COOLDOWN_DECLARE(last_color_change)
 
 /obj/darkpack_car/police/Initialize(mapload)
 	. = ..()
+	siren_sound_loop = new(src)
 	set_light_color(primary_light_color)
 	if(!secondary_light_color)
 		secondary_light_color = primary_light_color
+
+/obj/darkpack_car/police/Destroy()
+	QDEL_NULL(siren_sound_loop)
+	return ..()
+
+/obj/darkpack_car/police/set_light_on(new_value)
+	. = ..()
+	update_police_siren()
+
+/obj/darkpack_car/police/proc/update_police_siren()
+	if(!siren_sound_loop || istype(src, /obj/darkpack_car/police/unmarked))
+		return
+	if(light_on)
+		siren_sound_loop.start()
+	else
+		siren_sound_loop.stop()
 
 /obj/darkpack_car/police/ranger
 	icon_state = "ranger"

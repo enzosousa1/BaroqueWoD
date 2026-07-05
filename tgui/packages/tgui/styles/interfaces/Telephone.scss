@@ -212,6 +212,17 @@ $instaflog-phone-nav-clearance: 2.4rem;
   align-items: center;
 }
 
+.InstaFlog__AuthTabs {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.InstaFlog__AuthTab {
+  appearance: none;
+  font-family: inherit;
+}
+
 .InstaFlog__CommentRow {
   display: flex;
   width: 100%;

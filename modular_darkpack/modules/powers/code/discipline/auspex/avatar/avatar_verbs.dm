@@ -1,9 +1,9 @@
 /mob/living/basic/avatar/verb/reenter_corpse()
 	set name = "Re-enter Corpse"
 
-	exit_avatar(force = FALSE)
+	exit_avatar(force = !!psychic_projection_power)
 
-/mob/living/basic/avatar/proc/exit_avatar(force = FALSE)
+/mob/living/basic/avatar/proc/exit_avatar(force = FALSE, end_power = TRUE)
 	if(!client)
 		return
 	if(!mind || QDELETED(mind.current))
@@ -23,6 +23,8 @@
 	if(!mind.current.client)
 		return FALSE
 	mind.current.client.init_verbs()
+	if(end_power && psychic_projection_power?.active)
+		psychic_projection_power.try_deactivate(direct = TRUE)
 	qdel(src)
 	return TRUE
 

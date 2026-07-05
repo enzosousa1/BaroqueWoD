@@ -1,3 +1,8 @@
+#define INSTAFLOG_DB_PATH "data/instaflog_accounts.json"
+#define INSTAFLOG_DATA_FORMAT_VERSION 1
+
+#define INSTAFLOG_MIN_PASSWORD 4
+#define INSTAFLOG_MAX_PASSWORD 32
 #define INSTAFLOG_MAX_USERNAME 16
 #define INSTAFLOG_MAX_DISPLAY_NAME 24
 #define INSTAFLOG_MAX_BIO 140
@@ -7,7 +12,7 @@
 #define INSTAFLOG_MAX_COMMENT_BODY 200
 
 /// Global feed cap — oldest posts are removed when exceeded.
-#define INSTAFLOG_MAX_FEED_POSTS 80
+#define INSTAFLOG_MAX_FEED_POSTS 120
 /// Posts serialized to TGUI per refresh (prevents UI/network overload).
 #define INSTAFLOG_MAX_UI_POSTS 40
 /// Per-phone posting cap each round.
@@ -20,3 +25,4 @@
 #define INSTAFLOG_COMMENT_COOLDOWN 5 SECONDS
 #define INSTAFLOG_LIKE_COOLDOWN 1 SECONDS
 #define INSTAFLOG_FOLLOW_COOLDOWN 2 SECONDS
+#define INSTAFLOG_LOGIN_COOLDOWN 3 SECONDS

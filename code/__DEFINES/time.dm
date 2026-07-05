@@ -1,14 +1,14 @@
 ///number of deciseconds in a day
 #define MIDNIGHT_ROLLOVER 864000
 
-/// Offset applied to real-world years for lore calculations (e.g. death dates).
-#define STATION_YEAR_OFFSET -16 // NOCTURNE EDIT - ORIGINAL: #define STATION_YEAR_OFFSET -17 // DARKPACK EDIT
+/// In-universe, SS13 is set 540 years in the future from the real-world day, hence this number for determining the year-offset for the in-game year.
+#define STATION_YEAR_OFFSET -16 // BAROQUE EDIT - NOCTURNE EDIT: -21 — ORIGINAL: #define STATION_YEAR_OFFSET -17 // DARKPACK EDIT
 
 ///Returns the time that has passed since the game started
 #define STATION_TIME_PASSED(...) (world.time - SSticker.round_start_time)
 
 /// The current in-universe year.
-#define CURRENT_STATION_YEAR 2010
+#define CURRENT_STATION_YEAR (GLOB.year_integer + STATION_YEAR_OFFSET)
 
 #define JANUARY 1
 #define FEBRUARY 2

@@ -317,6 +317,10 @@
 	data += get_phone_camera_ui_data()
 	// BAROQUE EDIT ADD END
 
+	// BAROQUE EDIT ADD START - PHONE_NOTEPAD
+	data += get_phone_notepad_ui_data()
+	// BAROQUE EDIT ADD END
+
 	return data
 
 /obj/item/smartphone/ui_act(action, params, datum/tgui/ui)
@@ -532,6 +536,11 @@
 
 	// BAROQUE EDIT ADD START - INSTAFLOG
 	if(handle_instaflog_ui_act(action, params, ui))
+		return TRUE
+	// BAROQUE EDIT ADD END
+
+	// BAROQUE EDIT ADD START - PHONE_NOTEPAD
+	if(handle_phone_notepad_ui_act(action, params, ui))
 		return TRUE
 	// BAROQUE EDIT ADD END
 

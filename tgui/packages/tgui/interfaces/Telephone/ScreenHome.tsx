@@ -295,6 +295,15 @@ export const ScreenHome = (props: {
                 onClick={() => navigateTo(NavigableApps.InstaFlog)}
               />
             </Stack.Item>
+            <Stack.Item>
+              <AppIcon
+                backgroundColor="#fff9e8"
+                text="Notepad"
+                iconName="sticky-note"
+                iconColor="#8f6f2c"
+                onClick={() => navigateTo(NavigableApps.Notepad)}
+              />
+            </Stack.Item>
           </Stack>
         </Stack.Item>
         {/* Screen dots */}

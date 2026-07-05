@@ -1,6 +1,8 @@
 /mob/living/basic/avatar
 	name = "ghost"
 	desc = "A malevolent spirit."
+	/// Active Psychic Projection power, if this spirit was created by Auspex 5.
+	var/datum/discipline_power/auspex/psychic_projection/psychic_projection_power
 	icon = 'icons/mob/simple/mob.dmi'
 	icon_state = "ghost"
 	mob_biotypes = MOB_SPIRIT

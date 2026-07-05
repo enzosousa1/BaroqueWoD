@@ -12,12 +12,41 @@
 	icon_state = "target_circle"
 	duration = 0.5 SECONDS
 
-/datum/looping_sound/car_engine
+/// Shared playback for car loops — occupants inside the vehicle often miss global playsound().
+/datum/looping_sound/car_audio
+	reserve_random_channel = TRUE
+	volume = 70
+	falloff_distance = 14
+
+/datum/looping_sound/car_audio/play(soundfile, volume_override)
+	var/obj/darkpack_car/car = parent
+	if(!istype(car))
+		return ..()
+	car.play_sound_to_occupants_and_world(soundfile, volume_override || volume)
+
+/datum/looping_sound/car_audio/stop_current()
+	QDEL_NULL(sound_token_instance)
+	var/obj/darkpack_car/car = parent
+	if(!istype(car))
+		return
+	var/channel = reserved_channel || sound_channel
+	if(!channel)
+		return
+	for(var/mob/living/rider in car)
+		if(rider.client)
+			rider.stop_sound_channel(channel)
+
+/datum/looping_sound/car_audio/car_engine
 	start_sound = 'modular_darkpack/modules/cars/sounds/start.ogg'
 	start_length = 2 SECONDS
 	mid_sounds = list('modular_darkpack/modules/cars/sounds/work.ogg')
 	mid_length = 1.1 SECONDS
 	end_sound = 'modular_darkpack/modules/cars/sounds/stop.ogg'
+
+/datum/looping_sound/car_audio/car_siren
+	mid_sounds = list('modular_darkpack/modules/deprecated/sounds/migalka.ogg')
+	mid_length = 1.4 SECONDS
+	volume = 65
 
 /obj/car_trunk
 	name = "car trunk"
@@ -106,10 +135,11 @@
 	var/grant_car_keys = FALSE
 
 	/// sound loop for the engine
-	var/datum/looping_sound/car_engine/engine_sound_loop
+	var/datum/looping_sound/car_audio/car_engine/engine_sound_loop
 
 	COOLDOWN_DECLARE(impact_delay)
 	COOLDOWN_DECLARE(beep_cooldown)
+	COOLDOWN_DECLARE(movement_sound_cooldown)
 
 /obj/darkpack_car/Initialize(mapload)
 	. = ..()
@@ -190,6 +220,8 @@
 		to_chat(user, span_warning("You've failed to get [occupent] out of [src]."))
 
 /obj/darkpack_car/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(istype(tool, /obj/item/fuel_noozzle))
+		return try_refuel_from_nozzle(user, tool) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
 	if(istype(tool, /obj/item/gas_can))
 		return try_refuel(user, tool) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
 	if(istype(tool, /obj/item/melee/vamp/tire))
@@ -208,6 +240,34 @@
 			gas = min(CAR_TANK_MAX, gas+gas_to_transfer)
 			to_chat(user, span_notice("You transfer [gas_to_transfer] fuel to [src]."))
 			playsound(loc, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 25, TRUE)
+
+/obj/darkpack_car/proc/try_refuel_from_nozzle(mob/living/user, obj/item/fuel_noozzle/nozzle)
+	if(!nozzle?.connected_pump)
+		to_chat(user, span_warning("The nozzle isn't connected to a fuel pump."))
+		return FALSE
+	if(gas >= CAR_TANK_MAX)
+		to_chat(user, span_notice("[src] is already full."))
+		return FALSE
+	var/obj/structure/fuelstation/pump = nozzle.connected_pump
+	if(!pump.stored_money)
+		to_chat(user, span_warning("[pump] has no credit loaded."))
+		return FALSE
+	if(!isturf(user.loc))
+		return FALSE
+	if(do_after(user, 5 SECONDS, src, interaction_key = DOAFTER_SOURCE_CAR))
+		var/gas_needed = CAR_TANK_MAX - gas
+		var/gas_available = pump.stored_money * 20
+		var/gas_to_transfer = min(gas_needed, gas_available)
+		var/money_to_spend = round(gas_to_transfer / 20)
+		if(money_to_spend < 1)
+			return FALSE
+		gas_to_transfer = money_to_spend * 20
+		pump.stored_money = max(0, pump.stored_money - money_to_spend)
+		gas = min(CAR_TANK_MAX, gas + gas_to_transfer)
+		to_chat(user, span_notice("You pump [gas_to_transfer] fuel into [src]."))
+		playsound(loc, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 25, TRUE)
+		pump.say("Gas filled.")
+		return TRUE
 
 /obj/darkpack_car/proc/try_repair(mob/living/user, obj/item/tool)
 	if(atom_integrity >= max_integrity)
@@ -360,15 +420,31 @@
 	color = "#919191"
 	broken = TRUE
 
+/obj/darkpack_car/proc/play_sound_to_occupants_and_world(soundin, vol, vary_sound = FALSE, extra_range = 0)
+	var/turf/play_turf = get_turf(src)
+	if(!play_turf)
+		return
+	playsound(play_turf, soundin, vol, vary_sound, extra_range)
+	for(var/mob/living/rider in src)
+		if(rider.client)
+			rider.playsound_local(play_turf, soundin, vol, vary_sound)
+
+/obj/darkpack_car/proc/play_movement_sound(soundin)
+	if(!COOLDOWN_FINISHED(src, movement_sound_cooldown))
+		return
+	COOLDOWN_START(src, movement_sound_cooldown, 0.35 SECONDS)
+	play_sound_to_occupants_and_world(soundin, 60, TRUE)
+
 /obj/darkpack_car/proc/set_headlight_on(new_value)
 	if(headlight_on == new_value)
 		return
 	. = headlight_on
 	headlight_on = new_value
-	if(headlight_on)
-		add_overlay(headlight_image)
-	else
-		cut_overlay(headlight_image)
+	if(headlight_image)
+		if(headlight_on)
+			add_overlay(headlight_image)
+		else
+			cut_overlay(headlight_image)
 
 	set_light_on(headlight_on)
 
@@ -426,9 +502,11 @@
 // Please only call via driver_enter or passanger_enter
 /obj/darkpack_car/proc/enter_car(mob/living/user)
 	user.forceMove(src)
+	if(user.client)
+		user.enable_client_mobs_in_contents()
 	visible_message(span_notice("[user] enters [src]."), \
 		span_notice("You enter [src]."))
-	playsound(src, 'modular_darkpack/master_files/sounds/effects/door/door.ogg', 50, TRUE)
+	play_sound_to_occupants_and_world('modular_darkpack/master_files/sounds/effects/door/door.ogg', 50, TRUE)
 
 //Dump out all living from the car
 /obj/darkpack_car/proc/empty_car()
@@ -439,6 +517,8 @@
 /obj/darkpack_car/proc/empty_occupent(mob/living/dumpe)
 	if(driver == dumpe)
 		driver = null
+		if(on)
+			stop_engine()
 	if(dumpe in passengers)
 		passengers -= dumpe
 	dumpe.forceMove(loc)
@@ -463,7 +543,7 @@
 	if(dumpe?.client)
 		dumpe.client.pixel_x = 0
 		dumpe.client.pixel_y = 0
-	playsound(src, 'modular_darkpack/master_files/sounds/effects/door/door.ogg', 50, TRUE)
+	play_sound_to_occupants_and_world('modular_darkpack/master_files/sounds/effects/door/door.ogg', 50, TRUE)
 	for(var/datum/action/darkpack_car/C in dumpe.actions)
 		qdel(C)
 
@@ -724,23 +804,23 @@
 	if(adjusting_speed)
 		if(on)
 			if(adjusting_speed > 0 && speed_in_pixels <= 0)
-				playsound(src, 'modular_darkpack/modules/cars/sounds/stopping.ogg', 10, FALSE)
+				play_movement_sound('modular_darkpack/modules/cars/sounds/stopping.ogg')
 				speed_in_pixels = speed_in_pixels+adjusting_speed*3
 				movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true*drift)
 			else if(adjusting_speed < 0 && speed_in_pixels > 0)
-				playsound(src, 'modular_darkpack/modules/cars/sounds/stopping.ogg', 10, FALSE)
+				play_movement_sound('modular_darkpack/modules/cars/sounds/stopping.ogg')
 				speed_in_pixels = speed_in_pixels+adjusting_speed*3
 				movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true*drift)
 			else
 				speed_in_pixels = min(stage*64, max(-stage*64, speed_in_pixels+adjusting_speed*stage))
-				playsound(src, 'modular_darkpack/modules/cars/sounds/drive.ogg', 10, FALSE)
+				play_movement_sound('modular_darkpack/modules/cars/sounds/drive.ogg')
 		else
 			if(adjusting_speed > 0 && speed_in_pixels < 0)
-				playsound(src, 'modular_darkpack/modules/cars/sounds/stopping.ogg', 10, FALSE)
+				play_movement_sound('modular_darkpack/modules/cars/sounds/stopping.ogg')
 				speed_in_pixels = min(0, speed_in_pixels+adjusting_speed*3)
 				movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true*drift)
 			else if(adjusting_speed < 0 && speed_in_pixels > 0)
-				playsound(src, 'modular_darkpack/modules/cars/sounds/stopping.ogg', 10, FALSE)
+				play_movement_sound('modular_darkpack/modules/cars/sounds/stopping.ogg')
 				speed_in_pixels = max(0, speed_in_pixels+adjusting_speed*3)
 				movement_vector = SIMPLIFY_DEGREES(movement_vector+adjust_true*drift)
 
