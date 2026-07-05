@@ -76,6 +76,7 @@
 	var/secondary_light_color = "#0000ff"
 	var/next_color_primary = FALSE
 	var/datum/looping_sound/car_audio/car_siren/siren_sound_loop
+	var/siren_on = FALSE
 	COOLDOWN_DECLARE(last_color_change)
 
 /obj/darkpack_car/police/Initialize(mapload)
@@ -89,17 +90,36 @@
 	QDEL_NULL(siren_sound_loop)
 	return ..()
 
-/obj/darkpack_car/police/set_light_on(new_value)
-	. = ..()
+/obj/darkpack_car/police/grant_driver_actions(mob/living/user)
+	..()
+	if(!istype(src, /obj/darkpack_car/police/unmarked))
+		var/datum/action/darkpack_car/siren/siren_action = new()
+		siren_action.Grant(user)
+
+/obj/darkpack_car/police/proc/toggle_siren()
+	if(istype(src, /obj/darkpack_car/police/unmarked))
+		return
+	set_siren_on(!siren_on)
+
+/obj/darkpack_car/police/proc/set_siren_on(new_value)
+	if(istype(src, /obj/darkpack_car/police/unmarked))
+		return
+	if(siren_on == new_value)
+		return
+	siren_on = new_value
 	update_police_siren()
 
 /obj/darkpack_car/police/proc/update_police_siren()
 	if(!siren_sound_loop || istype(src, /obj/darkpack_car/police/unmarked))
 		return
-	if(light_on)
+	if(siren_on)
 		siren_sound_loop.start()
 	else
 		siren_sound_loop.stop()
+
+/obj/darkpack_car/police/atom_break(damage_flag)
+	set_siren_on(FALSE)
+	return ..()
 
 /obj/darkpack_car/police/ranger
 	icon_state = "ranger"

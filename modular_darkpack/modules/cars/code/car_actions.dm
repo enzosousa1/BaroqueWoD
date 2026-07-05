@@ -25,6 +25,27 @@
 	to_chat(owner, span_notice("You toggle [owned_car]'s lights."))
 	owned_car.play_sound_to_occupants_and_world('sound/items/weapons/magout.ogg', 40, TRUE)
 
+/datum/action/darkpack_car/siren
+	name = "Toggle Siren"
+	desc = "Toggle the emergency siren on or off."
+	button_icon_state = "lights"
+
+/datum/action/darkpack_car/siren/update_button_status(atom/movable/screen/movable/action_button/current_button, force = FALSE)
+	. = ..()
+	var/obj/darkpack_car/police/police_car = owner?.loc
+	if(istype(police_car) && police_car.siren_on)
+		current_button.color = rgb(90, 160, 255)
+
+/datum/action/darkpack_car/siren/Trigger(mob/clicker, trigger_flags)
+	. = ..()
+	if(!.)
+		return FALSE
+	var/obj/darkpack_car/police/police_car = owner.loc
+	police_car.toggle_siren()
+	to_chat(owner, span_notice("You turn [police_car]'s siren [police_car.siren_on ? "on" : "off"]."))
+	clicker.playsound_local(get_turf(police_car), 'sound/items/weapons/magout.ogg', 35, TRUE)
+	owner.update_action_buttons()
+
 /datum/action/darkpack_car/beep
 	name = "Signal"
 	desc = "Beep-beep."
@@ -119,6 +140,9 @@
 		owned_car.driver = null
 		if(owned_car.on)
 			owned_car.stop_engine()
+		if(istype(owned_car, /obj/darkpack_car/police))
+			var/obj/darkpack_car/police/police_car = owned_car
+			police_car.set_siren_on(FALSE)
 	if(owner in owned_car.passengers)
 		owned_car.passengers -= owner
 	owner.forceMove(owned_car.loc)

@@ -22,7 +22,10 @@
 	var/obj/darkpack_car/car = parent
 	if(!istype(car))
 		return ..()
-	car.play_sound_to_occupants_and_world(soundfile, volume_override || volume)
+	var/channel = reserved_channel || sound_channel
+	if(!channel)
+		return
+	car.play_loop_sound(soundfile, volume_override || volume, channel, extra_range, falloff_distance, vary)
 
 /datum/looping_sound/car_audio/stop_current()
 	QDEL_NULL(sound_token_instance)
@@ -32,9 +35,7 @@
 	var/channel = reserved_channel || sound_channel
 	if(!channel)
 		return
-	for(var/mob/living/rider in car)
-		if(rider.client)
-			rider.stop_sound_channel(channel)
+	car.stop_loop_sound_channel(channel, extra_range)
 
 /datum/looping_sound/car_audio/car_engine
 	start_sound = 'modular_darkpack/modules/cars/sounds/start.ogg'
@@ -46,7 +47,8 @@
 /datum/looping_sound/car_audio/car_siren
 	mid_sounds = list('modular_darkpack/modules/deprecated/sounds/migalka.ogg')
 	mid_length = 1.4 SECONDS
-	volume = 65
+	volume = 75
+	extra_range = 8
 
 /obj/car_trunk
 	name = "car trunk"
@@ -429,6 +431,32 @@
 		if(rider.client)
 			rider.playsound_local(play_turf, soundin, vol, vary_sound)
 
+/// Looping car audio must reuse one channel or stop() will not reach outside listeners.
+/obj/darkpack_car/proc/play_loop_sound(soundin, vol, channel, extra_range = 0, falloff_distance = SOUND_DEFAULT_FALLOFF_DISTANCE, vary_sound = FALSE)
+	var/turf/play_turf = get_turf(src)
+	if(!play_turf || !channel)
+		return
+	playsound(play_turf, soundin, vol, vary_sound, extra_range, channel = channel, falloff_distance = falloff_distance)
+	for(var/mob/living/rider in src)
+		if(rider.client)
+			rider.playsound_local(play_turf, soundin, vol, vary_sound, channel = channel, falloff_distance = falloff_distance)
+
+/obj/darkpack_car/proc/stop_loop_sound_channel(channel, extra_range = 0)
+	if(!channel)
+		return
+	var/turf/play_turf = get_turf(src)
+	var/list/stopped = list()
+	for(var/mob/living/rider in src)
+		if(rider.client && !(rider in stopped))
+			rider.stop_sound_channel(channel)
+			stopped += rider
+	if(!play_turf)
+		return
+	for(var/mob/M in range(SOUND_RANGE + extra_range, play_turf))
+		if(M.client && !(M in stopped))
+			M.stop_sound_channel(channel)
+			stopped += M
+
 /obj/darkpack_car/proc/play_movement_sound(soundin)
 	if(!COOLDOWN_FINISHED(src, movement_sound_cooldown))
 		return
@@ -480,13 +508,18 @@
 	to_chat(dropped, span_warning("You fail to enter [src]."))
 	return
 
+/obj/darkpack_car/proc/grant_driver_actions(mob/living/user)
+	for(var/car_action in subtypesof(/datum/action/darkpack_car))
+		if(ispath(car_action, /datum/action/darkpack_car/siren))
+			continue
+		var/datum/action/darkpack_car/new_action = new car_action()
+		new_action.Grant(user)
+
 /obj/darkpack_car/proc/driver_enter(mob/living/user)
 	if(driver)
 		return
 	driver = user
-	for(var/car_action in subtypesof(/datum/action/darkpack_car))
-		var/datum/action/darkpack_car/new_action = new car_action()
-		new_action.Grant(user)
+	grant_driver_actions(user)
 	enter_car(user)
 	return TRUE
 
