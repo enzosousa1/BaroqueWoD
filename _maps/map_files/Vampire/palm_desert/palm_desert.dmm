@@ -2446,7 +2446,7 @@
 "dmq" = (
 /obj/structure/table/countertop,
 /obj/machinery/dish_drive,
-/turf/open/space/basic,
+/turf/open/floor/wood,
 /area/vtm/palm_desert/outside/office)
 "dmN" = (
 /obj/structure/vampdoor/wood{
@@ -4745,7 +4745,7 @@
 "fPG" = (
 /obj/structure/table/countertop,
 /obj/machinery/vending/boozeomat,
-/turf/open/space/basic,
+/turf/open/floor/wood,
 /area/vtm/palm_desert/outside/office)
 "fPR" = (
 /obj/structure/platform/lowwall/wood/window,
@@ -7703,10 +7703,6 @@
 /obj/effect/decal/wallpaper/gold/alt,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/palm_desert/interior/giovanni)
-"jLS" = (
-/obj/structure/table/countertop,
-/turf/open/space/basic,
-/area/vtm/palm_desert/outside/office)
 "jMy" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#6d6d6d"
@@ -50742,7 +50738,7 @@ lNy
 dmq
 cfJ
 cfJ
-jLS
+dnQ
 rkh
 gYM
 gYM
@@ -50891,10 +50887,10 @@ cYQ
 cfJ
 cfJ
 cfJ
-jLS
 dnQ
 dnQ
-jLS
+dnQ
+dnQ
 rkh
 nFl
 nFl
