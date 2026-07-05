@@ -44,9 +44,9 @@
 			switch(layer)
 				if(BODY_BEHIND_LAYER)
 					layertext = "BEHIND"
-				else if(BODY_ADJ_LAYER)
+				if(BODY_ADJ_LAYER)
 					layertext = "ADJ"
-				else if(BODY_FRONT_UNDER_CLOTHES_LAYER)
+				if(BODY_FRONT_UNDER_CLOTHES_LAYER)
 					layertext = "FRONT_UNDER"
 			var/base_state = "m_[key]_[icon_state]_[layertext]"
 			if(base_state in cached_states)

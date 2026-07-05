@@ -46,11 +46,13 @@ SUBSYSTEM_DEF(city_time)
 	if(city_time_passed() > time_till_roundend && !roundend_started)
 		roundend_started = TRUE
 
-	if(daytime_started && !daytime_effects_applied)
-		daytime_effects_applied = TRUE
+	if(daytime_started)
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
-			H.apply_status_effect(/datum/status_effect/day_time_notif)
-			H.apply_status_effect(/datum/status_effect/sunlight_burning)
+			if(!daytime_effects_applied)
+				H.apply_status_effect(/datum/status_effect/day_time_notif)
+			if(get_kindred_splat(H) && !H.has_status_effect(/datum/status_effect/sunlight_burning))
+				H.apply_status_effect(/datum/status_effect/sunlight_burning)
+		daytime_effects_applied = TRUE
 
 /datum/controller/subsystem/city_time/proc/extend_round(amount)
 	time_till_daytime += amount * SSticker.city_time_rate_multiplier

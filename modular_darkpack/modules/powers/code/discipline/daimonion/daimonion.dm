@@ -199,7 +199,9 @@
 
 	//forces the subject's player to roll her lowest Virtue
 	var/datum/st_stat/virtue/lowest_virtue
-	var/static/list/virtue_types = subtypesof(/datum/st_stat/virtue)
+	var/static/list/virtue_types
+	if (!virtue_types)
+		virtue_types = subtypesof(/datum/st_stat/virtue)
 	for(var/virtue_type in virtue_types)
 		var/datum/st_stat/virtue/target_stat = target.storyteller_stats["[virtue_type]"]
 		if(!lowest_virtue || target_stat.get_score() < lowest_virtue.get_score())

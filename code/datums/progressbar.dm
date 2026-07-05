@@ -65,7 +65,6 @@
 
 /datum/progressbar/Destroy()
 	if(user)
-		UnregisterSignal(user, list(COMSIG_QDELETING, COMSIG_MOB_LOGOUT, COMSIG_MOB_LOGIN))
 		for(var/pb in user.progressbars[bar_loc])
 			var/datum/progressbar/progress_bar = pb
 			if(progress_bar == src || progress_bar.listindex <= listindex)
