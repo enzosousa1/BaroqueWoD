@@ -389,8 +389,7 @@
 	return TRUE
 
 //PSYCHIC PROJECTION
-#define PSYCHIC_PROJECTION_TICK_LENGTH 1 TURNS
-#define PSYCHIC_PROJECTION_MAX_TICKS 12
+#define PSYCHIC_PROJECTION_LENGTH 3 MINUTES
 
 /datum/discipline_power/auspex/psychic_projection
 	name = "Psychic Projection"
@@ -403,17 +402,14 @@
 	cooldown_length = 1 TURNS
 	toggled = TRUE
 	cancelable = TRUE
-	duration_length = PSYCHIC_PROJECTION_TICK_LENGTH
+	duration_length = PSYCHIC_PROJECTION_LENGTH
 
 	var/mob/living/basic/avatar/projection_avatar
-	var/projection_ticks = 0
 
 /datum/discipline_power/auspex/psychic_projection/activate()
 	. = ..()
 	if(!.)
 		return
-
-	projection_ticks = 0
 
 	var/roll = SSroll.storyteller_roll_datum(owner, difficulty = 7, applic_stats = list(STAT_PERCEPTION, STAT_AWARENESS))
 	if(roll != ROLL_SUCCESS)
@@ -474,24 +470,15 @@
 	try_deactivate(direct = TRUE)
 
 /datum/discipline_power/auspex/psychic_projection/do_refresh_checks(atom/target)
-	if(projection_ticks >= PSYCHIC_PROJECTION_MAX_TICKS)
-		if(projection_avatar?.client)
-			to_chat(projection_avatar, span_warning("Your focus falters — you can no longer sustain the projection."))
+	if(!projection_avatar?.client)
 		try_deactivate(direct = TRUE)
 		return FALSE
 
-	if(!projection_avatar || QDELETED(projection_avatar) || !projection_avatar.client)
-		try_deactivate(direct = TRUE)
-		return FALSE
-
-	if(owner.stat == DEAD)
-		if(projection_avatar?.client)
-			to_chat(projection_avatar, span_warning("Your body has died — the projection collapses."))
-		try_deactivate(direct = TRUE)
-		return FALSE
-
-	projection_ticks++
 	return TRUE
+
+/datum/discipline_power/auspex/psychic_projection/proc/notify_projection(message)
+	if(projection_avatar?.client)
+		to_chat(projection_avatar, message)
 
 /datum/discipline_power/auspex/psychic_projection/refresh(atom/target)
 	if(!active || !owner)
@@ -499,21 +486,18 @@
 	if(!do_refresh_checks(target))
 		return
 
-	if(owner.bloodpool < vitae_cost)
-		if(projection_avatar?.client)
-			to_chat(projection_avatar, span_warning("You don't have enough blood to keep [src] active!"))
-		try_deactivate(direct = TRUE)
-		return
+	if(spend_resources())
+		if(vitae_cost)
+			notify_projection(span_warning("[src] consumes your blood to stay active."))
+		if(willpower_cost)
+			notify_projection(span_warning("[src] consumes your willpower to stay active."))
+		if(!duration_override)
+			do_duration(target)
+	else
+		notify_projection(span_warning("You don't have enough blood to keep [src] active!"))
+		try_deactivate(target)
 
-	owner.adjust_blood_pool(-vitae_cost)
-	if(projection_avatar?.client)
-		to_chat(projection_avatar, span_warning("[src] consumes your blood to stay active."))
-
-	if(!duration_override)
-		do_duration(target)
-
-#undef PSYCHIC_PROJECTION_TICK_LENGTH
-#undef PSYCHIC_PROJECTION_MAX_TICKS
+#undef PSYCHIC_PROJECTION_LENGTH
 #undef TELEPATHY_MIND_READING
 #undef TELEPATHY_IMPLANT_THOUGHT
 #undef SENSE_VISION

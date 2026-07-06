@@ -134,6 +134,7 @@
 		return
 	return ..()
 
+// BAROQUE EDIT
 #define FUEL_UNITS_PER_DOLLAR 20
 #define FUEL_NOZZLE_HOSE_LENGTH 6
 
@@ -158,6 +159,7 @@
 		qdel(attached_nozzle)
 	return ..()
 
+// BAROQUE EDIT
 /obj/structure/fuelstation/proc/attach_nozzle(obj/item/fuel_noozzle/nozzle)
 	if(!nozzle || attached_nozzle)
 		return FALSE
@@ -167,11 +169,14 @@
 	nozzle.forceMove(src)
 	return TRUE
 
+// BAROQUE EDIT
 /obj/structure/fuelstation/proc/detach_nozzle()
 	if(!attached_nozzle)
 		return
 	attached_nozzle = null
 
+
+// BAROQUE EDIT
 /obj/structure/fuelstation/proc/try_fill_gas_can(obj/item/gas_can/can, mob/living/user)
 	if(!can || can.stored_gasoline >= 1000)
 		return FALSE
@@ -187,7 +192,6 @@
 	stored_money = max(0, stored_money - money_to_spend)
 	playsound(loc, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 50, TRUE)
 	to_chat(user, span_notice("You fill [can]."))
-	say("Gas filled.")
 	return TRUE
 
 /obj/structure/fuelstation/click_alt(mob/user)
@@ -198,6 +202,7 @@
 		stored_money -= money_to_spawn
 		return CLICK_ACTION_SUCCESS
 
+// BAROQUE EDIT
 /obj/structure/fuelstation/examine(mob/user)
 	. = ..()
 	. += "<b>Balance</b>: [stored_money] [MONEY_NAME]"
@@ -206,6 +211,7 @@
 	else
 		. += "The fuel nozzle is not on the pump."
 
+// BAROQUE EDIT
 /obj/structure/fuelstation/attack_hand(mob/living/user, list/modifiers)
 	if(attached_nozzle)
 		if(!user.put_in_hands(attached_nozzle))
@@ -216,11 +222,12 @@
 			span_notice("[user] takes the fuel nozzle from [src]."),
 			span_notice("You take the fuel nozzle from [src]."),
 		)
-		playsound(src, 'modular_darkpack/master_files/sounds/effects/gas_fill.ogg', 25, TRUE)
+		playsound(src, 'modular_baroque/master_files/sounds/nozzle_pickup.ogg', 25, TRUE)
 		say("Nozzle removed.")
 		return CLICK_ACTION_SUCCESS
 	return ..()
 
+// BAROQUE EDIT
 /obj/structure/fuelstation/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(iscash(tool))
 		stored_money += tool.get_item_credit_value()
@@ -243,7 +250,7 @@
 			span_notice("[user] holsters the fuel nozzle on [src]."),
 			span_notice("You holster the fuel nozzle on [src]."),
 		)
-		say("Fuel nozzle attached.")
+		playsound(src, 'modular_baroque/master_files/sounds/nozzle_holster.ogg', 25, TRUE)
 		return ITEM_INTERACT_SUCCESS
 	if(istype(tool, /obj/item/gas_can))
 		return try_fill_gas_can(tool, user) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
@@ -253,10 +260,11 @@
 /obj/item/fuel_noozzle
 	name = "fuel nozzle"
 	desc = "A nozzle for dispensing fuel. Keep it close to its pump."
-	icon = 'modular_darkpack/modules/deprecated/icons/items.dmi'
+	icon = 'modular_baroque/master_files/icons/misc.dmi'
 	icon_state = "fuel_nozzle"
 	lefthand_file = 'modular_darkpack/modules/deprecated/icons/righthand.dmi'
 	righthand_file = 'modular_darkpack/modules/deprecated/icons/lefthand.dmi'
+	inhand_icon_state = "gasoline"
 	w_class = WEIGHT_CLASS_NORMAL
 	/// Pump this hose is tethered to.
 	var/obj/structure/fuelstation/connected_pump
@@ -307,7 +315,7 @@
 		return
 	hose_beam = connected_pump.Beam(
 		holder,
-		icon_state = "b_beam",
+		icon_state = "1-full",
 		maxdistance = max_hose_length,
 		beam_color = "#1a1a1a",
 		emissive = FALSE,
