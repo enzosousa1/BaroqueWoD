@@ -8,9 +8,9 @@
 	outfit = /datum/outfit/job/vampire/mayor
 	job_flags = CITY_JOB_FLAGS
 	exp_required_type_department = EXP_TYPE_SERVICES
-	department_for_prefs = /datum/job_department/city_services
+	department_for_prefs = /datum/job_department/townhall
 	departments_list = list(
-		/datum/job_department/city_services,
+		/datum/job_department/townhall,
 	)
 	display_order = JOB_DISPLAY_ORDER_MAYOR
 	minimal_masquerade = 0
