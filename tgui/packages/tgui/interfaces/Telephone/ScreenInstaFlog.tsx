@@ -11,6 +11,7 @@ import {
 } from './InstaFlog/InstaFlogComponents';
 import { InstaFlogFeed } from './InstaFlog/InstaFlogFeed';
 import { InstaFlogProfileView } from './InstaFlog/InstaFlogProfile';
+import { InstaFlogSearch } from './InstaFlog/InstaFlogSearch';
 import { InstaFlogAuth } from './InstaFlog/InstaFlogAuth';
 import { InstaFlogRegistration } from './InstaFlog/InstaFlogRegistration';
 import { InstaFlogScreen } from './InstaFlog/InstaFlogScreen';
@@ -112,6 +113,7 @@ export const ScreenInstaFlog = (props: {
       return (
         <InstaFlogProfileView
           profile={viewedProfile}
+          profiles={profiles}
           posts={posts}
           postCount={viewedProfile.post_count}
           isOwnProfile={profileUsername === account?.username}
@@ -147,6 +149,16 @@ export const ScreenInstaFlog = (props: {
       );
     }
 
+    if (activeTab === 'search') {
+      return (
+        <InstaFlogSearch
+          profiles={profiles}
+          onViewProfile={handleViewProfile}
+          onClickSound={clickSound}
+        />
+      );
+    }
+
     return (
       <InstaFlogFeed
         tab={activeTab}
@@ -169,11 +181,13 @@ export const ScreenInstaFlog = (props: {
       ? 'Início'
       : activeTab === 'trending'
         ? 'Em Alta'
-        : activeTab === 'compose'
-          ? 'Nova postagem'
-          : viewingUsername && viewingUsername !== account?.username
-            ? `@${viewingUsername}`
-            : 'Meu perfil';
+        : activeTab === 'search'
+          ? 'Buscar perfis'
+          : activeTab === 'compose'
+            ? 'Nova postagem'
+            : viewingUsername && viewingUsername !== account?.username
+              ? `@${viewingUsername}`
+              : 'Meu perfil';
 
   return (
     <InstaFlogScreen
@@ -190,9 +204,7 @@ export const ScreenInstaFlog = (props: {
         <InstaFlogBottomNav
           activeTab={activeTab}
           onTabChange={(tab) => {
-            if (tab === 'profile') {
-              setViewingUsername(null);
-            }
+            setViewingUsername(null);
             setActiveTab(tab);
           }}
           onClickSound={clickSound}

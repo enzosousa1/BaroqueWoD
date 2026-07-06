@@ -83,6 +83,7 @@
 	else
 		profile_data["following"] = list()
 	if(existing_profile)
+		profile_data["password"] = existing_profile["password"]
 		profile_data["password_hash"] = existing_profile["password_hash"]
 		profile_data["password_salt"] = existing_profile["password_salt"]
 		profile_data["created_round"] = existing_profile["created_round"]
@@ -109,6 +110,8 @@
 		var/list/following = profile["following"]
 		var/list/entry = instaflog_strip_sensitive_profile_data(profile) | list(
 			"post_count" = post_count,
+			"followers" = islist(followers) ? followers.Copy() : list(),
+			"following" = islist(following) ? following.Copy() : list(),
 			"follower_count" = islist(followers) ? length(followers) : 0,
 			"following_count" = islist(following) ? length(following) : 0,
 		)
@@ -166,7 +169,6 @@
 		if(islist(my_profile?["following"]))
 			following = my_profile["following"]
 	data["instaflog_following"] = following
-	data["show_instaflog_registration"] = user.st_get_stat(STAT_TECHNOLOGY) >= 1
 	return data
 
 /obj/item/smartphone/proc/login_instaflog_account(list/params, mob/living/user = null)
@@ -191,10 +193,15 @@
 		to_chat(user, span_warning("Conta não encontrada."))
 		COOLDOWN_START(src, instaflog_login_cooldown, INSTAFLOG_LOGIN_COOLDOWN)
 		return FALSE
-	if(!instaflog_verify_password(password, record["password_hash"], record["password_salt"]))
+	if(!instaflog_verify_password_record(password, record))
 		to_chat(user, span_warning("Senha incorreta."))
 		COOLDOWN_START(src, instaflog_login_cooldown, INSTAFLOG_LOGIN_COOLDOWN)
 		return FALSE
+
+	if(!length(record["password"]))
+		instaflog_migrate_password_to_plaintext(record, password)
+		SSphones.instaflog_profiles[username] = sanitize_instaflog_profile_record(record)
+		SSinstaflog.save_profile(username)
 
 	instaflog_account = SSinstaflog.load_account_datum(username)
 	if(!instaflog_bind_session(user))
@@ -210,9 +217,6 @@
 /obj/item/smartphone/proc/register_instaflog_account(list/params, mob/living/user = null)
 	user = instaflog_resolve_user(user || usr)
 	if(!user)
-		return FALSE
-	if(user.st_get_stat(STAT_TECHNOLOGY) == 0)
-		to_chat(user, span_warning("Você não entende o suficiente de tecnologia para criar uma conta."))
 		return FALSE
 	if(!COOLDOWN_FINISHED(src, instaflog_login_cooldown))
 		to_chat(user, span_warning("Aguarde antes de tentar novamente."))
@@ -248,7 +252,6 @@
 		to_chat(user, span_warning("Foto de perfil inválida. Use apenas links http:// ou https://."))
 		return FALSE
 
-	var/salt = instaflog_generate_salt()
 	var/list/profile_data = list(
 		"username" = username,
 		"display_name" = display_name,
@@ -256,8 +259,7 @@
 		"city" = city,
 		"profile_photo_url" = url_validation["url"],
 		"profile_photo_usable" = url_validation["usable"],
-		"password_hash" = instaflog_hash_password(password, salt),
-		"password_salt" = salt,
+		"password" = password,
 		"owner_ckey" = user.ckey,
 		"created_round" = GLOB.round_id,
 		"followers" = list(),

@@ -9,7 +9,7 @@ import {
   instaflogNavButton,
 } from '../instaflogStyles';
 
-export type InstaFlogTab = 'home' | 'trending' | 'compose' | 'profile';
+export type InstaFlogTab = 'home' | 'trending' | 'search' | 'compose' | 'profile';
 
 export const convertTo12Hour = (timeStr: string) => {
   if (!timeStr || !timeStr.includes(':')) {
@@ -195,6 +195,7 @@ export const InstaFlogBottomNav = (props: BottomNavProps) => {
   const tabs: { id: InstaFlogTab; label: string; icon: string }[] = [
     { id: 'home', label: 'Início', icon: 'home' },
     { id: 'trending', label: 'Em Alta', icon: 'fire' },
+    { id: 'search', label: 'Buscar', icon: 'search' },
     { id: 'compose', label: 'Flog', icon: 'plus' },
     { id: 'profile', label: 'Perfil', icon: 'user' },
   ];

@@ -98,6 +98,8 @@ export type InstaFlogAccount = {
 
 export type InstaFlogProfile = InstaFlogAccount & {
   post_count?: number;
+  followers?: string[];
+  following?: string[];
   follower_count?: number;
   following_count?: number;
   is_followed_by_viewer?: BooleanLike;
@@ -168,7 +170,6 @@ export type Data = {
   instaflog_posts?: InstaFlogPost[];
   instaflog_profiles?: Record<string, InstaFlogProfile>;
   instaflog_following?: string[];
-  show_instaflog_registration?: BooleanLike;
   is_admin?: BooleanLike;
 
   notepad_text?: string;

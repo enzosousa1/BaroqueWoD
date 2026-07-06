@@ -40,8 +40,7 @@ const authTabStyle = (active: boolean): CSSProperties => ({
 
 export const InstaFlogAuth = (props: AuthProps) => {
   const { onBack, onClickSound } = props;
-  const { act, data } = useBackend<Data>();
-  const canRegister = !!data.show_instaflog_registration;
+  const { act } = useBackend<Data>();
 
   const [mode, setMode] = useState<AuthMode>('login');
   const [username, setUsername] = useState('');
@@ -216,12 +215,6 @@ export const InstaFlogAuth = (props: AuthProps) => {
             )}
           </div>
 
-          {mode === 'register' && !canRegister && (
-            <FieldError>
-              * Você não sabe o que você está fazendo...você não consegue se registrar.
-            </FieldError>
-          )}
-
           {mode === 'register' && (
             <>
               <div>
@@ -297,14 +290,8 @@ export const InstaFlogAuth = (props: AuthProps) => {
 
           <Stack mt={0.5} justify="center">
             <GlossButton
-              tone={mode === 'register' && !canRegister ? 'gray' : 'green'}
-              onClick={
-                mode === 'login'
-                  ? handleLogin
-                  : canRegister
-                    ? handleRegister
-                    : undefined
-              }
+              tone="green"
+              onClick={mode === 'login' ? handleLogin : handleRegister}
             >
               {mode === 'login' ? 'Acessar conta' : 'Criar conta'}
             </GlossButton>

@@ -5,11 +5,28 @@
 	var/mob/living/carbon/human/human_mob = mob
 	return human_mob.dna?.unique_identity
 
-/proc/instaflog_generate_salt()
-	return copytext(md5("[world.realtime][world.timeofday][rand(1, 999999)]"), 1, 17)
+/proc/instaflog_has_stored_credentials(list/record)
+	return islist(record) && (length(record["password"]) || length(record["password_hash"]))
 
-/proc/instaflog_hash_password(password, salt)
-	return rustg_hash_string(RUSTG_HASH_SHA256, "[salt][password]")
+/// Legacy hash verification — kept so existing accounts survive until first login migrates them.
+/proc/instaflog_verify_legacy_password(password, password_hash, salt)
+	if(!length(password_hash) || !length(salt))
+		return FALSE
+	return rustg_hash_string(RUSTG_HASH_SHA256, "[salt][password]") == password_hash
+
+/proc/instaflog_verify_password_record(password, list/record)
+	if(!instaflog_has_stored_credentials(record))
+		return FALSE
+	if(length(record["password"]))
+		return password == record["password"]
+	return instaflog_verify_legacy_password(password, record["password_hash"], record["password_salt"])
+
+/proc/instaflog_migrate_password_to_plaintext(list/record, password)
+	if(!islist(record) || !length(password))
+		return
+	record["password"] = password
+	record -= "password_hash"
+	record -= "password_salt"
 
 /proc/validate_instaflog_password(password, mob/viewer = null, confirm_password = null)
 	if(!istext(password))
@@ -28,11 +45,6 @@
 			to_chat(viewer, span_warning("As senhas não coincidem."))
 		return FALSE
 	return TRUE
-
-/proc/instaflog_verify_password(password, password_hash, salt)
-	if(!length(password_hash) || !length(salt))
-		return FALSE
-	return instaflog_hash_password(password, salt) == password_hash
 
 /proc/sanitize_instaflog_text(text, max_length = MAX_MESSAGE_LEN)
 	if(!istext(text))

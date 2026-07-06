@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Icon } from 'tgui-core/components';
 import type { InstaFlogPost, InstaFlogProfile } from '..';
 import { instaflogFadeIn, instaflogFullWidth, instaflogPanel } from '../instaflogStyles';
 import { GlossButton, InstaFlogAvatar } from './InstaFlogComponents';
 import { InstaFlogPostCard } from './InstaFlogPostCard';
+import { InstaFlogProfileList } from './InstaFlogProfileList';
+
+type ProfileListMode = 'followers' | 'following' | null;
 
 type ProfileViewProps = {
   profile: InstaFlogProfile;
+  profiles: Record<string, InstaFlogProfile>;
   posts: InstaFlogPost[];
   postCount?: number;
   isOwnProfile?: boolean;
@@ -24,6 +28,7 @@ type ProfileViewProps = {
 export const InstaFlogProfileView = (props: ProfileViewProps) => {
   const {
     profile,
+    profiles,
     posts,
     postCount,
     isOwnProfile,
@@ -39,14 +44,56 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
   } = props;
 
   const [photoLoadFailed, setPhotoLoadFailed] = useState(false);
+  const [listView, setListView] = useState<ProfileListMode>(null);
+
+  useEffect(() => {
+    setListView(null);
+  }, [profile.username]);
 
   const userPosts = posts
     .filter((post) => post.username === profile.username)
     .sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0));
 
   const count = postCount ?? userPosts.length;
-  const followerCount = profile.follower_count ?? 0;
-  const followingCount = profile.following_count ?? 0;
+  const followerUsernames = profile.followers ?? [];
+  const followingUsernames = profile.following ?? [];
+  const followerCount = profile.follower_count ?? followerUsernames.length;
+  const followingCount = profile.following_count ?? followingUsernames.length;
+
+  const openList = (mode: ProfileListMode) => {
+    if (!mode) {
+      return;
+    }
+    onClickSound();
+    setListView(mode);
+  };
+
+  const handleListProfileClick = (username: string) => {
+    setListView(null);
+    onViewProfile(username);
+  };
+
+  if (listView) {
+    const isFollowers = listView === 'followers';
+    return (
+      <InstaFlogProfileList
+        title={isFollowers ? 'Seguidores' : 'Seguindo'}
+        usernames={isFollowers ? followerUsernames : followingUsernames}
+        profiles={profiles}
+        emptyMessage={
+          isFollowers
+            ? 'Ninguém segue este perfil ainda.'
+            : 'Este perfil ainda não segue ninguém.'
+        }
+        onBack={() => {
+          onClickSound();
+          setListView(null);
+        }}
+        onViewProfile={handleListProfileClick}
+        onClickSound={onClickSound}
+      />
+    );
+  }
 
   return (
     <div
@@ -99,9 +146,29 @@ export const InstaFlogProfileView = (props: ProfileViewProps) => {
               {count} flogs
               <span style={{ margin: '0 6px' }}>•</span>
               <Icon name="users" mr={0.25} />
-              {followerCount} seguidores
+              <Box
+                inline
+                color="#6d3f10"
+                style={{
+                  cursor: followerCount > 0 ? 'pointer' : 'default',
+                  textDecoration: followerCount > 0 ? 'underline' : 'none',
+                }}
+                onClick={() => followerCount > 0 && openList('followers')}
+              >
+                {followerCount} seguidores
+              </Box>
               <span style={{ margin: '0 6px' }}>•</span>
-              {followingCount} seguindo
+              <Box
+                inline
+                color="#6d3f10"
+                style={{
+                  cursor: followingCount > 0 ? 'pointer' : 'default',
+                  textDecoration: followingCount > 0 ? 'underline' : 'none',
+                }}
+                onClick={() => followingCount > 0 && openList('following')}
+              >
+                {followingCount} seguindo
+              </Box>
             </Box>
           </div>
         </div>

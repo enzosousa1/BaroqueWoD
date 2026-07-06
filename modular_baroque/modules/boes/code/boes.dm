@@ -23,3 +23,8 @@
 	name = "BOES Priest"
 	outfit = /datum/outfit/job/vampire/swat_negotiator
 	role = "BOES Priest"
+
+/datum/antagonist/ert/baroque/boes/priest/on_gain()
+	. = ..()
+	var/mob/living/spawnee = owner?.current
+	spawnee?.st_set_stat(STAT_FAITH, FAITH_MAX_SCORE)

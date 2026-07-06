@@ -1,5 +1,5 @@
 /**
- * Persistent InstaFlog account storage (followers, profiles, password hashes).
+ * Persistent InstaFlog account storage (followers, profiles, passwords).
  * Round-local posts remain on SSphones.instaflog_posts.
  */
 SUBSYSTEM_DEF(instaflog)
@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(instaflog)
 	var/list/accounts = account_database.get()
 	for(var/username in accounts)
 		var/list/record = accounts[username]
-		if(!islist(record) || !length(record["password_hash"]))
+		if(!islist(record) || !instaflog_has_stored_credentials(record))
 			continue
 		SSphones.instaflog_profiles[sanitize_instaflog_username(username)] = sanitize_instaflog_profile_record(record)
 
@@ -36,7 +36,7 @@ SUBSYSTEM_DEF(instaflog)
 	if(!username)
 		return
 	var/list/profile = SSphones.instaflog_profiles[username]
-	if(!profile || !length(profile["password_hash"]))
+	if(!profile || !instaflog_has_stored_credentials(profile))
 		return
 	account_database.set_key(username, profile)
 
@@ -72,6 +72,7 @@ SUBSYSTEM_DEF(instaflog)
 		"city" = record["city"] || "",
 		"profile_photo_url" = record["profile_photo_url"] || "",
 		"profile_photo_usable" = record["profile_photo_usable"] || TRUE,
+		"password" = record["password"] || "",
 		"password_hash" = record["password_hash"] || "",
 		"password_salt" = record["password_salt"] || "",
 		"owner_ckey" = record["owner_ckey"] || "",
@@ -95,5 +96,5 @@ SUBSYSTEM_DEF(instaflog)
 
 /proc/instaflog_strip_sensitive_profile_data(list/profile)
 	var/list/safe = profile.Copy()
-	safe -= list("password_hash", "password_salt")
+	safe -= list("password", "password_hash", "password_salt")
 	return safe
