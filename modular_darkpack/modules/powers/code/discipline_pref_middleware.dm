@@ -156,7 +156,7 @@ GLOBAL_LIST_INIT(rare_discipline_types, list(
 /datum/preference_middleware/disciplines/proc/get_discipline_point_budget(immortal_age)
 	if(immortal_age <= 10)
 		return list(
-			"points" = 72,
+			"points" = 12,
 			"tier" = "Fledgling",
 			"details" ="As a Fledgling, you are still learning how to control your new powers, and face your new problems. You are much the same person as you were prior to the embrace, for good or for bad. The phrase \"Life's sucks and then you die\" leaves out how much it sucks to be dead, but you're starting to learn that first-hand. You might be recently declared dead or reported missing, and are struggling to piece together a new unlife without the support network you had when you were alive. There are a lot of rules and customs you're unfamiliar with, and older kindred look down on you. You may be alone, hiding out after a string of murders post-embrace that put you on the radar of law enforcement and the Camarilla, or under the watchful eye of your Sire learning to control yourself under their wing. Either way, you're going to need help to navigate all of this.")
 	if(immortal_age <= 100)
