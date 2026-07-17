@@ -29,8 +29,8 @@
 
 //Primogens
 #define JOB_PRIMOGEN_TOREADOR "Primogen Toreador"
-#define JOB_PRIMOGEN_BANU_HAQIM "Primogen Banu Haqim"
-#define JOB_PRIMOGEN_LASOMBRA "Primogen Lasombra"
+#define JOB_PRIMOGEN_BRUJAH "Primogen Brujah"
+#define JOB_PRIMOGEN_GANGREL "Primogen Gangrel"
 #define JOB_PRIMOGEN_MALKAVIAN "Primogen Malkavian"
 #define JOB_PRIMOGEN_NOSFERATU "Primogen Nosferatu"
 #define JOB_PRIMOGEN_VENTRUE "Primogen Ventrue"

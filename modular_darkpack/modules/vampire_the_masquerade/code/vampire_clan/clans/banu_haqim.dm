@@ -11,7 +11,8 @@
 		/datum/discipline/quietus
 	)
 	clan_traits = list(
-		TRAIT_VITAE_ADDICTION
+		TRAIT_VITAE_ADDICTION,
+		TRAIT_BANU_HAQIM_AURA,
 	)
 	male_clothes = /obj/item/clothing/under/vampire/bandit
 	female_clothes = /obj/item/clothing/under/vampire/bandit
@@ -31,4 +32,6 @@
 		/datum/discipline/auspex,
 		/datum/discipline/quietus
 	)
-	clan_traits =  list()
+	clan_traits =  list(
+		TRAIT_BANU_HAQIM_AURA,
+	)

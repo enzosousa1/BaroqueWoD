@@ -15,7 +15,7 @@
 /obj/item/melee/touch_attack/quietus/Initialize(mapload, potency = 1, duration = 0)
 	. = ..()
 	AddComponent(/datum/component/scorpions_touch_poison, potency, duration)
-	ADD_TRAIT(src, TRAIT_NODROP, INNATE_TRAIT)
+	QDEL_IN(src, 30 SECONDS)
 
 //COMPONENT FOR WEAPON
 /datum/component/scorpions_touch_poison

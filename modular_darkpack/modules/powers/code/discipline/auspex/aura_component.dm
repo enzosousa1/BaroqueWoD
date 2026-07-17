@@ -234,6 +234,14 @@
 	if(HAS_TRAIT(parent_mob, TRAIT_AURA_OF_CONFIDENCE))
 		return
 
+	// Banu Haqim have a black aura
+	if(HAS_TRAIT(parent_mob, TRAIT_BANU_HAQIM_AURA))
+		output_color = "#000000"
+		aura_appearance.color = output_color
+		if(aura_smoke)
+			aura_smoke.particles.color = output_color + "40"
+		return
+
 	if(output_color && has_pale_aura(parent_mob))
 		var/list/hsv_color_value = rgb2hsv(output_color)
 		hsv_color_value[2] = hsv_color_value[2] * 0.7 // Reduce saturation for kindred

@@ -189,6 +189,14 @@
 	cooldown_length = 1 TURNS
 	toggled = TRUE
 	activate_sound = 'modular_darkpack/modules/powers/sounds/vicissitude.ogg'
+	/// Saved hair color to restore after deactivation
+	var/saved_hair_color
+	/// Saved facial hair color to restore after deactivation
+	var/saved_facial_hair_color
+	/// Saved hair style to restore after deactivation
+	var/saved_hair_style
+	/// Saved facial hair style to restore after deactivation
+	var/saved_facial_hair_style
 
 /datum/discipline_power/vicissitude/bloodform/pre_activation_checks()
 	. = ..()
@@ -199,6 +207,13 @@
 
 /datum/discipline_power/vicissitude/bloodform/activate()
 	. = ..()
+	// Save hair data before transforming
+	if(ishuman(owner))
+		var/mob/living/carbon/human/human_owner = owner
+		saved_hair_color = human_owner.hair_color
+		saved_facial_hair_color = human_owner.facial_hair_color
+		saved_hair_style = human_owner.hairstyle
+		saved_facial_hair_style = human_owner.facial_hairstyle
 	owner.set_species(mrace = /datum/species/tzimisce_blood_form, icon_update = TRUE, pref_load = TRUE, replace_missing = FALSE)
 	owner.uncuff() //Avoids any issues with existing cuffs, and you can't handcuff a selectively solid pool of blood.
 
@@ -208,4 +223,16 @@
 	if(!do_after(owner, 1 TURNS, owner))
 		return FALSE
 	owner.set_species(mrace = /datum/species/human, icon_update = TRUE, pref_load = TRUE, replace_missing = FALSE)
+	// Restore hair data after transforming back
+	if(ishuman(owner))
+		var/mob/living/carbon/human/human_owner = owner
+		if(saved_hair_color)
+			human_owner.set_haircolor(saved_hair_color, update = FALSE)
+		if(saved_facial_hair_color)
+			human_owner.set_facial_haircolor(saved_facial_hair_color, update = FALSE)
+		if(saved_hair_style)
+			human_owner.set_hairstyle(saved_hair_style, update = FALSE)
+		if(saved_facial_hair_style)
+			human_owner.set_facial_hairstyle(saved_facial_hair_style, update = FALSE)
+		human_owner.update_hair()
 	return TRUE
