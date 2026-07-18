@@ -1724,6 +1724,7 @@
 	},
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
 /obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/access/mayor,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/townhall)
 "cda" = (
@@ -2283,6 +2284,14 @@
 /obj/effect/turf_decal/trimline/blue/corner,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/outside/supply)
+"cQh" = (
+/obj/structure/table/reinforced,
+/obj/item/battering_ram,
+/obj/item/battering_ram,
+/obj/item/battering_ram,
+/obj/item/storage/box/flashbangs,
+/turf/open/floor/city/factory,
+/area/vtm/interior/police)
 "cQk" = (
 /obj/machinery/libraryscanner,
 /turf/open/floor/city/plating,
@@ -2291,6 +2300,7 @@
 /obj/structure/chair/comfy/darkpack/dark{
 	dir = 4
 	},
+/obj/effect/landmark/start/darkpack/townhall/mayor,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/townhall)
 "cRy" = (
@@ -2694,13 +2704,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/carpet/darkpack/bluesilver,
 /area/vtm/interior/ghetto)
-"dnI" = (
-/obj/structure/vampdoor/reinf{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/door/access/police,
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/police)
 "dnX" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/landmark/latejoin_daytime,
@@ -7449,14 +7452,9 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/gun_store)
 "iCr" = (
-/obj/structure/vampdoor/wood{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/obj/effect/mapping_helpers/door/access/clinic,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
+/obj/structure/billboard/azik,
+/turf/open/floor/city/toilet,
+/area/vtm/interior/police)
 "iCM" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/concrete,
@@ -11114,12 +11112,6 @@
 /obj/machinery/light/prince/directional/north,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
-"mEm" = (
-/obj/structure/chair/darkpack{
-	dir = 1
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/interior/police)
 "mEq" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -12068,8 +12060,8 @@
 /turf/closed/wall/vampwall/painted,
 /area/vtm/palm_desert/interior/clinic)
 "nNl" = (
-/obj/structure/signboard{
-	pixel_y = 16
+/obj/structure/chair/darkpack{
+	dir = 1
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
@@ -13181,8 +13173,8 @@
 /area/vtm/interior)
 "oUB" = (
 /obj/structure/table/wood,
-/obj/vampire_computer,
 /obj/structure/platform/lowwall/brick,
+/obj/structure/mayor_console,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/townhall)
 "oVe" = (
@@ -13727,8 +13719,10 @@
 /turf/open/misc/dirt,
 /area/vtm/palm_desert/interior/hunter)
 "puP" = (
-/obj/structure/billboard/azik,
-/turf/open/floor/city/toilet,
+/obj/structure/signboard{
+	pixel_y = 16
+	},
+/turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
 "pvc" = (
 /obj/structure/vampdoor/wood,
@@ -14617,13 +14611,14 @@
 /turf/open/floor/wood/rough,
 /area/vtm/interior)
 "qsG" = (
-/obj/structure/table/reinforced,
-/obj/item/battering_ram,
-/obj/item/battering_ram,
-/obj/item/battering_ram,
-/obj/item/storage/box/flashbangs,
-/turf/open/floor/city/factory,
-/area/vtm/interior/police)
+/obj/structure/vampdoor/wood{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/mapping_helpers/door/access/clinic,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "qsK" = (
 /obj/structure/platform/lowwall/market,
 /obj/structure/table,
@@ -18931,6 +18926,13 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/theatre)
+"vst" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/police,
+/turf/open/floor/plating/concrete,
+/area/vtm/interior/police)
 "vsA" = (
 /obj/structure/lamppost/one,
 /turf/open/floor/plating/sidewalk/poor,
@@ -59730,7 +59732,7 @@ nNb
 mES
 lzg
 lzg
-iCr
+qsG
 lzg
 lzg
 nNb
@@ -82530,7 +82532,7 @@ lzg
 lzg
 tYk
 wsw
-iCr
+qsG
 tfi
 tYk
 tPY
@@ -82667,7 +82669,7 @@ qaZ
 gGE
 koQ
 uia
-puP
+iCr
 uia
 rVr
 ric
@@ -83113,7 +83115,7 @@ rEa
 rEa
 rEa
 tmt
-qsG
+cQh
 iNW
 iNW
 rVr
@@ -83431,7 +83433,7 @@ rEa
 rEa
 rEa
 rEa
-dnI
+vst
 rEa
 qhV
 qhV
@@ -83730,11 +83732,11 @@ qhV
 qhV
 qhV
 rEa
+puP
 nNl
-mEm
-mEm
-mEm
-mEm
+nNl
+nNl
+nNl
 lVL
 rEa
 qhV
@@ -83883,10 +83885,10 @@ djQ
 qhV
 fpJ
 lVL
-mEm
-mEm
-mEm
-mEm
+nNl
+nNl
+nNl
+nNl
 lVL
 rEa
 qhV
@@ -84035,10 +84037,10 @@ djQ
 qhV
 rEa
 lVL
-mEm
-mEm
-mEm
-mEm
+nNl
+nNl
+nNl
+nNl
 lVL
 rEa
 qhV
